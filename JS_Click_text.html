@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS_Click_text</title>
+    <style>
+        h1 {
+            font-size: 30px;
+        }
+
+        .change2 {
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 按鍵事件函數 1-->
+    <h1 class="change" onclick="changText()">JS.按鍵事件 1</h1>
+
+    <!-- 按鍵事件函數 2-->
+    <div class="change2">JS.按鍵事件 2</div>
+    <button class="chang2_button">改文字</button>
+    <!-- 按鍵事件改由按鈕執行 -->
+
+
+    <script>
+        // 按鍵事件函數 2
+        var cbt2 = document.querySelector('.chang2_button');
+        // 宣告變數  變數名稱cbt2 = 本文內 .查詢選擇器 ('選擇項目')
+        var changeword2 = document.querySelector('.change2');
+        // 宣告變數  變數名稱 = 本文內 .查詢選擇器 ('選擇項目')
+        cbt2.onclick = function () {
+            // 按鍵到script寫
+            changeword2.textContent = 'Hello';
+            // 變數名稱 .文字內容 = '變更訊息'
+        }
+
+        // 按鍵事件函數 1
+        function changText() {
+            // 宣告函數 函數名稱()
+            var changeword = document.querySelector('h1.change');
+            // 宣告變數  變數名稱 = 本文內 .查詢選擇器 ('選擇項目')
+            changeword.textContent = 'Hello World!'
+            // 變數名稱 .文字內容 = '變更訊息'
+        }
+    </script>
+
+</body>
+
+</html>

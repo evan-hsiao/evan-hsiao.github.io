@@ -1,36 +1,12 @@
-*{
+* {
     box-sizing: border-box;
 }
 
 /* 預設 */
+
 .container {
     width: 1536px;
     margin: 0px auto;
-}
-
-@media (max-width: 1680px) {
-    .container {
-        width: 1336px;
-    }
-}
-
-@media (max-width: 1460px) {
-    .container {
-        width: 1136px;
-    }
-}
-
-@media (max-width: 1280px) {
-    .container {
-        width: 960px;
-    }
-}
-
-@media (max-width: 1024px) {
-    .container {
-        padding: 0px 30px;
-        width: 100%;
-    }
 }
 
 body {
@@ -62,30 +38,16 @@ nav .logo {
     flex: 0 0 auto;
 }
 
-@media (max-width: 1024px) {
-    nav .logo {
-        width: 60px;
-    }
-}
-
-@media (max-width: 670px) {
-    nav .logo {
-        width: 30px;
-    }
-}
-
 nav .logo a {
     margin-top: 4px;
 }
 
 nav .logo svg {
-    width: 16px;
+    width: 20px;
     background-image: url('https://cdn.pixabay.com/photo/2016/09/14/20/50/teeth-1670434_960_720.png');
     background-position: center;
     background-size: cover;
 }
-
-
 
 nav .home_title h1 {
     margin: 0;
@@ -132,7 +94,7 @@ nav ul a {
 .mobile_nav_toggle span.top-bar {
     top: 17px;
     left: 12px;
- /* 變形旋轉方向*/
+    /* 變形旋轉方向*/
     transform: rotate(0deg);
 }
 
@@ -145,7 +107,7 @@ nav ul a {
 .mobile_nav_toggle span.bottom-bar {
     top: 31px;
     left: 12px;
- /* 變形旋轉方向*/
+    /* 變形旋轉方向*/
     transform: rotate(0deg);
 }
 
@@ -168,7 +130,6 @@ nav ul a {
     pointer-events: all;
 }
 
-
 .mobile_nav ul {
     width: 100%;
     margin: 0px;
@@ -184,14 +145,45 @@ nav ul a {
     padding: 25px 30px;
 }
 
+@media (max-width: 1680px) {
+    .container {
+        width: 1336px;
+    }
+}
 
+@media (max-width: 1460px) {
+    .container {
+        width: 1136px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .container {
+        width: 960px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        padding: 0px 30px;
+        width: 100%;
+    }
+    nav .logo {
+        width: 60px;
+    }
+}
+
+@media (max-width: 670px) {
+    nav .logo {
+        width: 30px;
+    }
+}
 
 @media (max-width: 767px) {
     /* mobile 選單顯示 */
     .nav-links {
         display: none;
     }
-
     .mobile_nav_toggle {
         display: block;
     }
