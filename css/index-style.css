@@ -1,30 +1,26 @@
-body {
-    margin: 0;
+body{
     box-sizing: border-box;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(51, 51, 51);
 }
-
-nav {
-    height: 100%;
-    display: block;
-    margin: 0px;
-    padding: 0px;
-}
-
-#container {
+nav{
     width: 100%;
     height: 48px;
     position: absolute;
     top: 0px;
     left: 0px;
     z-index: 10;
-    background-color: gold;
+    background-color: transparent;
 }
-.burinner{
+.inner-bar{
     display: flex;
+    -webkit-box-pack: start;
     justify-content: flex-start;
+    width: 1536px;
     margin: 0px auto;
 }
-.logo{
+.inner-bar .logo{
     width: 190px;
     height: 48px;
     display: flex;
@@ -34,37 +30,27 @@ nav {
     align-items: center;
     flex: 0 0 auto;
 }
-.home-link{
-    height: 48px;
-    width: auto;
-    align-content: center;
-    flex: 0 0 auto;
+.inner-bar .logo a{
+    opacity: 1;
+    height: 16px;
+    display: block;
+    margin: 2px 0px 0px;
 }
-.links{
-    height: 48px;
-    flex: 1 1 auto;
-    padding: 0px 120px 0px 420px;
+.title{
+    .jteTPZ {
+        height: 48px;
+        width: auto;
+        align-content: center;
+        flex: 0 0 auto;
 }
-.links-all{
-    width: 100%;
-    display: flex;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
-}
-.nav-link{
-    width: auto;
+.title h1{
     color: rgb(255, 255, 255);
     font-size: 16px;
-    line-height: 49px;
     font-weight: 600;
-    margin: 0px;
-    padding: 0px;
+    line-height: 49px;
 }
-.nav-link a{
+.title h1 a{
     color: rgb(255, 255, 255);
     text-decoration: none;
-    transition: all 200ms linear 0ms;
+    transition: color 200ms linear 0ms;
 }
