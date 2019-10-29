@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Guess your Number</title>
+    <style>
+        .gass_Num {
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        .gass_Num #input_Num {
+            width: 150px;
+            height: 20px;
+        }
+
+        .gass_Num #send_Num {
+            width: 60px;
+            height: 30px;
+        }
+
+        .gass_Num #restar_button {
+            opacity: 0;
+            pointer-events: none;
+            width: 60px;
+            height: 30px;
+        }
+
+        .gass_Num #restar_button.show {
+            opacity: 1;
+            pointer-events: all;
+            width: 60px;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="gass_Num">
+        <h1>Guess Number</h1>
+        <p class='info'>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis maiores illum placeat ipsa voluptatibus
+            consectetur alias laborum! Optio, voluptas. Ratione porro optio itaque tenetur molestiae sequi voluptatibus
+            labore, eum et!
+        </p>
+        <input id="input_Num" type="number" min="0" max="100">
+        <!-- 輸入值為數字最小0，最大100 -->
+        <button id="send_Num">Send</button>
+        <!-- 送出按鈕(此為字串非數值) -->
+        <button id="restar_button">Restar</button>
+    </div>
+
+    <script>
+        var answer_Num = Math.floor(Math.random() * 101);
+        // 宣告answer_Num=最大整數(亂數0~100個)
+        var send_Num = document.querySelector("#send_Num");
+        // 宣告user送出的數字
+        var info = document.querySelector(".info");
+        // 宣告info
+        var user_input_Num;
+        // 宣告送出數值變數
+        var guess_round = 1;
+        // 宣告猜測次數初始值為1
+        var star_Num = 0;
+        // 宣告起始值
+        var end_Num = 100;
+        // 宣告尾數值
+        var restar_btn = document.querySelector("#restar_button");
+        // 宣告restar按鈕
+
+        send_Num.onclick = function () {
+            // 送出的點擊事件
+            user_input_Num = parseInt(document.querySelector("#input_Num").value);
+            // 將輸入值轉換為數值並放到變數user_input_Num中
+            console.log(answer_Num);
+            if (answer_Num === user_input_Num) {
+                // 如果亂數值等於送出值
+                info.textContent = `恭喜猜對了，累積猜題次數為${guess_round}次`;
+                // 替換info內容(text模式)
+                restar_btn.classList.add('show');
+                //增加show文字，讓restar按鈕出現
+
+            } else if (user_input_Num > answer_Num) {
+                // 否則如果送出值大於亂數值
+                end_Num = user_input_Num
+                // 尾數值就等於送出值
+                info.innerHTML = `猜錯了!數字太大了!範圍為${star_Num}-${end_Num},<br>累積猜題次數為${guess_round}次`;
+                // 替換info內容(html模式，加br跨行)
+                guess_round++;
+                // 猜測累積數+1
+
+            } else {
+                // 否則送出值小於亂數值
+                star_Num = user_input_Num
+                // 起始值就等於送出值
+                info.innerHTML = `猜錯了!數字太小了!範圍為${star_Num}-${end_Num},<br>累積猜題次數為${guess_round}次`;
+                // 替換info內容(html模式，加br跨行)
+                guess_round++;
+                // 猜測累積數+1
+            }
+        }
+        restar_btn.onclick = function () {
+            //重設restar鍵
+            //恢復初始值(answer_Num.guess_round.star_Num.end_Num)
+            //將info歸空白
+            answer_Num = Math.floor(Math.random() * 101);
+            info.textContent = "";
+            guess_round = 1;
+            star_Num = 0;
+            end_Num = 100;
+            document.querySelector("#input_Num").value = "";
+            //將原本輸入值改為空白
+            restar_btn.classList.remove('show');
+            //取消show文字，讓restar按鈕消失
+        }
+    </script>
+</body>
+
+</html>

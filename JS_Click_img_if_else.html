@@ -11,7 +11,7 @@
 <body>
 
     <img class="ifElse_img" src="https://cdn.pixabay.com/photo/2019/04/28/02/16/conservatory-4161955_960_720.jpg"
-        alt="">;
+        alt="">
 
 </body>
 <script>
@@ -19,13 +19,13 @@
     var first_img = 'https://cdn.pixabay.com/photo/2019/04/28/02/16/conservatory-4161955_960_720.jpg';
     var sec_img = 'https://cdn.pixabay.com/photo/2019/10/14/03/26/landscape-4547734_960_720.jpg';
 
-    // 宣告change_img變數選擇為if else img路徑
+    // 宣告變數change_img文件選擇器為.ifElse_img
     var change_img = document.querySelector('.ifElse_img');
 
-    // 執行點擊事件
+    // 執行change_img點擊事件函式()
     change_img.onclick = function () {
 
-        // 宣告right_img取得(getAttribute)change_img路徑
+        // 宣告right_img=change_img取得(getAttribute)('路徑')
         var right_img = change_img.getAttribute('src');
 
         // 如果right_img等於first_img

@@ -30,18 +30,18 @@
     <script>
         // 按鍵事件函數 2
         var cbt2 = document.querySelector('.chang2_button');
-        // 宣告變數  變數名稱cbt2 = 本文內 .查詢選擇器 ('選擇項目')
+        // 宣告變數  變數名稱cbt2 = 本文內 .查詢選擇器 ('選擇項目.chang2_button')
         var changeword2 = document.querySelector('.change2');
-        // 宣告變數  變數名稱 = 本文內 .查詢選擇器 ('選擇項目')
+        // 宣告變數  變數名稱 = 本文內 .查詢選擇器 ('選擇項目change2')
         cbt2.onclick = function () {
-            // 按鍵到script寫
+            // 變數cbt2點擊事件寫到函式()內
             changeword2.textContent = 'Hello';
-            // 變數名稱 .文字內容 = '變更訊息'
+            // 變數名稱changeword2 .文字變更 = '變更訊息Hello'
         }
 
         // 按鍵事件函數 1
         function changText() {
-            // 宣告函數 函數名稱()
+            // 宣告函式 函式名稱()
             var changeword = document.querySelector('h1.change');
             // 宣告變數  變數名稱 = 本文內 .查詢選擇器 ('選擇項目')
             changeword.textContent = 'Hello World!'
