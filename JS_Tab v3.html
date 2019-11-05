@@ -90,17 +90,17 @@
 
     <script>
 
-        //.tab_link按鍵事件
+        //.tab_link按鍵事件+函式()
         $(".tab_link").click(function () {
-            //.tab_link移除字串內的active字
+            //移除.tab_link字串對應的active文字
             $(".tab_link").removeClass("active");
-            // 指向按鍵事件當下的選項，新增字串active字
+            //指定按鍵事件當下選擇的字串，新增active文字字
             $(this).addClass("active");
-            // 宣告變數index為tab_link所指向的選項
+            // 宣告變數index為.tab_link所指定的選項轉為數字
             var index = $(".tab_link").index(this);
             // 移除.tab_content字串內的active字
             $(".tab_content").removeClass("active");
-            // 增加變數指向數值+1，並增加指定字串內active字
+            // 將變數轉為數值並選擇該數值+1，增加指定字串內active字
             $(`.tab_content:nth-child(${index + 1})`).addClass("active");
 
         });

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery AjexAPI串接</title>
+
+    <style>
+        .weather_info {}
+    </style>
+
+</head>
+
+<div class="weather_info">
+    <div class="info_all">
+        <div class="loconame">地區</div>
+        <div class="parameterName">溫度說明</div>
+
+    </div>
+</div>
+
+<body>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+        </script>
+
+    <script>
+
+        // var info_object = [a_object, b_object, c_object];
+
+        var weather_info = document.querySelector(".weather_info");
+
+        //使用jquery .ajax串接資訊網址
+        $.ajax({
+            url: "https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-B5282D9D-8FDD-40E9-AD48-B1DF3270465D",
+            cache: false,
+            success: function (info) {
+                // console.log(info.records.location[1].weatherElement[4].time[1].parameter.parameterName);
+            }
+        });
+
+    </script>
+</body>
+
+</html>
