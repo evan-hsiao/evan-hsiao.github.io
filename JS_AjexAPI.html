@@ -8,17 +8,37 @@
     <title>jQuery AjexAPI串接</title>
 
     <style>
-        .weather_info {}
+        body {
+            margin: 0;
+        }
+
+        .weather_info {
+            margin: 0 auto;
+            flex-wrap: wrap;
+            flex-grow: 1;
+        }
+
+        .info_all {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10PX;
+            border: 1px solid;
+            width: 250px;
+            height: 200px;
+        }
     </style>
 
 </head>
 
 <div class="weather_info">
-    <div class="info_all">
-        <div class="loconame">地區</div>
-        <div class="parameterName">溫度說明</div>
-
-    </div>
+    <!-- 改描述到js裡面 -->
+    <!-- <div class="info_all">
+        <h1>台中市</h1>
+        <h2>晴時多雲</h2>
+        <p>降雨機率: 50%</p>
+        <p>溫度: 20 ~ 30C</p>
+    </div> -->
 </div>
 
 <body>
@@ -28,17 +48,31 @@
         </script>
 
     <script>
-
-        // var info_object = [a_object, b_object, c_object];
-
-        var weather_info = document.querySelector(".weather_info");
-
         //使用jquery .ajax串接資訊網址
         $.ajax({
             url: "https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-B5282D9D-8FDD-40E9-AD48-B1DF3270465D",
-            cache: false,
             success: function (info) {
-                // console.log(info.records.location[1].weatherElement[4].time[1].parameter.parameterName);
+
+                // 宣告變數all_locations
+                var all_locations = info.records.location;
+
+                //使用forEach擷取需要的資料位址，並宣告為變數
+                all_locations.forEach(location => {
+                    var locationName = location.locationName;
+                    var Wx = location.weatherElement[0].time[0].parameter.parameterName;
+                    var PoP = location.weatherElement[1].time[0].parameter.parameterName;
+                    var MinT = location.weatherElement[2].time[0].parameter.parameterName;
+                    var MaxT = location.weatherElement[4].time[0].parameter.parameterName;
+
+                    //將上述宣告變數資料放到設定html區塊內
+                    $(".weather_info").append(`<div class="info_all">
+                        <h1>${locationName} </h1>
+                        <h2>${Wx} </h2>
+                        <p>降雨機率: ${PoP}%</p>
+                        <p>溫度: ${MinT} ~ ${MaxT} C</p>
+                    </div>`);
+                })
+
             }
         });
 
