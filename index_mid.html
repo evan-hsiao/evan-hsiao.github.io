@@ -31,6 +31,7 @@
         .info a {
             display: block;
             color: black;
+            text-decoration: none;
         }
 
         .info .col-xl-3:nth-child(1):after {
@@ -62,17 +63,29 @@
         .info .col-xl-3:nth-child(1) {
             background-color: rgb(37, 142, 222);
         }
+        .info .col-xl-3:nth-child(1):hover {
+            background-color:rgb(12, 117, 197);
+        }
 
         .info .col-xl-3:nth-child(2) {
             background-color: rgb(79, 229, 255);
+        }
+        .info .col-xl-3:nth-child(2):hover {
+            background-color: rgb(54, 204, 230);
         }
 
         .info .col-xl-3:nth-child(3) {
             background-color: rgb(207, 143, 255);
         }
+        .info .col-xl-3:nth-child(3):hover {
+            background-color: rgb(182, 118, 230);
+        }
 
         .info .col-xl-3:nth-child(4) {
             background-color: rgb(105, 229, 110);
+        }
+        .info .col-xl-3:nth-child(4):hover {
+            background-color: rgb(80, 204, 85);
         }
     </style>
 </head>
@@ -82,18 +95,21 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-3 col-md-6 col-12">
-                    <a href="" >
+                    <a href="" data-aos="fade-up" data-aos-duration="2000">
                         <div class="img"><img src="https://www.microsoft.com/design/fluent/assets/images/icon-globe.svg"
                                 alt=""></div>
-                        <div class="words" data-aos="fade-up" data-aos-duration="3000">
+                        <div class="words">
                             <h2>Web</h2>
                             <p>Create your own web apps and add-ins.</p>
                         </div>
-                        <h6 data-aos="fade-up" data-aos-duration="3000" >Get started</h6>
+                        <div class="connect">
+                            <img src="https://www.microsoft.com/design/fluent/assets/images/arrow-black.svg" alt="">
+                            <span>Get started</span>
+                        </div>
                     </a>
                 </div>
                 <div class="col-xl-3 col-md-6 col-12">
-                    <a href="">
+                    <a href="" data-aos="fade-up" data-aos-duration="2000">
                         <div class="img"><img
                                 src="https://www.microsoft.com/design/fluent/assets/images/icon-windows.svg" alt="">
                         </div>
@@ -101,30 +117,39 @@
                             <h2>Windows</h2>
                             <p>Create and publish your own Windows apps.</p>
                         </div>
-                        <h6>Get started</h6>
+                        <div class="connect">
+                            <img src="https://www.microsoft.com/design/fluent/assets/images/arrow-black.svg" alt="">
+                            <span>Get started</span>
+                        </div>
                     </a>
                 </div>
                 <div class="col-xl-3 col-md-6 col-12">
-                    <a href="">
+                    <a href=""  data-aos="fade-up" data-aos-duration="3000">
                         <div class="img"><img src="https://www.microsoft.com/design/fluent/assets/images/icon-ios.svg"
                                 alt=""></div>
-                        <div class="words" data-aos="fade-up" data-aos-duration="3000">
+                        <div class="words">
                             <h2>iOS</h2>
                             <p>Take your custom apps to the mobile market.</p>
                         </div>
-                        <h6>Get started</h6>
+                        <div class="connect">
+                            <img src="https://www.microsoft.com/design/fluent/assets/images/arrow-black.svg" alt="">
+                            <span>Get started</span>
+                        </div>
                     </a>
                 </div>
                 <div class="col-xl-3 col-md-6 col-12">
-                    <a href="">
+                    <a href="" data-aos="fade-up" data-aos-duration="3000">
                         <div class="img"><img
                                 src="https://www.microsoft.com/design/fluent/assets/images/icon-android.svg" alt="">
                         </div>
-                        <div class="words" data-aos="fade-up" data-aos-duration="3000">
+                        <div class="words">
                             <h2>Android</h2>
                             <p>Take your custom apps to the mobile market.</p>
                         </div>
-                        <h6>Get started</h6>
+                        <div class="connect">
+                            <img src="https://www.microsoft.com/design/fluent/assets/images/arrow-black.svg" alt="">
+                            <span>Get started</span>
+                        </div>
                     </a>
                 </div>
             </div>
