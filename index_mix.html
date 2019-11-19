@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- bootstrary CSS套件 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- AOS CSS套件 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Document</title>
+    <style>
+        /* -------------------nav------------------------------------- */
+        *{
+            box-sizing: border-box;
+        }
+
+        /* 預設 */
+        .container {
+            width: 1536px;
+            margin: 0px auto;
+        }
+
+        @media (max-width: 1680px) {
+            .container {
+                width: 1336px;
+            }
+        }
+
+        @media (max-width: 1460px) {
+            .container {
+                width: 1136px;
+            }
+        }
+
+        @media (max-width: 1280px) {
+            .container {
+                width: 960px;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .container {
+                padding: 0px 30px;
+                width: 100%;
+            }
+        }
+
+        body {
+            height: 2000px;
+            margin: 0;
+            font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+        }
+
+        nav {
+            background-color: black;
+            color: white;
+            height: 48px;
+        }
+
+        nav .container {
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        nav .logo {
+            width: 190px;
+            height: 48px;
+            display: flex;
+            -webkit-box-pack: start;
+            justify-content: flex-start;
+            -webkit-box-align: center;
+            align-items: center;
+            flex: 0 0 auto;
+        }
+
+        @media (max-width: 1024px) {
+            nav .logo {
+                width: 60px;
+            }
+        }
+
+        @media (max-width: 670px) {
+            nav .logo {
+                width: 30px;
+            }
+        }
+
+        nav .logo a {
+            margin-top: 4px;
+        }
+
+        nav .logo svg {
+            width: 16px;
+        }
+
+        nav svg .microsoft-red {
+            fill: rgb(255, 255, 255);
+            transition: all 200ms linear 0ms;
+        }
+
+        nav svg .microsoft-green {
+            fill: rgb(255, 255, 255);
+            transition: all 200ms linear 0ms;
+        }
+
+        nav svg .microsoft-blue {
+            fill: rgb(255, 255, 255);
+            transition: all 200ms linear 0ms;
+        }
+
+        nav svg .microsoft-yellow {
+            fill: rgb(255, 255, 255);
+            transition: all 200ms linear 0ms;
+        }
+
+        nav .website_title h1 {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 49px;
+        }
+
+        nav .nav-links ul {
+            display: flex;
+            margin: 0;
+            padding: 0 60px 0 120px;
+            list-style: none;
+            justify-content: space-between;
+        }
+
+        nav ul a {
+            color: white;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            flex-grow: 1;
+        }
+
+        .mobile_nav_toggle {
+            display: none;
+            position: absolute;
+            top: 0px;
+            right: 10px;
+            height: 48px;
+            width: 48px;
+        }
+
+        .mobile_nav_toggle span {
+            position: absolute;
+            width: 24px;
+            height: 2px;
+            background-color: rgb(255, 255, 255);
+            transition: all 200ms linear 0ms;
+        }
+
+        .mobile_nav_toggle span.top-bar {
+            top: 17px;
+            left: 12px;
+            transform: rotate(0deg);
+        }
+
+        .mobile_nav_toggle span.middle-bar {
+            top: 24px;
+            left: 12px;
+            opacity: 1;
+        }
+
+        .mobile_nav_toggle span.bottom-bar {
+            top: 31px;
+            left: 12px;
+            transform: rotate(0deg);
+        }
+
+        .mobile_nav {
+            /* display: none; */
+            opacity: 0;
+            pointer-events: none;
+            position: fixed;
+            top: 48px;
+            left: 0;
+            width: 100%;
+            height: calc(100vh - 48px);
+            background-color: black;
+            transition: 1s;
+        }
+
+        .mobile_nav.active {
+            /* display: block; */
+            opacity: 1;
+            pointer-events: all;
+        }
+
+
+        .mobile_nav ul {
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+        }
+
+        .mobile_nav ul a {
+            color: rgb(255, 255, 255);
+            position: relative;
+            display: block;
+            text-decoration: none;
+            padding: 25px 30px;
+        }
+
+
+        /* mobile 選單出現 */
+        @media (max-width: 767px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile_nav_toggle {
+                display: block;
+            }
+        }
+        /* -------------------mid------------------------------------- */
+        .info {
+            overflow: hidden;
+        }
+
+        .info .container {
+            width: 100%;
+            height: 384px;
+            display: block;
+        }
+
+        .info .container .row {
+            width: 100%;
+            height: 100%;
+        }
+
+        .info a {
+            display: block;
+            color: black;
+            text-decoration: none;
+        }
+
+        .info .col-xl-3:nth-child(1):after {
+            content: "";
+            width: 500px;
+            height: 100%;
+            background-color: rgb(34, 128, 200);
+            display: block;
+            position: absolute;
+            left: -180%;
+            top: 0;
+        }
+
+        .info .col-xl-3:nth-child(4):after {
+            content: "";
+            width: 500px;
+            height: 100%;
+            background-color: rgb(95, 207, 99);
+            display: block;
+            position: absolute;
+            right: -180%;
+            top: 0;
+        }
+
+        .img {
+            margin: 26px;
+        }
+
+        .info .col-xl-3:nth-child(1) {
+            background-color: rgb(37, 142, 222);
+        }
+        .info .col-xl-3:nth-child(1):hover {
+            background-color:rgb(12, 117, 197);
+        }
+
+        .info .col-xl-3:nth-child(2) {
+            background-color: rgb(79, 229, 255);
+        }
+        .info .col-xl-3:nth-child(2):hover {
+            background-color: rgb(54, 204, 230);
+        }
+
+        .info .col-xl-3:nth-child(3) {
+            background-color: rgb(207, 143, 255);
+        }
+        .info .col-xl-3:nth-child(3):hover {
+            background-color: rgb(182, 118, 230);
+        }
+
+        .info .col-xl-3:nth-child(4) {
+            background-color: rgb(105, 229, 110);
+        }
+        .info .col-xl-3:nth-child(4):hover {
+            background-color: rgb(80, 204, 85);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- -------------------------------nav----------------------------- -->
+    <nav>
+        <div class="container">
+            <div class="logo">
+                <a href="">
+                    <svg viewBox="0 0 24 24">
+                        <rect class="microsoft-red" width="11" height="11"></rect>
+                        <rect class="microsoft-green" x="13" width="11" height="11"></rect>
+                        <rect class="microsoft-blue" y="13" width="11" height="11"></rect>
+                        <rect class="microsoft-yellow" x="13" y="13" width="11" height="11"></rect>
+                    </svg>
+                </a>
+            </div>
+            <div class="website_title">
+                <h1>Fluent Design System</h1>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li>
+                        <a href="">Web</a>
+                    </li>
+                    <li>
+                        <a href="">Windows</a>
+                    </li>
+                    <li>
+                        <a href="">iOS</a>
+                    </li>
+                    <li>
+                        <a href="">Android</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="mobile_nav_toggle">
+                <span class="top-bar"></span>
+                <span class="middle-bar"></span>
+                <span class="bottom-bar"></span>
+            </div>
+            <div class="mobile_nav">
+                <ul>
+                    <li>
+                        <a href="">Web</a>
+                    </li>
+                    <li>
+                        <a href="">Windows</a>
+                    </li>
+                    <li>
+                        <a href="">iOS</a>
+                    </li>
+                    <li>
+                        <a href="">Android</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<!-- -------------------mid------------------------------------- -->
+<div class="info">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-3 col-md-6 col-12">
+                <a href="" data-aos="fade-up" data-aos-duration="2000">
+                    <div class="img"><img src="https://www.microsoft.com/design/fluent/assets/images/icon-globe.svg"
+                            alt=""></div>
+                    <div class="words">
+                        <h2>Web</h2>
+                        <p>Create your own web apps and add-ins.</p>
+                    </div>
+                    <div class="connect">
+                        <img src="https://www.microsoft.com/design/fluent/assets/images/arrow-black.svg" alt="">
+                        <span>Get started</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-xl-3 col-md-6 col-12">
+                <a href="" data-aos="fade-up" data-aos-duration="2000">
+                    <div class="img"><img
+                            src="https://www.microsoft.com/design/fluent/assets/images/icon-windows.svg" alt="">
+                    </div>
+                    <div class="words">
+                        <h2>Windows</h2>
+                        <p>Create and publish your own Windows apps.</p>
+                    </div>
+                    <div class="connect">
+                        <img src="https://www.microsoft.com/design/fluent/assets/images/arrow-black.svg" alt="">
+                        <span>Get started</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-xl-3 col-md-6 col-12">
+                <a href=""  data-aos="fade-up" data-aos-duration="3000">
+                    <div class="img"><img src="https://www.microsoft.com/design/fluent/assets/images/icon-ios.svg"
+                            alt=""></div>
+                    <div class="words">
+                        <h2>iOS</h2>
+                        <p>Take your custom apps to the mobile market.</p>
+                    </div>
+                    <div class="connect">
+                        <img src="https://www.microsoft.com/design/fluent/assets/images/arrow-black.svg" alt="">
+                        <span>Get started</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-xl-3 col-md-6 col-12">
+                <a href="" data-aos="fade-up" data-aos-duration="3000">
+                    <div class="img"><img
+                            src="https://www.microsoft.com/design/fluent/assets/images/icon-android.svg" alt="">
+                    </div>
+                    <div class="words">
+                        <h2>Android</h2>
+                        <p>Take your custom apps to the mobile market.</p>
+                    </div>
+                    <div class="connect">
+                        <img src="https://www.microsoft.com/design/fluent/assets/images/arrow-black.svg" alt="">
+                        <span>Get started</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- bootstrary JS套件 -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+crossorigin="anonymous"></script>
+<!-- aos JS套件 -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init();
+</script>
+
+</body>
+
+</html>
