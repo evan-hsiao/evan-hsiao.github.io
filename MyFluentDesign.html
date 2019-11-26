@@ -7,298 +7,494 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>My Fluent Design</title>
     <style>
+        body {
+            background: rgb(0, 0, 0);
+        }
 
+        .root {
+            height: 100%;
+            display: block;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .container_all {
+            font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+            -webkit-font-smoothing: antialiased;
+            font-size: 14px;
+            font-weight: 400;
+            color: rgb(51, 51, 51);
+        }
+
+        /* ------------------------------------------------------------------------------------------------ */
+        /* 頁首  nav_bar */
+        .nav_bar {
+            width: 100%;
+            height: 48px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: 10;
+            background-color: transparent;
+        }
+
+        .header_inner {
+            display: flex;
+            -webkit-box-pack: start;
+            justify-content: flex-start;
+            width: 1536px;
+            margin: 0px auto;
+        }
+
+        .header_inner .logo {
+            width: 190px;
+            height: 48px;
+            display: flex;
+            -webkit-box-pack: start;
+            justify-content: flex-start;
+            -webkit-box-align: center;
+            align-items: center;
+            flex: 0 0 auto;
+        }
+
+        .header_inner .logo a {
+            opacity: 1;
+            height: 16px;
+            display: block;
+            margin: 2px 0px 0px;
+        }
+
+        /* windows logo icon */
+        .header_inner .logo a svg {
+            width: 16px;
+        }
+
+        .header_inner .logo a svg .microsoft-red {
+            fill: rgb(255, 255, 255);
+            transition: all 200ms linear 0ms;
+        }
+
+        .header_inner .logo a svg .microsoft-green {
+            fill: rgb(255, 255, 255);
+            transition: all 200ms linear 0ms;
+        }
+
+        .header_inner .logo a svg .microsoft-blue {
+            fill: rgb(255, 255, 255);
+            transition: all 200ms linear 0ms;
+        }
+
+        .header_inner .logo a svg .microsoft-yellow {
+            fill: rgb(255, 255, 255);
+            transition: all 200ms linear 0ms;
+        }
+        
+        /* .header_inner .site_title */
+        .header_inner .site_title {
+            height: 48px;
+            width: auto;
+            align-content: center;
+            flex: 0 0 auto;
+        }
+
+        .header_inner .site_title h1 {
+            color: rgb(255, 255, 255);
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 49px;
+        }
+
+        .header_inner .site_title h1 a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            transition: color 200ms linear 0ms;
+        }
+        /* .header_inner .list_inner */
+        .header_inner .list_inner {
+            height: 48px;
+            flex: 1 1 auto;
+            padding: 0px 120px 0px 420px;
+        }
+        .header_inner .list_inner .list_link{
+
+        }
+        .header_inner .list_inner .list_link .link{
+
+}
+
+        /* ------------------------------------------------------------------------------------------------ */
+        /* 主頁內容 style_main */
+        .style_main {
+            width: 100%;
+            position: relative;
+            overflow-x: hidden;
+            margin: 48px 0px 0px;
+        }
+
+        /* 第7層space */
+        .space_img {
+            width: 100%;
+            min-height: 768px;
+            background: url(https://www.microsoft.com/design/fluent/assets/images/space.jpg) 50% center / cover no-repeat fixed rgb(0, 0, 0);
+        }
+
+
+
+        /* 底部選單 */
+        .bt_link_icon svg {
+            max-width: 20px;
+            height: auto;
+        }
+
+        /* ------------------------------------------------------------------------------------------------ */
+
+        /* 底層 footer_all*/
+        .footer_all {
+            width: 100%;
+            height: 48px;
+        }
+
+        .footer_inner {
+            display: flex;
+            -webkit-box-pack: justify;
+            justify-content: space-between;
+            width: 1536px;
+            margin: 0px auto;
+        }
+
+        .footer_logo {
+            width: 190px;
+            height: 48px;
+            display: flex;
+            -webkit-box-pack: start;
+            justify-content: flex-start;
+            -webkit-box-align: center;
+            align-items: center;
+            flex: 0 0 auto;
+        }
+
+        .footer_logo svg {
+            width: 16px;
+        }
+
+        .footer_nav {
+            height: 48px;
+            flex: 1 1 auto;
+            padding: 0px 100px 0px 0px;
+        }
+
+        .footer_nav_link_all {
+            width: 100%;
+            display: flex;
+            -webkit-box-pack: justify;
+            justify-content: space-between;
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+        }
+
+        .footer_nav_link {
+            width: auto;
+            color: rgb(255, 255, 255);
+            font-size: 12px;
+            line-height: 48px;
+            font-weight: 400;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .footer_nav_link a {
+            color: rgb(255, 255, 255);
+            position: relative;
+            text-decoration: none;
+        }
+
+        .footer_icon_link svg {
+            width: 20px;
+        }
     </style>
 </head>
 
 <body>
-    <header class="nav_bar">
-        <div class="header_inner">
-            <div class="logo"></div>
-            <div class="site_title">Fluent Design System</div>
-            <div class="list_inner">
-                <ul class="list_link">
-                    <!-- 連結 -->
-                    <li class="link"><a href="">Web</a></li>
-                    <li class="link"><a href="">Windwos</a></li>
-                    <li class="link"><a href="">iOS</a></li>
-                    <li class="link"><a href="">Android</a></li>
-                </ul>
-            </div>
-        </div>
-        <!-- mobile模式選單圖像 -->
-        <button class="mobile_pic">
-            <span class="top"></span>
-            <span class="mid"></span>
-            <span class="bottom"></span>
-        </button>
-        <!-- mobile模式選單 -->
-        <nav class="mobile_menu">
-            <ul>
-                <li class="mobile_link"><a href="">Web</a></li>
-                <li class="mobile_link"><a href="">Windows</a></li>
-                <li class="mobile_link"><a href="">iOS</a></li>
-                <li class="mobile_link"><a href="">Android</a></li>
-            </ul>
-        </nav>
-    </header>
-    <!-- 主頁內容 -->
-    <main class="style_main">
-        <!-- 第1層Fluent Design System -->
-        <div class="fluent_design_system">
-            <div class="main_top_inner">
-                <!-- 第1層左半邊文字區塊 -->
-                <div class="main_top_innerL">
-                    <div class="innerL_title">Fluent Design System</div>
-                    <div class="innerL_block">
-                        <div class="block_all">
-                            <p>Fluent brings the fundamentals of principled design, innovation in technology, and
-                                customer needs together as one. It’s a collective approach to creating simplicity and
-                                coherence through a shared, open design system across platforms.</p>
-                            <p>Open ecosystem, open design system.</p>
+    <div class="root">
+        <div class="container_all">
+            <!-- 頁首 nav_bar -->
+            <header class="nav_bar">
+                <div class="header_inner">
+                    <div class="logo">
+                        <a href="https://www.microsoft.com">
+                            <svg viewBox="0 0 24 24">
+                                <rect class="microsoft-red" width="11" height="11"></rect>
+                                <rect class="microsoft-green" x="13" width="11" height="11"></rect>
+                                <rect class="microsoft-blue" y="13" width="11" height="11"></rect>
+                                <rect class="microsoft-yellow" x="13" y="13" width="11" height="11"></rect>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="site_title">
+                        <h1> <a title="Fluent Design System" href="#/">Fluent Design System</a></h1>
+                    </div>
+                    <div class="list_inner">
+                        <ul class="list_link">
+                            <!-- 連結 -->
+                            <li class="link"><a href="">Web</a></li>
+                            <li class="link"><a href="">Windwos</a></li>
+                            <li class="link"><a href="">iOS</a></li>
+                            <li class="link"><a href="">Android</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- mobile模式選單圖像 .mobile_pic > .top+.mid + .bottom -->
+                <button class="mobile_pic">
+                    <span class="top"></span>
+                    <span class="mid"></span>
+                    <span class="bottom"></span>
+                </button>
+                <!-- mobile模式選單 -->
+                <nav class="mobile_menu">
+                    <ul>
+                        <li class="mobile_link"><a href="">Web</a></li>
+                        <li class="mobile_link"><a href="">Windows</a></li>
+                        <li class="mobile_link"><a href="">iOS</a></li>
+                        <li class="mobile_link"><a href="">Android</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <!-- 主頁內容 style_main-->
+            <main class="style_main">
+                <!-- 第1層Fluent Design System -->
+                <div class="fluent_design_system">
+                    <div class="main_top_inner">
+                        <!-- 第1層左半邊文字區塊 -->
+                        <div class="main_top_innerL">
+                            <div class="innerL_title">Fluent Design System</div>
+                            <div class="innerL_block">
+                                <div class="block_all">
+                                    <p>Fluent brings the fundamentals of principled design, innovation in technology,
+                                        and
+                                        customer needs together as one. It’s a collective approach to creating
+                                        simplicity and
+                                        coherence through a shared, open design system across platforms.</p>
+                                    <p>Open ecosystem, open design system.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 第1層右半邊圖形區塊 -->
+                        <div class="main_top_innerR">
+                            <img class="innerR_imgR"
+                                src="https://www.microsoft.com/design/fluent/assets/images/line-white-01.svg" alt="">
+                            <img class="innerR_imgL"
+                                src="https://www.microsoft.com/design/fluent/assets/images/line-white-02.svg" alt="">
+                            <img class="innerR_imgM"
+                                src="https://www.microsoft.com/design/fluent/assets/images/icon-fluent@1x.png" alt="">
                         </div>
                     </div>
                 </div>
-                <!-- 第1層右半邊圖形區塊 -->
-                <div class="main_top_innerR">
-                    <img class="innerR_imgR"
-                        src="https://www.microsoft.com/design/fluent/assets/images/line-white-01.svg" alt="">
-                    <img class="innerR_imgL"
-                        src="https://www.microsoft.com/design/fluent/assets/images/line-white-02.svg" alt="">
-                    <img class="innerR_imgM"
-                        src="https://www.microsoft.com/design/fluent/assets/images/icon-fluent@1x.png" alt="">
-                </div>
-            </div>
-        </div>
-        <!-- 中間選單 -->
-        <div class="main_link">
-            <div class="main_mid_inner">
-                <div class="mid_inner_all">
-                    <div class="mid_inner_link">
-                        <a href="">
-                            <div class="icon">
-                                <img src="https://www.microsoft.com/design/fluent/assets/images/icon-globe.svg" alt="">
-                            </div>
-                            <div class="mid_text">
-                                <h2>Web</h2>
-                                <p>Create your own web apps and add-ins.</p>
-                            </div>
-                            <div class="bottom_text">
-                                <img src="https://www.microsoft.com/design/fluent/assets/images/arrow-black.svg" alt="">
-                                <span>Get started</span>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="mid_inner_link">
-                        <a href="">
-                            <div class="icon">
-                                <img src="https://www.microsoft.com/design/fluent/assets/images/icon-windows.svg"
-                                    alt="">
-                            </div>
-                            <div class="mid_text">
-                                <h2>Windws</h2>
-                                <p>Create and publish your own Windows apps.</p>
-                            </div>
-                            <div class="bottom_text">
-                                <img src="https://www.microsoft.com/design/fluent/assets/images/arrow-black.svg" alt="">
-                                <span>Get started</span>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="mid_inner_link">
-                        <a href="">
-                            <div class="icon">
-                                <img src="https://www.microsoft.com/design/fluent/assets/images/icon-ios.svg" alt="">
-                            </div>
-                            <div class="mid_text">
-                                <h2>iOS</h2>
-                                <p>Take your custom apps to the mobile market.</p>
-                            </div>
-                            <div class="bottom_text">
-                                <img src="https://www.microsoft.com/design/fluent/assets/images/arrow-black.svg" alt="">
-                                <span>Get started</span>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="mid_inner_link">
-                        <a href="">
-                            <div class="icon">
-                                <img src="https://www.microsoft.com/design/fluent/assets/images/icon-android.svg"
-                                    alt="">
-                            </div>
-                            <div class="mid_text">
-                                <h2>Android</h2>
-                                <p>Take your custom apps to the mobile market.</p>
-                            </div>
-                            <div class="bottom_text">
-                                <img src="https://www.microsoft.com/design/fluent/assets/images/arrow-black.svg" alt="">
-                                <span>Get started</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- 第2層Natural on every device -->
-        <div class="every_device">
-            <div class="device_inner">
-                <div class="device_inner_title">
-                    <h2>Natural on<br>every device</h2>
-                </div>
-                <div class="device_inner_content">
-                    <div class="conten_block">
-                        <p>People move and shift across devices and platforms throughout their day. From laptops to
-                            phones, from PCs to holograms. From office to living room, from real to virtual. Experiences
-                            seamlessly move and shift with them.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- 第3層sphere -->
-        <div class="sphere">
-            <div class="sphere_imgR"><img src="https://www.microsoft.com/design/fluent/assets/images/rect-white-01.svg"
-                    alt=""></div>
-            <div class="sphere_imgL"><img src="https://www.microsoft.com/design/fluent/assets/images/line-white-03.svg"
-                    alt=""></div>
-            <div class="sphere_imgM"><img src="https://www.microsoft.com/design/fluent/assets/images/sphere@1x.png"
-                    alt=""></div>
-        </div>
-        <!-- 第3.5層文字區塊 -->
-        <div class="sphere_text">
-            <div class="sphere_text_inner">
-                <div class="sphere_text_content">
-                    <p>When design is intuitive, people are inspired to move forward. They’re understood and their
-                        behavior is anticipated. Experiences adapt to their needs, intent, and context.</p>
-                </div>
-            </div>
-        </div>
-        <!-- 第4層Intuitive and powerful -->
-        <div class="intuitive_and">
-            <div class="intuitive_title_inner">
-                <div class="title_inner_text">
-                    <h2>Intuitive and<br>powerful</h2>
-                </div>
-            </div>
-            <div>
-                <div class="intuitive_title_img">
-                    <img src="https://www.microsoft.com/design/fluent/assets/images/terraforma@1x.png" alt="">
-                </div>
-            </div>
-
-        </div>
-        <!-- 第5層Design -->
-        <div class="design">
-            <div class="design_inner">
-                <div class="design_inner_img">
-                    <div class="design_inner_img_top">
-                        <div>
-                            <img src="https://www.microsoft.com/design/fluent/assets/images/plane-outline.svg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="design_inner_img">
-                    <h2>De—</h2>
-                </div>
-                <div class="design_inner_img">
-                    <h2>sign</h2>
-                </div>
-                <div class="design_inner_img"><img
-                        src="https://www.microsoft.com/design/fluent/assets/images/line-black-01.svg" alt=""></div>
-            </div>
-        </div>
-        <!-- 第6層Engaging and immersive -->
-        <div class="engaging_and">
-            <div class="engaging_text">
-                <div class="engaging_title">
-                    <h2>Engaging and <br>immersive </h2>
-                </div>
-                <div class="engaging_title_content">
-                    <div class="title_content_block">
-                        <p>Experiences feel connected to the physical world-in the weave and fold of fundamental
-                            materials. Spaces feel clean, light and open. They draw people in, bring them together, and
-                            help them focus on what they’re trying to achieve.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="engaging_img">
-                <img src="https://www.microsoft.com/design/fluent/assets/images/icon-arrangement@1x.png" alt="">
-            </div>
-        </div>
-        <!-- 第7層space -->
-        <div class="space_img">
-            <div class="space_img_inner">
-                <div class="fluent_img">
-                    <img src="https://www.microsoft.com/design/fluent/assets/images/icon-fluent-solid.svg" alt=""></div>
-                <div class="line_img">
-                    <img src="https://www.microsoft.com/design/fluent/assets/images/line-white-01.svg" alt=""></div>
-                <div class="WhiteRect_img">
-                    <img src="https://www.microsoft.com/design/fluent/assets/images/rect-white-02.svg" alt=""></div>
-                <div class="WhitePlan_img">
-                    <img src="https://www.microsoft.com/design/fluent/assets/images/rect-white-03.svg" alt=""></div>
-                <div class="lilacRect_img">
-                    <img src="https://www.microsoft.com/design/fluent/assets/images/rect-lilac-01.svg" alt=""></div>
-            </div>
-        </div>
-        <!-- 底部選單 -->
-        <div class="bottom_link">
-            <div class="bottom_link_inner">
-                <div class="bt_link_inner_block">
-                    <div class="bt_inner_link">
-                        <a
-                            href="https://www.theverge.com/2019/4/29/18515776/microsoft-design-open-fluent-prototypes-history">
-                            <div class="bt_link_text">
-                                <p>How Microsoft learned from the past to redesign its future</p>
-                            </div>
-                            <div class="bt_link_img">
-                                <div class="bt_link_icon">
-                                    <svg width="195px" height="195px">
-                                        <path d="M0,0v195h195V0H0z M162,46.2l-10.5,10c-0.9,0.7-1.3,1.8-1.2,2.9v73.7c-0.2,1.1,0.3,2.2,1.2,2.9l10.2,10v2.2
-    h-51.4v-2.2l10.6-10.3c1-1,1-1.3,1-2.9V73l-29.4,74.7h-4L54.4,73v50.1c-0.3,2.1,0.4,4.2,1.9,5.7L70,145.6v2.2H31v-2.2l13.8-16.7
-    c1.5-1.5,2.1-3.7,1.8-5.7v-58c0.2-1.6-0.5-3.2-1.7-4.3L32.7,46.2V44h38l29.4,64.4L125.8,44H162V46.2z"></path>>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="bt_link_title">
-                                <label for="">Microsoft Design</label>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="bt_inner_link">
-                        <div class="bt_inner_link">
-                            <a
-                                href="https://medium.com/microsoft-design/evolving-the-microsoft-fluent-design-system-9b37fb890c82">
-                                <div class="bt_link_text">
-                                    <p>Evolving the Microsoft Fluent Design System</p>
-                                </div>
-                                <div class="bt_link_img">
-                                    <div class="bt_link_icon">
-                                        <svg width="195px" height="195px">
-                                            <path d="M0,0v195h195V0H0z M162,46.2l-10.5,10c-0.9,0.7-1.3,1.8-1.2,2.9v73.7c-0.2,1.1,0.3,2.2,1.2,2.9l10.2,10v2.2
-                h-51.4v-2.2l10.6-10.3c1-1,1-1.3,1-2.9V73l-29.4,74.7h-4L54.4,73v50.1c-0.3,2.1,0.4,4.2,1.9,5.7L70,145.6v2.2H31v-2.2l13.8-16.7
-                c1.5-1.5,2.1-3.7,1.8-5.7v-58c0.2-1.6-0.5-3.2-1.7-4.3L32.7,46.2V44h38l29.4,64.4L125.8,44H162V46.2z">
-                                            </path>>
-                                        </svg>
+                <!-- 中間選單 -->
+                <div class="main_link">
+                    <div class="main_mid_inner">
+                        <div class="mid_inner_all">
+                            <div class="mid_inner_link">
+                                <a href="">
+                                    <div class="icon">
+                                        <img src="https://www.microsoft.com/design/fluent/assets/images/icon-globe.svg"
+                                            alt="">
                                     </div>
-                                </div>
-                                <div class="bt_link_title">
-                                    <label for="">Microsoft Design</label>
-                                </div>
-                            </a>
+                                    <div class="mid_text">
+                                        <h2>Web</h2>
+                                        <p>Create your own web apps and add-ins.</p>
+                                    </div>
+                                    <div class="bottom_text">
+                                        <img src="https://www.microsoft.com/design/fluent/assets/images/arrow-black.svg"
+                                            alt="">
+                                        <span>Get started</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="mid_inner_link">
+                                <a href="">
+                                    <div class="icon">
+                                        <img src="https://www.microsoft.com/design/fluent/assets/images/icon-windows.svg"
+                                            alt="">
+                                    </div>
+                                    <div class="mid_text">
+                                        <h2>Windws</h2>
+                                        <p>Create and publish your own Windows apps.</p>
+                                    </div>
+                                    <div class="bottom_text">
+                                        <img src="https://www.microsoft.com/design/fluent/assets/images/arrow-black.svg"
+                                            alt="">
+                                        <span>Get started</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="mid_inner_link">
+                                <a href="">
+                                    <div class="icon">
+                                        <img src="https://www.microsoft.com/design/fluent/assets/images/icon-ios.svg"
+                                            alt="">
+                                    </div>
+                                    <div class="mid_text">
+                                        <h2>iOS</h2>
+                                        <p>Take your custom apps to the mobile market.</p>
+                                    </div>
+                                    <div class="bottom_text">
+                                        <img src="https://www.microsoft.com/design/fluent/assets/images/arrow-black.svg"
+                                            alt="">
+                                        <span>Get started</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="mid_inner_link">
+                                <a href="">
+                                    <div class="icon">
+                                        <img src="https://www.microsoft.com/design/fluent/assets/images/icon-android.svg"
+                                            alt="">
+                                    </div>
+                                    <div class="mid_text">
+                                        <h2>Android</h2>
+                                        <p>Take your custom apps to the mobile market.</p>
+                                    </div>
+                                    <div class="bottom_text">
+                                        <img src="https://www.microsoft.com/design/fluent/assets/images/arrow-black.svg"
+                                            alt="">
+                                        <span>Get started</span>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
-                        <div class="bt_inner_link">
+                    </div>
+                </div>
+                <!-- 第2層Natural on every device -->
+                <div class="every_device">
+                    <div class="device_inner">
+                        <div class="device_inner_title">
+                            <h2>Natural on<br>every device</h2>
+                        </div>
+                        <div class="device_inner_content">
+                            <div class="conten_block">
+                                <p>People move and shift across devices and platforms throughout their day. From laptops
+                                    to
+                                    phones, from PCs to holograms. From office to living room, from real to virtual.
+                                    Experiences
+                                    seamlessly move and shift with them.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 第3層sphere -->
+                <div class="sphere">
+                    <div class="sphere_imgR"><img
+                            src="https://www.microsoft.com/design/fluent/assets/images/rect-white-01.svg" alt=""></div>
+                    <div class="sphere_imgL"><img
+                            src="https://www.microsoft.com/design/fluent/assets/images/line-white-03.svg" alt=""></div>
+                    <div class="sphere_imgM"><img
+                            src="https://www.microsoft.com/design/fluent/assets/images/sphere@1x.png" alt=""></div>
+                </div>
+                <!-- 第3.5層文字區塊 -->
+                <div class="sphere_text">
+                    <div class="sphere_text_inner">
+                        <div class="sphere_text_content">
+                            <p>When design is intuitive, people are inspired to move forward. They’re understood and
+                                their
+                                behavior is anticipated. Experiences adapt to their needs, intent, and context.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 第4層Intuitive and powerful -->
+                <div class="intuitive_and">
+                    <div class="intuitive_title_inner">
+                        <div class="title_inner_text">
+                            <h2>Intuitive and<br>powerful</h2>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="intuitive_title_img">
+                            <img src="https://www.microsoft.com/design/fluent/assets/images/terraforma@1x.png" alt="">
+                        </div>
+                    </div>
+
+                </div>
+                <!-- 第5層Design -->
+                <div class="design">
+                    <div class="design_inner">
+                        <div class="design_inner_img">
+                            <div class="design_inner_img_top">
+                                <div>
+                                    <img src="https://www.microsoft.com/design/fluent/assets/images/plane-outline.svg"
+                                        alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="design_inner_img">
+                            <h2>De—</h2>
+                        </div>
+                        <div class="design_inner_img">
+                            <h2>sign</h2>
+                        </div>
+                        <div class="design_inner_img"><img
+                                src="https://www.microsoft.com/design/fluent/assets/images/line-black-01.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!-- 第6層Engaging and immersive -->
+                <div class="engaging_and">
+                    <div class="engaging_text">
+                        <div class="engaging_title">
+                            <h2>Engaging and <br>immersive </h2>
+                        </div>
+                        <div class="engaging_title_content">
+                            <div class="title_content_block">
+                                <p>Experiences feel connected to the physical world-in the weave and fold of fundamental
+                                    materials. Spaces feel clean, light and open. They draw people in, bring them
+                                    together, and
+                                    help them focus on what they’re trying to achieve.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="engaging_img">
+                        <img src="https://www.microsoft.com/design/fluent/assets/images/icon-arrangement@1x.png" alt="">
+                    </div>
+                </div>
+                <!-- 第7層space -->
+                <div class="space_img">
+                    <div class="space_img_inner">
+                        <div class="fluent_img">
+                            <img src="https://www.microsoft.com/design/fluent/assets/images/icon-fluent-solid.svg"
+                                alt=""></div>
+                        <div class="line_img">
+                            <img src="https://www.microsoft.com/design/fluent/assets/images/line-white-01.svg" alt="">
+                        </div>
+                        <div class="WhiteRect_img">
+                            <img src="https://www.microsoft.com/design/fluent/assets/images/rect-white-02.svg" alt="">
+                        </div>
+                        <div class="WhitePlan_img">
+                            <img src="https://www.microsoft.com/design/fluent/assets/images/rect-white-03.svg" alt="">
+                        </div>
+                        <div class="lilacRect_img">
+                            <img src="https://www.microsoft.com/design/fluent/assets/images/rect-lilac-01.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!-- 底部選單 -->
+                <div class="bottom_link">
+                    <div class="bottom_link_inner">
+                        <div class="bt_link_inner_block">
                             <div class="bt_inner_link">
                                 <a
-                                    href="https://medium.com/microsoft-design/designing-for-scale-and-complexity-b788363fd1cc">
+                                    href="https://www.theverge.com/2019/4/29/18515776/microsoft-design-open-fluent-prototypes-history">
                                     <div class="bt_link_text">
-                                        <p>Designing for Scale and Complexity</p>
+                                        <p>How Microsoft learned from the past to redesign its future</p>
                                     </div>
                                     <div class="bt_link_img">
+                                        <!-- m icon -->
                                         <div class="bt_link_icon">
-                                            <svg width="195px" height="195px">
-                                                <path d="M0,0v195h195V0H0z M162,46.2l-10.5,10c-0.9,0.7-1.3,1.8-1.2,2.9v73.7c-0.2,1.1,0.3,2.2,1.2,2.9l10.2,10v2.2
-                h-51.4v-2.2l10.6-10.3c1-1,1-1.3,1-2.9V73l-29.4,74.7h-4L54.4,73v50.1c-0.3,2.1,0.4,4.2,1.9,5.7L70,145.6v2.2H31v-2.2l13.8-16.7
-                c1.5-1.5,2.1-3.7,1.8-5.7v-58c0.2-1.6-0.5-3.2-1.7-4.3L32.7,46.2V44h38l29.4,64.4L125.8,44H162V46.2z">
-                                                </path>>
+                                            <svg width="195px" height="195px" viewBox="0 0 195 195">
+                                                <path
+                                                    d="M0,0v195h195V0H0z M162,46.2l-10.5,10c-0.9,0.7-1.3,1.8-1.2,2.9v73.7c-0.2,1.1,0.3,2.2,1.2,2.9l10.2,10v2.2
+                                            h-51.4v-2.2l10.6-10.3c1-1,1-1.3,1-2.9V73l-29.4,74.7h-4L54.4,73v50.1c-0.3,2.1,0.4,4.2,1.9,5.7L70,145.6v2.2H31v-2.2l13.8-16.7
+                                            c1.5-1.5,2.1-3.7,1.8-5.7v-58c0.2-1.6-0.5-3.2-1.7-4.3L32.7,46.2V44h38l29.4,64.4L125.8,44H162V46.2z">
+                                                </path>
                                             </svg>
                                         </div>
                                     </div>
@@ -310,17 +506,19 @@
                             <div class="bt_inner_link">
                                 <div class="bt_inner_link">
                                     <a
-                                        href="https://medium.com/microsoft-design/designing-for-power-simplicity-9cddec615567">
+                                        href="https://medium.com/microsoft-design/evolving-the-microsoft-fluent-design-system-9b37fb890c82">
                                         <div class="bt_link_text">
-                                            <p>Designing for Power & Simplicity</p>
+                                            <p>Evolving the Microsoft Fluent Design System</p>
                                         </div>
                                         <div class="bt_link_img">
+                                            <!-- m icon -->
                                             <div class="bt_link_icon">
-                                                <svg width="195px" height="195px">
+                                                <svg width="195px" height="195px" viewBox="0 0 195 195">
                                                     <path d="M0,0v195h195V0H0z M162,46.2l-10.5,10c-0.9,0.7-1.3,1.8-1.2,2.9v73.7c-0.2,1.1,0.3,2.2,1.2,2.9l10.2,10v2.2
-                h-51.4v-2.2l10.6-10.3c1-1,1-1.3,1-2.9V73l-29.4,74.7h-4L54.4,73v50.1c-0.3,2.1,0.4,4.2,1.9,5.7L70,145.6v2.2H31v-2.2l13.8-16.7
-                c1.5-1.5,2.1-3.7,1.8-5.7v-58c0.2-1.6-0.5-3.2-1.7-4.3L32.7,46.2V44h38l29.4,64.4L125.8,44H162V46.2z">
-                                                    </path>>
+												h-51.4v-2.2l10.6-10.3c1-1,1-1.3,1-2.9V73l-29.4,74.7h-4L54.4,73v50.1c-0.3,2.1,0.4,4.2,1.9,5.7L70,145.6v2.2H31v-2.2l13.8-16.7
+												c1.5-1.5,2.1-3.7,1.8-5.7v-58c0.2-1.6-0.5-3.2-1.7-4.3L32.7,46.2V44h38l29.4,64.4L125.8,44H162V46.2z"></path>
+                                                </svg>
+                                                </path>
                                                 </svg>
                                             </div>
                                         </div>
@@ -329,74 +527,126 @@
                                         </div>
                                     </a>
                                 </div>
+                                <div class="bt_inner_link">
+                                    <div class="bt_inner_link">
+                                        <a
+                                            href="https://medium.com/microsoft-design/designing-for-scale-and-complexity-b788363fd1cc">
+                                            <div class="bt_link_text">
+                                                <p>Designing for Scale and Complexity</p>
+                                            </div>
+                                            <div class="bt_link_img">
+                                                <!-- m icon -->
+                                                <div class="bt_link_icon">
+                                                    <svg width="195px" height="195px" viewBox="0 0 195 195">
+                                                        <path
+                                                            d="M0,0v195h195V0H0z M162,46.2l-10.5,10c-0.9,0.7-1.3,1.8-1.2,2.9v73.7c-0.2,1.1,0.3,2.2,1.2,2.9l10.2,10v2.2
+                                                    h-51.4v-2.2l10.6-10.3c1-1,1-1.3,1-2.9V73l-29.4,74.7h-4L54.4,73v50.1c-0.3,2.1,0.4,4.2,1.9,5.7L70,145.6v2.2H31v-2.2l13.8-16.7
+                                                    c1.5-1.5,2.1-3.7,1.8-5.7v-58c0.2-1.6-0.5-3.2-1.7-4.3L32.7,46.2V44h38l29.4,64.4L125.8,44H162V46.2z">
+                                                        </path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="bt_link_title">
+                                                <label for="">Microsoft Design</label>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="bt_inner_link">
+                                        <div class="bt_inner_link">
+                                            <a
+                                                href="https://medium.com/microsoft-design/designing-for-power-simplicity-9cddec615567">
+                                                <div class="bt_link_text">
+                                                    <p>Designing for Power & Simplicity</p>
+                                                </div>
+                                                <div class="bt_link_img">
+                                                    <!-- m icon -->
+                                                    <div class="bt_link_icon">
+                                                        <svg width="195px" height="195px" viewBox="0 0 195 195">
+                                                            <path
+                                                                d="M0,0v195h195V0H0z M162,46.2l-10.5,10c-0.9,0.7-1.3,1.8-1.2,2.9v73.7c-0.2,1.1,0.3,2.2,1.2,2.9l10.2,10v2.2
+                                                        h-51.4v-2.2l10.6-10.3c1-1,1-1.3,1-2.9V73l-29.4,74.7h-4L54.4,73v50.1c-0.3,2.1,0.4,4.2,1.9,5.7L70,145.6v2.2H31v-2.2l13.8-16.7
+                                                        c1.5-1.5,2.1-3.7,1.8-5.7v-58c0.2-1.6-0.5-3.2-1.7-4.3L32.7,46.2V44h38l29.4,64.4L125.8,44H162V46.2z">
+                                                            </path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="bt_link_title">
+                                                    <label for="">Microsoft Design</label>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <!-- 第8層news -->
-        <div class="news_text">
-            <div class="news_text_inner">
-                <div class="nes_inner_block">
-                    <div class="inner_block_textL">
-                        <h2>Open starts with you</h2>
-                    </div>
-                    <div class="inner_block_textR">
-                        <div class="in_b_text">
-                            <p>We learn and improve the system based on feedback we receive from you—our customers,
-                                partners, and community of developers and designers. Work with us, work with each other,
-                                and we’ll all improve... together.</p>
-                        </div>
-                        <div class="in_b_img">
-                            <a href="https://www.linkedin.com/groups/13529340/">
-                                <img src="https://www.microsoft.com/design/fluent/assets/images/arrow-white.svg" alt="">
-                                <span>Join the community on LinkedIn</span>
-                            </a>
-                        </div>
-                    </div>
+                <!-- 第8層news-open starts with you -->
+                <div class="news_text">
+                    <div class="news_text_inner">
+                        <div class="nes_inner_block">
+                            <div class="inner_block_textL">
+                                <h2>Open starts with you</h2>
+                            </div>
+                            <div class="inner_block_textR">
+                                <div class="in_b_text">
+                                    <p>We learn and improve the system based on feedback we receive from you—our
+                                        customers,
+                                        partners, and community of developers and designers. Work with us, work with
+                                        each other,
+                                        and we’ll all improve... together.</p>
+                                </div>
+                                <div class="in_b_img">
+                                    <a href="https://www.linkedin.com/groups/13529340/">
+                                        <img src="https://www.microsoft.com/design/fluent/assets/images/arrow-white.svg"
+                                            alt="">
+                                        <span>Join the community on LinkedIn</span>
+                                    </a>
+                                </div>
+                            </div>
 
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </main>
-    <!-- 底層 -->
-    <footer>
-        <div class="footer_inner">
-            <div class="footer_logo">
-                <a href="https://www.microsoft.com">
-                    <svg viewBox="0 0 24 24">
-                        <rect class="microsoft-red" width="11" height="11"></rect>
-                        <rect class="microsoft-green" x="13" width="11" height="11"></rect>
-                        <rect class="microsoft-blue" y="13" width="11" height="11"></rect>
-                        <rect class="microsoft-yellow" x="13" y="13" width="11" height="11"></rect>
-                    </svg>
-                </a>
-            </div>
-            <div class="footer_nav">
-                <div class="footer_nav_link">
-                    <li>
-                        <a href="https://www.microsoft.com/en-us/sitemap.aspx">Sitemap</a>
-                    </li>
-                    <li>
-                        <a href="https://go.microsoft.com/fwlink/?LinkId=521839">Privacy & cookies</a>
-                    </li>
-                    <li>
-                        <a href="hhttps://go.microsoft.com/fwlink/?LinkID=206977">Terms of use</a>
-                    </li>
-                    <li>
-                        <a href="https://www.microsoft.com/trademarks">Trademarks</a>
-                    </li>
-                    <li>
-                        <a href="https://choice.microsoft.com/">About our ads</a>
-                    </li>
-                </div>
-            </div>
-            <div class="footer_icon_link">
-                <a href="https://www.linkedin.com/groups/13529340/">
-                    <svg x="0px" y="0px" viewBox="0 0 430.117 430.118">
-                        <g class="linkedin">
-                            <path d="M398.355,0H31.782C14.229,0,0.002,13.793,0.002,30.817v368.471
+            </main>
+            <!-- 底層 footer_all-->
+            <footer class="footer_all">
+                <div class="footer_inner">
+                    <div class="footer_logo">
+                        <a href="https://www.microsoft.com">
+                            <svg viewBox="0 0 24 24">
+                                <rect class="microsoft-red" width="11" height="11"></rect>
+                                <rect class="microsoft-green" x="13" width="11" height="11"></rect>
+                                <rect class="microsoft-blue" y="13" width="11" height="11"></rect>
+                                <rect class="microsoft-yellow" x="13" y="13" width="11" height="11"></rect>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="footer_nav">
+                        <ul class="footer_nav_link_all">
+                            <li class="footer_nav_link">
+                                <a href="https://www.microsoft.com/en-us/sitemap.aspx">Sitemap</a>
+                            </li>
+                            <li class="footer_nav_link">
+                                <a href="https://go.microsoft.com/fwlink/?LinkId=521839">Privacy & cookies</a>
+                            </li>
+                            <li class="footer_nav_link">
+                                <a href="hhttps://go.microsoft.com/fwlink/?LinkID=206977">Terms of use</a>
+                            </li>
+                            <li class="footer_nav_link">
+                                <a href="https://www.microsoft.com/trademarks">Trademarks</a>
+                            </li>
+                            <li class="footer_nav_link">
+                                <a href="https://choice.microsoft.com/">About our ads</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_icon_link">
+                        <a href="https://www.linkedin.com/groups/13529340/">
+                            <!-- in icon -->
+                            <svg x="0px" y="0px" viewBox="0 0 430.117 430.118">
+                                <g class="linkedin">
+                                    <path d="M398.355,0H31.782C14.229,0,0.002,13.793,0.002,30.817v368.471
                         c0,17.025,14.232,30.83,31.78,30.83h366.573c17.549,0,31.76-13.814,31.76-30.83V30.817C430.115,13.798,415.904,0,398.355,0z
                             M130.4,360.038H65.413V165.845H130.4V360.038z M97.913,139.315h-0.437c-21.793,0-35.92-14.904-35.92-33.563
                         c0-19.035,14.542-33.535,36.767-33.535c22.227,0,35.899,14.496,36.331,33.535C134.654,124.415,120.555,139.315,97.913,139.315z
@@ -404,63 +654,69 @@
                         c-1.736,4.144-2.166,9.94-2.166,15.728v108.468h-64.954c0,0,0.85-175.979,0-194.192h64.964v27.531
                         c8.624-13.229,24.035-32.1,58.534-32.1c42.76,0,74.822,27.739,74.822,87.414V360.038z M230.883,193.99
                         c0.111-0.182,0.266-0.401,0.42-0.614v0.614H230.883z"></path>
-                        </g>
-                    </svg>
-                </a>
-                <a href="https://dribbble.com/microsoft">
-                    <svg version="1.1" x="0px" y="0px" viewBox="0 0 31 31">
-                        <g class="dribbble">
-                            <path d="M15.5,0C6.9,0,0,6.9,0,15.5S6.9,31,15.5,31S31,24.1,31,15.5C31,6.9,24.1,0,15.5,0z M25.8,7.2
+                                </g>
+                            </svg>
+                        </a>
+                        <a href="https://dribbble.com/microsoft">
+                            <!-- globe icon-->
+                            <svg version="1.1" x="0px" y="0px" viewBox="0 0 31 31">
+                                <g class="dribbble">
+                                    <path d="M15.5,0C6.9,0,0,6.9,0,15.5S6.9,31,15.5,31S31,24.1,31,15.5C31,6.9,24.1,0,15.5,0z M25.8,7.2
                         c1.9,2.3,3,5.2,3,8.3c-3-0.6-6.2-0.7-9.2-0.4c-0.1-0.2-0.2-0.5-0.3-0.7c-0.3-0.6-0.6-1.3-0.9-1.9C21.2,11.3,23.8,9.5,25.8,7.2z
                         M15.5,2.3c3.2,0,6.4,1.2,8.8,3.3c-1.8,2.2-4.2,3.9-6.9,4.8c-1.5-2.7-3.1-5.3-4.9-7.7C13.4,2.4,14.5,2.3,15.5,2.3z M9.9,3.5
                         c1.8,2.5,3.4,5,4.9,7.7c-4,1-8.1,1.6-12.2,1.6C3.4,8.7,6.1,5.3,9.9,3.5z M2.3,15.5c0-0.1,0-0.3,0-0.4c4.6,0,9.2-0.6,13.6-1.9
                         c0.4,0.7,0.7,1.5,1.1,2.3l-0.5,0.2C9.6,17.8,6,23.9,5.7,24.4C3.5,21.9,2.3,18.8,2.3,15.5L2.3,15.5z M15.5,28.8
                         c-2.9,0-5.8-1-8.1-2.8c0.2-0.5,2.9-5.7,10.4-8.3h0.1c1.3,3.2,2.2,6.6,2.8,10C19,28.4,17.3,28.8,15.5,28.8z M22.9,26.5
                         c-0.6-3.2-1.4-6.4-2.6-9.4c2.8-0.4,5.6-0.2,8.2,0.6C28,21.2,25.9,24.5,22.9,26.5z"></path>
-                        </g>
-                    </svg>
-                </a>
-                <a href="https://twitter.com/MicrosoftDesign">
-                    <svg x="0px" y="0px" viewBox="0 0 31 25.2">
-                        <g class="twitter">
-                            <path d="M9.8,25.2c11.7,0,18.1-9.7,18.1-18.1c0-0.3,0-0.6,0-0.8c1.2-0.9,2.3-2,3.1-3.3c-1.2,0.5-2.4,0.9-3.6,1
+                                </g>
+                            </svg>
+                        </a>
+                        <a href="https://twitter.com/MicrosoftDesign">
+                            <!-- twitter icon -->
+                            <svg x="0px" y="0px" viewBox="0 0 31 25.2">
+                                <g class="twitter">
+                                    <path d="M9.8,25.2c11.7,0,18.1-9.7,18.1-18.1c0-0.3,0-0.6,0-0.8c1.2-0.9,2.3-2,3.1-3.3c-1.2,0.5-2.4,0.9-3.6,1
                         c1.3-0.8,2.3-2.1,2.8-3.5c-1.2,0.7-2.6,1.3-4,1.5c-2.4-2.6-6.4-2.7-9-0.3c-1.7,1.6-2.4,3.9-1.9,6.1C10.2,7.6,5.4,5.1,2.2,1.2
                         c-1.7,2.9-0.8,6.6,2,8.5c-1,0-2-0.3-2.9-0.8c0,0,0,0.1,0,0.1c0,3,2.1,5.6,5.1,6.2c-0.5,0.1-1.1,0.2-1.7,0.2c-0.4,0-0.8,0-1.2-0.1
                         c0.8,2.6,3.2,4.3,5.9,4.4c-2.3,1.8-5,2.7-7.9,2.7c-0.5,0-1,0-1.5-0.1C2.9,24.2,6.3,25.2,9.8,25.2">
-                            </path>
-                        </g>
-                    </svg>
-                </a>
-                <a href="https://medium.com/microsoft-design">
-                    <svg x="0px" y="0px" viewBox="0 0 32 32">
-                        <g class="medium">
-                            <path
-                                d="M32,32H0V0h32V32z M18,24.3h8.6c-0.1-0.2-0.2-0.4-0.3-0.5c-0.5-0.5-0.9-0.9-1.4-1.4
+                                    </path>
+                                </g>
+                            </svg>
+                        </a>
+                        <a href="https://medium.com/microsoft-design">
+                            <!-- m icon -->
+                            <svg x="0px" y="0px" viewBox="0 0 32 32">
+                                <g class="medium">
+                                    <path
+                                        d="M32,32H0V0h32V32z M18,24.3h8.6c-0.1-0.2-0.2-0.4-0.3-0.5c-0.5-0.5-0.9-0.9-1.4-1.4
                         c-0.1-0.2-0.2-0.4-0.3-0.6c0-4,0-8,0-12c0-0.2,0.1-0.4,0.3-0.6c0.5-0.5,1-0.9,1.4-1.4c0.1-0.2,0.2-0.3,0.3-0.5c-2,0-3.8,0-5.6,0
                         c-0.3,0-0.5,0.1-0.6,0.4c-1.3,3.3-2.6,6.5-3.9,9.7l-0.2,0.4l-0.2-0.5l-4.4-9.7c-0.1-0.2-0.2-0.3-0.4-0.3H5.6H5.3
                         c0.1,0.2,0.2,0.4,0.3,0.6c0.6,0.7,1.2,1.4,1.8,2.1c0.2,0.3,0.3,0.6,0.3,0.9c0,3.1,0,6.2,0,9.3c0,0.4-0.1,0.9-0.4,1.2
                         c-0.7,0.8-1.3,1.6-1.9,2.4C5.2,23.8,5.1,24,5,24.2h6.5c-0.1-0.2-0.1-0.4-0.3-0.6c-0.7-0.8-1.4-1.6-2-2.5C9.1,20.9,9,20.6,9,20.3
                         c0-2.6,0-5.2,0-7.8c0-0.1,0-0.2,0-0.3c0.1,0.2,0.2,0.3,0.2,0.5l5.2,11.3c0.1,0.2,0.3,0.4,0.5,0.4c0.3,0,0.4-0.2,0.4-0.4l3.6-9.2
                         l1-2.6c0,0.1,0,0.2,0,0.2c0,3.2,0,6.3,0,9.5c0,0.2-0.1,0.4-0.3,0.5c-0.5,0.5-1,0.9-1.4,1.4C18.2,23.9,18.1,24.1,18,24.3z">
-                            </path>
-                        </g>
-                    </svg>
-                </a>
-                <a href="https://www.facebook.com/microsoftdesign">
-                    <svg x="0px" y="0px" viewBox="0 0 32 32">
-                        <g class="facebook">
-                            <path d="M0,30.5v-29C0.4,0.4,1.5-0.2,2.6,0c9.1,0,18.1,0,27.2,0C31.3,0,32,0.7,32,2.2c0,9.1,0,18.2,0,27.3
+                                    </path>
+                                </g>
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/microsoftdesign">
+                            <!-- fb icon -->
+                            <svg x="0px" y="0px" viewBox="0 0 32 32">
+                                <g class="facebook">
+                                    <path d="M0,30.5v-29C0.4,0.4,1.5-0.2,2.6,0c9.1,0,18.1,0,27.2,0C31.3,0,32,0.7,32,2.2c0,9.1,0,18.2,0,27.3
                         c0,1.2-0.3,2.1-1.5,2.5h-8.3V19.7c0.3,0,0.5,0,0.8,0c0.9,0,1.9,0,2.8,0c0.4,0,0.6-0.1,0.6-0.6c0.1-1.3,0.3-2.5,0.5-3.8
                         c0.1-0.5-0.1-0.6-0.6-0.6h-3.5c-0.2,0-0.5,0-0.7,0c0-1.2,0-2.4,0-3.5c-0.1-0.9,0.6-1.6,1.5-1.6c0,0,0.1,0,0.1,0
                         c0.9-0.1,1.8-0.1,2.7-0.1c0.5,0,0.6-0.1,0.6-0.6c0-0.9,0-1.8,0-2.6V5c-0.7,0-1.2-0.1-1.8-0.1c-1-0.1-2-0.1-3,0
                         c-2.5,0.1-4.6,2-5.1,4.5c-0.1,0.8-0.2,1.6-0.2,2.5c0,0.9,0,1.8,0,2.8h-0.8c-1,0-1.9,0-2.9,0c-0.2,0-0.5,0.2-0.5,0.3
                         c0,1.5,0,3,0,4.6H17V32H1.5C0.8,31.8,0.2,31.2,0,30.5z"></path>
-                        </g>
-                    </svg>
-                </a>
-            </div>
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </footer>
         </div>
-    </footer>
+    </div>
 </body>
 
 </html>
