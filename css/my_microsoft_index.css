@@ -1,0 +1,33 @@
+body {
+    margin: 0 auto;
+    padding: 0;
+}
+
+.navbar {
+    height: 54px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar_left {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.nav_left_list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+.ms_logo col img{
+    width: 137px;
+    height: 54px;
+}
+
+.nav_right_list{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
