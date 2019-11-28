@@ -3,31 +3,73 @@ body {
     padding: 0;
 }
 
+header {}
+
+a {
+    color: black;
+}
+
 .navbar {
     height: 54px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    font-size: 13px;
+    text-align: center;
 }
 
 .navbar_left {
+    text-align: center;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    justify-content: left;
     align-items: flex-start;
+    flex-direction: row;
 }
 
 .nav_left_list {
     list-style-type: none;
     display: flex;
-    justify-content: space-around;
-}
-.ms_logo col img{
-    width: 137px;
-    height: 54px;
+    text-align: center;
 }
 
-.nav_right_list{
+.ms_logo img {
+    width: 100px;
+}
+
+.navbar_right {}
+
+.nav_right_list {
     list-style-type: none;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+.banner {}
+
+.banner_all {
+    margin: 0 auto;
+    position: relative;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.banner_all picture img {
+    width: 100%;
+       }
+
+.banner_title {
+    position: absolute;
+    top: 120px;
+    left: 130px;
+    margin: 0 auto;
+}
+
+.banner_title .banner_sec_text {
+    font-size: 15px;
+    padding: 10px;
+    position: relative;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    background-color: black;
 }
