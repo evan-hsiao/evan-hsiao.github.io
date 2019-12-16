@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>animation</title>
+    <style>
+        .outside {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            left: calc(100% - 350px);
+            top: 10vh;
+            background-color: goldenrod;
+            animation-name: outsideBox;
+            animation-duration: 5s;
+            animation-timing-function: cubic-bezier(.72,.2,.01,.74);
+            /* animation-delay: 3S; */
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        .block {
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            /* 動畫前須設定定位 */
+            position: relative;
+            left: 0;
+            top: 0;
+            background-color: blue;
+
+            animation-name: linearBox;
+            /* 執行時間 */
+            animation-duration: 6s;
+            /* 執行速度曲線 */
+            animation-timing-function: cubic-bezier(.13, 1.08, .8, .29);
+            /* 延遲秒數 */
+            animation-delay: 1S;
+            /* 重複次數 */
+            animation-iteration-count: infinite;
+            /* 是否反向執行 */
+            animation-direction: alternate;
+
+        }
+
+        @keyframes outsideBox {
+            0% {
+                left: 0;
+            }
+
+           3% {
+                transform: translatey(10px) translateZ(20deg);
+                               background-color: blueviolet;
+            }
+
+            50% {
+                transform: translatey(30px) translateZ(20deg);
+                background-color: blueviolet;
+            }
+
+            80% {
+                transform: rotatez(30deg);
+                border-radius: 150px;
+                background-color: cadetblue;
+            }
+
+            100% {
+                transform: rotatez(360deg);
+                background-color: gold;
+            }
+        }
+
+        @keyframes linearBox {
+            0% {
+                left: 0;
+            }
+
+            50% {
+                left: 50%;
+                top: calc(100% - 100px);
+                background-color: red;
+            }
+
+            100% {
+                left: calc(100% - 100px);
+                background-color: green;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outside">
+        <div class="block"></div>
+    </div>
+</body>
+
+</html>
