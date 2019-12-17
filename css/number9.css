@@ -2,9 +2,10 @@ body {
   margin: 0 auto;
 }
 
-body .left_menu {
+.left_menu {
   width: 250px;
   height: 80vh;
+  font-family: "Noto Sans TC", sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22,16 +23,18 @@ body .left_menu {
           transform: translateX(50px) translateY(50px);
   position: fixed;
   border-radius: 30px;
+  -webkit-box-shadow: 5px 4px 14px 3px rgba(0, 0, 0, 0.65);
+          box-shadow: 5px 4px 14px 3px rgba(0, 0, 0, 0.65);
   z-index: 99;
 }
 
-body .left_menu .left_menu_logo {
-  width: 100%;
+.left_menu .left_menu_logo {
+  width: 100px;
   height: 100px;
   background-color: #302e2e;
 }
 
-body .left_menu .left_menu_link {
+.left_menu .left_menu_link {
   list-style-type: none;
   margin: 0 auto;
   padding: 0;
@@ -39,31 +42,16 @@ body .left_menu .left_menu_link {
   color: white;
 }
 
-body .outside_link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body .outside_link .ubereats_link_icon {
-  width: 50px;
-  height: 50px;
+.left_menu .outside_link .ubereats_link_icon {
+  width: 60px;
+  height: 60px;
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4SaY_BzzyGckBNzt-jPLnYbz8ldfM3aiX80QARqdd-zqmPo-p&s");
   background-size: cover;
 }
 
-body .outside_link .foodpand_link_icon {
-  width: 50px;
-  height: 50px;
+.left_menu .outside_link .foodpand_link_icon {
+  width: 60px;
+  height: 60px;
   background-image: url("https://is3-ssl.mzstatic.com/image/thumb/Purple113/v4/c3/37/a0/c337a0fe-bc2e-22ec-c85e-42c28d2cd1cf/AppIcon-0-1x_U007emarketing-0-0-85-220-0-5.png/246x0w.png");
   background-size: cover;
 }
@@ -74,25 +62,45 @@ body .outside_link .foodpand_link_icon {
   background-color: gray;
 }
 
-.mid_menu {
+.mid_menu_all {
+  position: relative;
+}
+
+.mid_menu_all .menu_right_title {
+  width: 200px;
+  height: 100vh;
+  background-color: #3f3f3f;
+  position: absolute;
+  right: 0;
+}
+
+.mid_menu_all .menu_right_title p {
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  font-size: 130px;
+  color: white;
+  margin: 0;
+}
+
+.mid_menu_all .mid_menu {
   width: 100%;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
 }
 
-.mid_menu .mid_menu_title {
+.mid_menu_all .mid_menu .mid_menu_title {
+  position: absolute;
+  top: 0;
+  right: 0;
   font-size: 30px;
   background-color: gray;
   color: white;
@@ -100,9 +108,32 @@ body .outside_link .foodpand_link_icon {
           box-sizing: border-box;
 }
 
-.mid_menu .mid_menu_section .mid_menu_link {
-  width: 220px;
-  height: 220px;
+.mid_menu_all .mid_menu .mid_menu_section:nth-child(1) {
+  margin-left: 150px;
+}
+
+.mid_menu_all .mid_menu .mid_menu_section .mid_menu_link {
+  width: 200px;
+  height: 200px;
+  font-size: 30px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #494949;
+  border-radius: 50%;
   list-style-type: none;
+}
+
+.mid_ad_img {
+  width: 100%;
+  height: 20vh;
+  background-color: gray;
 }
 /*# sourceMappingURL=number9.css.map */
