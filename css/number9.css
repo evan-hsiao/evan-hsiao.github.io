@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 body {
   margin: 0 auto;
 }
@@ -35,7 +41,6 @@ body {
 }
 
 .left_menu .left_menu_link {
-  list-style-type: none;
   margin: 0 auto;
   padding: 0;
   font-size: 30px;
@@ -129,11 +134,65 @@ body {
   background-color: #494949;
   border-radius: 50%;
   list-style-type: none;
+  text-decoration: none;
 }
 
 .mid_ad_img {
   width: 100%;
   height: 20vh;
   background-color: gray;
+}
+
+.stone_list {
+  font-family: "Noto Sans TC", sans-serif;
+  width: 100%;
+  height: 100vh;
+  background-color: #f8d6a9;
+}
+
+.stone_list .stone_time_line {
+  margin: 0 auto;
+}
+
+.stone_list .stone_time_line li {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 40%;
+  padding: 20px 0;
+}
+
+.stone_list .stone_time_line li a {
+  display: block;
+  border: 1px solid #aaa;
+  background-color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  padding: 20px;
+  border-radius: 10px;
+  -webkit-box-shadow: 3px 3px 5px gray;
+          box-shadow: 3px 3px 5px gray;
+}
+
+.stone_list .stone_time_line li a h2 {
+  color: #333;
+  font-weight: 700;
+}
+
+.stone_list .stone_time_line li a h5 {
+  color: #666;
+  font-weight: 100;
+}
+
+.stone_list .stone_time_line li:nth-child(odd) {
+  float: left;
+  padding-right: 50px;
+}
+
+.stone_list .stone_time_line li:nth-child(even) {
+  float: right;
+  padding-left: 50px;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
 }
 /*# sourceMappingURL=number9.css.map */
