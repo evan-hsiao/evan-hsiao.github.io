@@ -5,7 +5,7 @@
 }
 
 body {
-  margin: 0 auto;
+  background-color: #f3daa4;
 }
 
 .left_menu {
@@ -145,23 +145,25 @@ body {
 
 .stone_list {
   font-family: "Noto Sans TC", sans-serif;
-  width: 100%;
-  height: 100vh;
-  background-color: #f8d6a9;
 }
 
 .stone_list .stone_time_line {
   margin: 0 auto;
 }
 
-.stone_list .stone_time_line li {
+.stone_list .stone_time_line .stone_link li {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 40%;
   padding: 20px 0;
+  position: relative;
 }
 
-.stone_list .stone_time_line li a {
+.stone_list .stone_time_line .stone_link li :hover {
+  background-color: #fcdac1;
+}
+
+.stone_list .stone_time_line .stone_link li a {
   display: block;
   border: 1px solid #aaa;
   background-color: #fff;
@@ -174,25 +176,73 @@ body {
           box-shadow: 3px 3px 5px gray;
 }
 
-.stone_list .stone_time_line li a h2 {
+.stone_list .stone_time_line .stone_link li a h2 {
   color: #333;
   font-weight: 700;
 }
 
-.stone_list .stone_time_line li a h5 {
+.stone_list .stone_time_line .stone_link li a h2::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100px;
+  background-color: gray;
+}
+
+.stone_list .stone_time_line .stone_link li a h5 {
   color: #666;
   font-weight: 100;
 }
 
-.stone_list .stone_time_line li:nth-child(odd) {
-  float: left;
-  padding-right: 50px;
+.stone_list .stone_time_line .stone_link li a h5 :hover {
+  color: white;
 }
 
-.stone_list .stone_time_line li:nth-child(even) {
+.stone_list .stone_time_line .stone_link li::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin: auto;
+  border-radius: 50%;
+  background-color: gray;
+}
+
+.stone_list .stone_time_line .stone_link li::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background-color: gray;
+  z-index: -1;
+}
+
+.stone_list .stone_time_line .stone_link li:nth-child(odd) {
+  float: left;
+  padding-right: 100px;
+}
+
+.stone_list .stone_time_line .stone_link li:nth-child(odd)::before {
+  right: 0px;
+}
+
+.stone_list .stone_time_line .stone_link li:nth-child(odd)::after {
+  right: 0px;
+}
+
+.stone_list .stone_time_line .stone_link li:nth-child(even) {
   float: right;
-  padding-left: 50px;
+  padding-left: 100px;
   -webkit-transform: translateY(50%);
           transform: translateY(50%);
+}
+
+.stone_list .stone_time_line .stone_link li:nth-child(even)::before {
+  left: 0;
+}
+
+.stone_list .stone_time_line .stone_link li:nth-child(even)::after {
+  left: 0;
 }
 /*# sourceMappingURL=number9.css.map */
