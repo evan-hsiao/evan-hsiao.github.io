@@ -245,4 +245,8 @@ body {
 .stone_list .stone_time_line .stone_link li:nth-child(even)::after {
   left: 0;
 }
+
+.left_menu {
+  background-color: 0;
+}
 /*# sourceMappingURL=number9.css.map */
