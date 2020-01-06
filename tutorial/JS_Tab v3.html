@@ -38,6 +38,7 @@
 
         .tab_content {
             display: none;
+            /* 隱藏資訊 */
             padding: 20px;
             background-color: white;
             margin-left: 8px;
@@ -46,6 +47,7 @@
 
         .tab_content.active {
             display: block;
+            /* 加active顯示資訊 */
 
         }
     </style>
@@ -105,7 +107,7 @@
             // 移除.tab_content字串內的active字
             $(".tab_content").removeClass("active");
            
-            // 將變數轉為數值並選擇該數值+1，增加指定字串內active字
+            // 選擇.tab_content子項目 在宣告的變數index內+1 增加指定字串 active
             $(`.tab_content:nth-child(${index + 1})`).addClass("active");
 
         });
