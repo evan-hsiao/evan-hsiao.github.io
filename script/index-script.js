@@ -1,4 +1,3 @@
-
 // 預設使用者資訊
 var passUserInfo = [
     {
@@ -16,18 +15,18 @@ function getInfo() {
     var username = document.getElementById("name").value
     var password = document.getElementById("password").value
     var keyInfo = document.getElementById("key_info")
-    // console.log(username + "welcome!!" + password);
+    // console.log(username + password);
 
     // 建立迴圈
     for (i = 0; i < passUserInfo.length; i++) {
         if (username == passUserInfo[i].name && password == passUserInfo[i].password) {
             alert(username + " welcome歡迎光臨!!");
-            // console.log(username + " welcome歡迎光臨!!");
+            // console.log(username);
             return
         }
         else {
             alert("Hi " + username + " 輸入錯誤!!");
-            // console.log("Hi " + username + " 輸入錯誤!!");
+            // console.log(username);
             return
         }
     }
