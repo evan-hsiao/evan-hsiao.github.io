@@ -12,7 +12,8 @@
     <link href="https://fonts.googleapis.com/css?family=Cute+Font&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Monda&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./css/index-style.css">
+    <link rel="stylesheet" href="/css/index-style.css">
+    <script src="/script/index-script.js"></script>
     <title>Welcome My GitHub Page</title>
 
 </head>
@@ -22,16 +23,20 @@
     <div class="login_all">
         <div class="logo_img"></div>
         <H2 class="title">Welcome</H2>
-        <form action="">
-            <p>User Name</p>
-            <input type="text" name="" placeholder="enter your name">
-            <p>User Password</p>
-            <input type="password" name="" placeholder="enter your Password">
-            <button type="button" class="btn btn-info">Login</button>
+        <div id="error"></div>
+        <form action="/" method="GET" id="form">
+           
+            <p>姓名(Name):</p>
+            <input type="text" name="name" id="name" placeholder="enter your name" required>
+            <p>密碼(Password):</p>
+            <input type="password" name="password" id="password" placeholder="enter your Password">
+            
+            <button type="submit" class="btn btn-info">登入Login</button>
             <a href="#">Loss Your Pssword</a>
             <br>
             <a href="#">Register</a>
         </form>
+       
     </div>
 
     <script>
