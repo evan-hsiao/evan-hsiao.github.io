@@ -1,3 +1,4 @@
+
 // 預設使用者資訊
 var passUserInfo = [
     {
@@ -14,7 +15,7 @@ function getInfo() {
     // 設定變數，取用id送出的值
     var username = document.getElementById("name").value
     var password = document.getElementById("password").value
-    var keyInfo = document.getElementById("key_info")
+    var keyInfo = document.querySelectorAll("key_info")
     // console.log(username + password);
 
     // 建立迴圈
@@ -27,6 +28,7 @@ function getInfo() {
         else {
             alert("Hi " + username + " 輸入錯誤!!");
             // console.log(username);
+            // keyInfo.textContent="error";
             return
         }
     }
