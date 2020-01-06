@@ -23,20 +23,23 @@
     <div class="login_all">
         <div class="logo_img"></div>
         <H2 class="title">Welcome</H2>
-        <div id="error"></div>
+        <div id="key_info_"></div>
         <form action="/" method="GET" id="form">
-           
+
             <p>姓名(Name):</p>
             <input type="text" name="name" id="name" placeholder="enter your name" required>
+
             <p>密碼(Password):</p>
-            <input type="password" name="password" id="password" placeholder="enter your Password">
-            
-            <button type="submit" class="btn btn-info">登入Login</button>
+            <input type="password" name="password" id="password" placeholder="enter your Password" required>
+
+            <button type="button" class="btn btn-info" onclick="getInfo()">登入Login</button>
+
             <a href="#">Loss Your Pssword</a>
             <br>
             <a href="#">Register</a>
+
         </form>
-       
+
     </div>
 
     <script>
