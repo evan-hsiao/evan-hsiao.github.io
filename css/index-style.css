@@ -2,7 +2,8 @@ body {
   margin: 0;
   padding: 0;
   background-image: url("https://cdn.pixabay.com/photo/2019/12/28/14/00/chrome-hill-4724723_1280.jpg");
-  /* background-position: center; */
+  height: 100vh;
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -95,8 +96,8 @@ line-height: 20px;
   color: black;
   font-weight: bold;
 }
-.key_info{
+/* .key_info{
   width: 100%;
   height: 30px;
   background-color: burlywood;
-}
+} */
