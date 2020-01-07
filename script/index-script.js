@@ -21,13 +21,22 @@ function getInfo() {
     // 建立迴圈
     for (i = 0; i < passUserInfo.length; i++) {
         if (username == passUserInfo[i].name && password == passUserInfo[i].password) {
-            keyInfo.innerText=username+"歡迎光臨!!";
+            keyInfo.innerText = username + "歡迎光臨!!";
             // console.log(username);
             return
         }
+        else if (username != passUserInfo[i].name) {
+            keyInfo.innerText = "姓名輸入錯誤";
+            return
+            
+        }
+        else if
+            (password != passUserInfo[i].password) {
+            keyInfo.innerText = "密碼輸入錯誤";
+            return
+        }
         else {
-            // alert("Hi " + username + " 輸入錯誤!!");
-            keyInfo.innerText="輸入錯誤";
+            keyInfo.innerText = "輸入錯誤";            
             return
         }
     }
