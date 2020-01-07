@@ -96,8 +96,9 @@ line-height: 20px;
   color: black;
   font-weight: bold;
 }
-/* .key_info{
-  width: 100%;
+.key_info{
+  /* width: 100%;
   height: 30px;
-  background-color: burlywood;
-} */
+  background-color: burlywood; */
+  color: red;
+}

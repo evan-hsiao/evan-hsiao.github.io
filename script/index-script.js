@@ -15,20 +15,19 @@ function getInfo() {
     // 設定變數，取用id送出的值
     var username = document.getElementById("name").value
     var password = document.getElementById("password").value
-    var keyInfo = document.querySelectorAll("key_info")
+    var keyInfo = document.querySelector(".key_info")
     // console.log(username + password);
 
     // 建立迴圈
     for (i = 0; i < passUserInfo.length; i++) {
         if (username == passUserInfo[i].name && password == passUserInfo[i].password) {
-            alert(username + " welcome歡迎光臨!!");
+            keyInfo.innerText=username+"歡迎光臨!!";
             // console.log(username);
             return
         }
         else {
-            alert("Hi " + username + " 輸入錯誤!!");
-            // console.log(username);
-            // keyInfo.textContent="error";
+            // alert("Hi " + username + " 輸入錯誤!!");
+            keyInfo.innerText="輸入錯誤";
             return
         }
     }
