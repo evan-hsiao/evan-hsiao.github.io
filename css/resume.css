@@ -1,5 +1,9 @@
-body {
+*{
   margin: 0;
+  padding: 0;
+}
+/* body {
+  margin: 0 auto;
   padding: 0;
 }
 .link_block {
@@ -59,4 +63,16 @@ body {
   justify-content: center;
   flex-direction: column-reverse;
   align-items: center;
+} */
+
+.resume_jpg{
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.img{
+margin: 10px;
 }

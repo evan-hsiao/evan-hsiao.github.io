@@ -2,13 +2,9 @@
 // 預設使用者資訊
 var passUserInfo = [
     {
-        name: "evan",
-        password: "123456789"
-    },
-    {
         name: "test",
-        password: "987654321"
-    }
+        password: "1234"
+    },
 ]
 
 function getInfo() {
@@ -26,8 +22,8 @@ function getInfo() {
             navbar.style.display = "block";
             // console.log(username);
             return
-            
-        }
+
+        }   
         else if (username != passUserInfo[i].name) {
             keyInfo.innerText = "姓名輸入錯誤";
             return
@@ -44,5 +40,5 @@ function getInfo() {
         }
 
     }
-    
+
 }
