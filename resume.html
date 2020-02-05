@@ -10,34 +10,74 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <link rel="stylesheet" href="/css/resume.css">
-    <title>Evan Resume</title>
+    <title>Evan-Hsiao Resume</title>
 </head>
 
 <body>
-    <div class="link_block"></div>
-    <div class="banner">
-        <div class="container all_banner">
-            <div class="resume_img row-1">
-                <div class="photo"></div>
-                <h1>蕭宏佑 <br> Evan Hsiao</h1>
-            </div>
-            <div class="connet_info row-1">
-                <div class="address col">   
-                    <div class="icon_img"></div>
-                    <h6>台中市潭子區大新路1-3號7樓</h6>
-                </div>
-                <div class="phone col">
-                    <div class="icon_img"></div>
-                    <h6>0937197783</h6>
-                </div>
-                <div class="email col">
-                    <div class="icon_img"></div>
-                    <h6>yogohot@gmail.com</h6>
-                </div>
-            </div>
-        </div>
-    </div>
+    <header>
+        <div class="navall fixed-top">
+            <nav class="navbar  navbar-expand-lg navbar-light bg-info container">
+                <a class="navbar-brand" href="#">Evan Hsiao</a>
+                <!-- 縮小時的按鈕 -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- 選單內容 -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">首頁</a>
+                        </li>
+                        <!-- 下拉選單 -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">前端作品集</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="https://evan-hsiao.github.io/no9_harbor/">9號碼頭</a>
+                                <a class="dropdown-item"
+                                    href="https://evan-hsiao.github.io/class_parallax_section/">Parallax架構網頁</a>
+                                <a class="dropdown-item"
+                                    href="https://evan-hsiao.github.io/class_microsoft_rwd/">Microsoft網站仿切</a>
+                                <a class="dropdown-item"
+                                    href="https://evan-hsiao.github.io/class-mobirise/">Mobirise設計架構網頁</a>
 
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">後端作品集</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">待續</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="banner">
+            <div class="connet_info row-6">
+                <h1>蕭宏佑 <br> Evan Hsiao</h1>
+                <div>
+                    <div class="address col">
+                        <div class="icon_img"></div>
+                        <h6>台中市潭子區大新路1-3號7樓</h6>
+                    </div>
+                    <div class="phone col">
+                        <div class="icon_img"></div>
+                        <h6>0937197783</h6>
+                    </div>
+                    <div class="email col">
+                        <div class="icon_img"></div>
+                        <h6>yogohot@gmail.com</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="photo row-6"></div>
+        </div>
+    </header>
 
     <!-- bootstrap js -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"

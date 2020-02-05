@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+* body {
+  margin: 0 auto;
+  padding: 0;
+}
+
+* body .background_img {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://cdn.pixabay.com/photo/2020/02/02/23/50/nature-4814418_1280.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+* body .background_img .container {
+  width: 900px;
+  height: 600px;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 0 20px black;
+          box-shadow: 0 0 20px black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  top: 8%;
+  left: 20%;
+}
+
+* body .background_img .container .left_info {
+  width: 35%;
+  height: 100%;
+  border-radius: 8px 0 0 8px;
+  background-color: #ccee88;
+}
+
+* body .background_img .container .left_info .my_photo {
+  width: 200px;
+  height: 200px;
+  background-color: chocolate;
+  border-radius: 50%;
+  -webkit-transform: translateX(60px) translateY(60px);
+          transform: translateX(60px) translateY(60px);
+}
+
+* body .background_img .container .right_info {
+  width: 65%;
+  height: 100%;
+  border-radius: 0 8px 8px 0;
+}
+
+* body .background_img .container .right_info .about_me {
+  width: 80%;
+  height: 30px;
+  font-size: 15px;
+  font-style: italic;
+  margin: 30px auto;
+  padding: 2px 20px;
+  border: 1px solid #07a4ff;
+  border-radius: 15px;
+}
+
+* body .background_img .container .right_info .about_me h3 {
+  color: #07a4ff;
+}
+/*# sourceMappingURL=resume_new.css.map */
