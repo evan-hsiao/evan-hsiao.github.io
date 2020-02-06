@@ -7,16 +7,20 @@
     padding: 0;
 
     .background_img {
-      width: 100vw;
+      width: 100%;
       height: 100vh;
+      margin: 0;
+      padding: 0;
       background-image: url("https://cdn.pixabay.com/photo/2020/02/02/23/50/nature-4814418_1280.jpg");
       background-position: center;
       background-size: cover;
-
+      @media (max-width: 1140px) {
+        height: 3000px;
+      }
       .container {
-        width: 900px;
-        height: 600px;
-        margin: 0;
+        width: 60vw;
+        height: 80vh;
+        margin: 0 auto;
         padding: 0;
         background-color: rgb(255, 255, 255);
         border-radius: 8px;
@@ -26,7 +30,15 @@
         position: absolute;
         top: 8%;
         left: 20%;
-
+        @media (max-width: 1140px) {
+          width: 100%;
+          border-radius: 0px;
+          box-shadow: none;
+          top: 0;
+          left: 0;
+          justify-content: center;
+          flex-direction: column;
+        }
         .left_info {
           width: 40%;
           height: 100%;
@@ -36,11 +48,20 @@
           background-size: cover;
           position: relative;
           clip-path: polygon(0 0, 100% 0, 90% 45%, 40% 90%, 0 73%);
+          @media (max-width: 1140px) {
+            width: 100%;
+            border-radius: 0;
+            clip-path: polygon(0 0, 100% 0, 95% 70%, 40% 100%, 0 90%);
+          }
           .my_photo_line {
             width: 100%;
             height: 50%;
             background-color: rgb(255, 255, 255);
             clip-path: polygon(30% 0, 100% 0, 100% 68%, 43% 80%, 4% 55%);
+            @media (max-width: 1140px) {
+              height: 100%;
+              clip-path: polygon(30% 0, 100% 0, 100% 68%, 43% 80%, 20% 60%);
+            }
             .my_photo {
               width: 100%;
               height: 100%;
@@ -48,6 +69,10 @@
               background-position: initial;
               background-size: cover;
               clip-path: polygon(35% 0, 100% 0, 100% 62%, 46% 76%, 7% 53%);
+              @media (max-width: 1140px) {
+                background-position: center;
+                clip-path: polygon(36% 0, 100% 0, 100% 62%, 42% 75%, 23% 56%);
+              }
             }
           }
           h1 {
@@ -58,16 +83,28 @@
             font-family: "Noto Sans TC", sans-serif;
             border: 2px solid white;
             border-radius: 10px;
+            @media (max-width: 1140px) {
+              position: absolute;
+              top: 30px;
+            }
           }
           h3 {
             margin: 0 30px;
             color: rgb(255, 255, 255);
             font-family: "Merriweather Sans", sans-serif;
+            @media (max-width: 1140px) {
+              position: absolute;
+              top: 150px;
+            }
           }
           h6 {
             margin: 0 35px;
             color: rgb(255, 255, 255);
             font-family: "Merriweather Sans", sans-serif;
+            @media (max-width: 1140px) {
+              position: absolute;
+              top: 190px;
+            }
           }
         }
 
@@ -76,8 +113,11 @@
           height: 100%;
           padding: 22px;
           border-radius: 0 8px 8px 0;
-          // background-color: rosybrown;
           font-family: "Noto Sans TC", sans-serif;
+          @media (max-width: 1140px) {
+            width: 100%;
+            border-radius: 0;
+          }
           h3 {
             width: 70%;
             height: 35px;
@@ -90,18 +130,35 @@
               rgba(141, 219, 117, 0.15) 50%,
               rgba(0, 0, 0, 0) 100%
             );
+            @media (max-width: 1140px) {
+              height: 55px;
+              font-size: 40px;
+            }
           }
-          .dropdown-divider { 
+          .dropdown-divider {
+            @media (max-width: 1140px) {
+              display: none;
+            }
           }
           h6 {
             font-size: 15px;
             text-align: justify;
             line-height: 25px;
             color: black;
+            @media (max-width: 1140px) {
+              font-size: 25px;
+              line-height: 45px;
+              width: 90%;
+              margin: 50px auto;
+            }
           }
           .swiper-container {
             width: 100%;
             height: 35%;
+            @media (max-width: 1140px) {
+              height: 50%;
+              margin-top: 50px;
+            }
             .swiper-slide {
               // background: red;
               display: flex;
@@ -136,21 +193,21 @@
               background-position: center;
               background-size: cover;
             }
-            .sections_img{
+            .sections_img {
               width: 100%;
               height: 100%;
               background-image: url("../img/綜合練習.png");
               background-position: center;
               background-size: cover;
             }
-            .mobirise_img{
+            .mobirise_img {
               width: 100%;
               height: 100%;
               background-image: url("../img/Class-Mobirise.png");
               background-position: center;
               background-size: cover;
             }
-            .api_img{
+            .api_img {
               width: 100%;
               height: 100%;
               background-image: url("../img/jQuery\ AjexAPI串接.png");
@@ -170,6 +227,10 @@
             font-size: 12px;
             color: rgb(148, 148, 148);
             text-align: center;
+            @media (max-width: 1140px) {
+              height: 50px;
+              margin-top: 20px;
+            }
           }
         }
       }

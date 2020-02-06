@@ -10,17 +10,19 @@
 }
 
 * body .background_img {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
+  margin: 0;
+  padding: 0;
   background-image: url("https://cdn.pixabay.com/photo/2020/02/02/23/50/nature-4814418_1280.jpg");
   background-position: center;
   background-size: cover;
 }
 
 * body .background_img .container {
-  width: 900px;
-  height: 600px;
-  margin: 0;
+  width: 60vw;
+  height: 80vh;
+  margin: 0 auto;
   padding: 0;
   background-color: white;
   border-radius: 8px;
@@ -37,6 +39,25 @@
   left: 20%;
 }
 
+@media (max-width: 1140px) {
+  * body .background_img .container {
+    width: 100%;
+    height: 1024px;
+    border-radius: 0px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    top: 0;
+    left: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 * body .background_img .container .left_info {
   width: 40%;
   height: 100%;
@@ -49,12 +70,29 @@
           clip-path: polygon(0 0, 100% 0, 90% 45%, 40% 90%, 0 73%);
 }
 
+@media (max-width: 1140px) {
+  * body .background_img .container .left_info {
+    width: 100%;
+    border-radius: 0;
+    -webkit-clip-path: polygon(0 0, 100% 0, 95% 70%, 40% 100%, 0 90%);
+            clip-path: polygon(0 0, 100% 0, 95% 70%, 40% 100%, 0 90%);
+  }
+}
+
 * body .background_img .container .left_info .my_photo_line {
   width: 100%;
   height: 50%;
   background-color: white;
   -webkit-clip-path: polygon(30% 0, 100% 0, 100% 68%, 43% 80%, 4% 55%);
           clip-path: polygon(30% 0, 100% 0, 100% 68%, 43% 80%, 4% 55%);
+}
+
+@media (max-width: 1140px) {
+  * body .background_img .container .left_info .my_photo_line {
+    height: 100%;
+    -webkit-clip-path: polygon(30% 0, 100% 0, 100% 68%, 43% 80%, 20% 60%);
+            clip-path: polygon(30% 0, 100% 0, 100% 68%, 43% 80%, 20% 60%);
+  }
 }
 
 * body .background_img .container .left_info .my_photo_line .my_photo {
@@ -67,6 +105,14 @@
           clip-path: polygon(35% 0, 100% 0, 100% 62%, 46% 76%, 7% 53%);
 }
 
+@media (max-width: 1140px) {
+  * body .background_img .container .left_info .my_photo_line .my_photo {
+    background-position: center;
+    -webkit-clip-path: polygon(36% 0, 100% 0, 100% 62%, 42% 75%, 23% 56%);
+            clip-path: polygon(36% 0, 100% 0, 100% 62%, 42% 75%, 23% 56%);
+  }
+}
+
 * body .background_img .container .left_info h1 {
   width: 100px;
   margin: 0 30px;
@@ -77,10 +123,24 @@
   border-radius: 10px;
 }
 
+@media (max-width: 1140px) {
+  * body .background_img .container .left_info h1 {
+    position: absolute;
+    top: 30px;
+  }
+}
+
 * body .background_img .container .left_info h3 {
   margin: 0 30px;
   color: white;
   font-family: "Merriweather Sans", sans-serif;
+}
+
+@media (max-width: 1140px) {
+  * body .background_img .container .left_info h3 {
+    position: absolute;
+    top: 150px;
+  }
 }
 
 * body .background_img .container .left_info h6 {
@@ -89,12 +149,26 @@
   font-family: "Merriweather Sans", sans-serif;
 }
 
+@media (max-width: 1140px) {
+  * body .background_img .container .left_info h6 {
+    position: absolute;
+    top: 190px;
+  }
+}
+
 * body .background_img .container .right_info {
   width: 60%;
   height: 100%;
   padding: 22px;
   border-radius: 0 8px 8px 0;
   font-family: "Noto Sans TC", sans-serif;
+}
+
+@media (max-width: 1140px) {
+  * body .background_img .container .right_info {
+    width: 100%;
+    border-radius: 0;
+  }
 }
 
 * body .background_img .container .right_info h3 {
@@ -106,6 +180,19 @@
   background: linear-gradient(135deg, #00929c 20%, rgba(141, 219, 117, 0.15) 50%, rgba(0, 0, 0, 0) 100%);
 }
 
+@media (max-width: 1140px) {
+  * body .background_img .container .right_info h3 {
+    height: 55px;
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 1140px) {
+  * body .background_img .container .right_info .dropdown-divider {
+    display: none;
+  }
+}
+
 * body .background_img .container .right_info h6 {
   font-size: 15px;
   text-align: justify;
@@ -113,9 +200,25 @@
   color: black;
 }
 
+@media (max-width: 1140px) {
+  * body .background_img .container .right_info h6 {
+    font-size: 25px;
+    line-height: 45px;
+    width: 90%;
+    margin: 50px auto;
+  }
+}
+
 * body .background_img .container .right_info .swiper-container {
   width: 100%;
   height: 35%;
+}
+
+@media (max-width: 1140px) {
+  * body .background_img .container .right_info .swiper-container {
+    height: 50%;
+    margin-top: 50px;
+  }
 }
 
 * body .background_img .container .right_info .swiper-container .swiper-slide {
@@ -198,5 +301,12 @@
   font-size: 12px;
   color: #949494;
   text-align: center;
+}
+
+@media (max-width: 1140px) {
+  * body .background_img .container .right_info .copyright {
+    height: 50px;
+    margin-top: 20px;
+  }
 }
 /*# sourceMappingURL=resume_new.css.map */
