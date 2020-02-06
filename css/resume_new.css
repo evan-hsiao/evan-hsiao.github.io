@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -23,8 +24,8 @@
   padding: 0;
   background-color: white;
   border-radius: 8px;
-  -webkit-box-shadow: 0 0 20px black;
-          box-shadow: 0 0 20px black;
+  -webkit-box-shadow: 0 0 50px black;
+          box-shadow: 0 0 50px black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -37,39 +38,165 @@
 }
 
 * body .background_img .container .left_info {
-  width: 35%;
+  width: 40%;
   height: 100%;
   border-radius: 8px 0 0 8px;
-  background-color: #ccee88;
+  background-image: url("https://cdn.pixabay.com/photo/2014/04/07/16/51/leaf-318743_1280.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0, 90% 45%, 40% 90%, 0 73%);
+          clip-path: polygon(0 0, 100% 0, 90% 45%, 40% 90%, 0 73%);
 }
 
-* body .background_img .container .left_info .my_photo {
-  width: 200px;
-  height: 200px;
-  background-color: chocolate;
-  border-radius: 50%;
-  -webkit-transform: translateX(60px) translateY(60px);
-          transform: translateX(60px) translateY(60px);
+* body .background_img .container .left_info .my_photo_line {
+  width: 100%;
+  height: 50%;
+  background-color: white;
+  -webkit-clip-path: polygon(30% 0, 100% 0, 100% 68%, 43% 80%, 4% 55%);
+          clip-path: polygon(30% 0, 100% 0, 100% 68%, 43% 80%, 4% 55%);
+}
+
+* body .background_img .container .left_info .my_photo_line .my_photo {
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/P_20200206_093700aw.jpg");
+  background-position: initial;
+  background-size: cover;
+  -webkit-clip-path: polygon(35% 0, 100% 0, 100% 62%, 46% 76%, 7% 53%);
+          clip-path: polygon(35% 0, 100% 0, 100% 62%, 46% 76%, 7% 53%);
+}
+
+* body .background_img .container .left_info h1 {
+  width: 100px;
+  margin: 0 30px;
+  padding: 3px;
+  color: white;
+  font-family: "Noto Sans TC", sans-serif;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+* body .background_img .container .left_info h3 {
+  margin: 0 30px;
+  color: white;
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+* body .background_img .container .left_info h6 {
+  margin: 0 35px;
+  color: white;
+  font-family: "Merriweather Sans", sans-serif;
 }
 
 * body .background_img .container .right_info {
-  width: 65%;
+  width: 60%;
   height: 100%;
+  padding: 22px;
   border-radius: 0 8px 8px 0;
+  font-family: "Noto Sans TC", sans-serif;
 }
 
-* body .background_img .container .right_info .about_me {
-  width: 80%;
-  height: 30px;
-  font-size: 15px;
-  font-style: italic;
-  margin: 30px auto;
-  padding: 2px 20px;
-  border: 1px solid #07a4ff;
+* body .background_img .container .right_info h3 {
+  width: 70%;
+  height: 35px;
   border-radius: 15px;
+  padding-left: 12px;
+  color: white;
+  background: linear-gradient(135deg, #00929c 20%, rgba(141, 219, 117, 0.15) 50%, rgba(0, 0, 0, 0) 100%);
 }
 
-* body .background_img .container .right_info .about_me h3 {
-  color: #07a4ff;
+* body .background_img .container .right_info h6 {
+  font-size: 15px;
+  text-align: justify;
+  line-height: 25px;
+  color: black;
+}
+
+* body .background_img .container .right_info .swiper-container {
+  width: 100%;
+  height: 35%;
+}
+
+* body .background_img .container .right_info .swiper-container .swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* body .background_img .container .right_info .swiper-container .swiper-slide a {
+  text-align: center;
+  font-size: 10px;
+  color: white;
+  font-family: "Noto Serif TC", serif;
+}
+
+* body .background_img .container .right_info .swiper-container .night_img {
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/Harbor no.9.png");
+  background-position: center;
+  background-size: cover;
+}
+
+* body .background_img .container .right_info .swiper-container .coms_img {
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/Microsoft網站練習.png");
+  background-position: center;
+  background-size: cover;
+}
+
+* body .background_img .container .right_info .swiper-container .parallax_img {
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/Parallax視差與Anchors錨點.png");
+  background-position: center;
+  background-size: cover;
+}
+
+* body .background_img .container .right_info .swiper-container .sections_img {
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/綜合練習.png");
+  background-position: center;
+  background-size: cover;
+}
+
+* body .background_img .container .right_info .swiper-container .mobirise_img {
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/Class-Mobirise.png");
+  background-position: center;
+  background-size: cover;
+}
+
+* body .background_img .container .right_info .swiper-container .api_img {
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/jQuery AjexAPI串接.png");
+  background-position: center;
+  background-size: cover;
+}
+
+* body .background_img .container .right_info .swiper-container .swiper-button-next {
+  top: 80%;
+}
+
+* body .background_img .container .right_info .swiper-container .swiper-button-prev {
+  top: 80%;
+}
+
+* body .background_img .container .right_info .copyright {
+  padding-top: 10px;
+  font-size: 12px;
+  color: #949494;
+  text-align: center;
 }
 /*# sourceMappingURL=resume_new.css.map */

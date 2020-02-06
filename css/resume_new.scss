@@ -18,9 +18,9 @@
         height: 600px;
         margin: 0;
         padding: 0;
-        background-color: white;
+        background-color: rgb(255, 255, 255);
         border-radius: 8px;
-        box-shadow: 0 0 20px black;
+        box-shadow: 0 0 50px black;
         display: flex;
         justify-content: space-between;
         position: absolute;
@@ -28,37 +28,148 @@
         left: 20%;
 
         .left_info {
-          width: 35%;
+          width: 40%;
           height: 100%;
           border-radius: 8px 0 0 8px;
-          background-color: rgb(204, 238, 136);
-         
-          .my_photo{
-              width: 200px;
-              height: 200px;
-              background-color: chocolate;
-              border-radius: 50%;
-              transform: translateX(60px) translateY(60px);
+          background-image: url("https://cdn.pixabay.com/photo/2014/04/07/16/51/leaf-318743_1280.jpg");
+          background-position: center;
+          background-size: cover;
+          position: relative;
+          clip-path: polygon(0 0, 100% 0, 90% 45%, 40% 90%, 0 73%);
+          .my_photo_line {
+            width: 100%;
+            height: 50%;
+            background-color: rgb(255, 255, 255);
+            clip-path: polygon(30% 0, 100% 0, 100% 68%, 43% 80%, 4% 55%);
+            .my_photo {
+              width: 100%;
+              height: 100%;
+              background-image: url("../img/P_20200206_093700aw.jpg");
+              background-position: initial;
+              background-size: cover;
+              clip-path: polygon(35% 0, 100% 0, 100% 62%, 46% 76%, 7% 53%);
+            }
+          }
+          h1 {
+            width: 100px;
+            margin: 0 30px;
+            padding: 3px;
+            color: rgb(255, 255, 255);
+            font-family: "Noto Sans TC", sans-serif;
+            border: 2px solid white;
+            border-radius: 10px;
+          }
+          h3 {
+            margin: 0 30px;
+            color: rgb(255, 255, 255);
+            font-family: "Merriweather Sans", sans-serif;
+          }
+          h6 {
+            margin: 0 35px;
+            color: rgb(255, 255, 255);
+            font-family: "Merriweather Sans", sans-serif;
           }
         }
 
         .right_info {
-          width: 65%;
+          width: 60%;
           height: 100%;
+          padding: 22px;
           border-radius: 0 8px 8px 0;
-          //   background-color: rosybrown;
-          .about_me {
-            width: 80%;
-            height: 30px;
-            font-size: 15px;
-            font-style: italic;
-            margin: 30px auto;
-            padding: 2px 20px;
-            border: 1px solid rgb(7, 164, 255);
+          // background-color: rosybrown;
+          font-family: "Noto Sans TC", sans-serif;
+          h3 {
+            width: 70%;
+            height: 35px;
             border-radius: 15px;
-            h3{
-                color: rgb(7, 164, 255);
+            padding-left: 12px;
+            color: rgb(255, 255, 255);
+            background: linear-gradient(
+              135deg,
+              rgb(0, 146, 156) 20%,
+              rgba(141, 219, 117, 0.15) 50%,
+              rgba(0, 0, 0, 0) 100%
+            );
+          }
+          .dropdown-divider { 
+          }
+          h6 {
+            font-size: 15px;
+            text-align: justify;
+            line-height: 25px;
+            color: black;
+          }
+          .swiper-container {
+            width: 100%;
+            height: 35%;
+            .swiper-slide {
+              // background: red;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              a {
+                text-align: center;
+                font-size: 10px;
+                color: white;
+                font-family: "Noto Serif TC", serif;
+              }
             }
+            // 連結縮圖
+            .night_img {
+              width: 100%;
+              height: 100%;
+              background-image: url("../img/Harbor\ no.9.png");
+              background-position: center;
+              background-size: cover;
+            }
+            .coms_img {
+              width: 100%;
+              height: 100%;
+              background-image: url("../img/Microsoft網站練習.png");
+              background-position: center;
+              background-size: cover;
+            }
+            .parallax_img {
+              width: 100%;
+              height: 100%;
+              background-image: url("../img/Parallax視差與Anchors錨點.png");
+              background-position: center;
+              background-size: cover;
+            }
+            .sections_img{
+              width: 100%;
+              height: 100%;
+              background-image: url("../img/綜合練習.png");
+              background-position: center;
+              background-size: cover;
+            }
+            .mobirise_img{
+              width: 100%;
+              height: 100%;
+              background-image: url("../img/Class-Mobirise.png");
+              background-position: center;
+              background-size: cover;
+            }
+            .api_img{
+              width: 100%;
+              height: 100%;
+              background-image: url("../img/jQuery\ AjexAPI串接.png");
+              background-position: center;
+              background-size: cover;
+            }
+
+            .swiper-button-next {
+              top: 80%;
+            }
+            .swiper-button-prev {
+              top: 80%;
+            }
+          }
+          .copyright {
+            padding-top: 10px;
+            font-size: 12px;
+            color: rgb(148, 148, 148);
+            text-align: center;
           }
         }
       }
