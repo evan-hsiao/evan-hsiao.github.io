@@ -336,6 +336,8 @@
   background-image: url("../img/Harbor no.9.png");
   background-position: center;
   background-size: cover;
+  -webkit-box-shadow: 0 0 5px black;
+          box-shadow: 0 0 5px black;
 }
 
 * body .background_img .container-all .right_info .swiper-container .coms_img {
@@ -344,6 +346,8 @@
   background-image: url("../img/Microsoft網站練習.png");
   background-position: center;
   background-size: cover;
+  -webkit-box-shadow: 0 0 5px black;
+          box-shadow: 0 0 5px black;
 }
 
 * body .background_img .container-all .right_info .swiper-container .parallax_img {
@@ -352,6 +356,8 @@
   background-image: url("../img/Parallax視差與Anchors錨點.png");
   background-position: center;
   background-size: cover;
+  -webkit-box-shadow: 0 0 5px black;
+          box-shadow: 0 0 5px black;
 }
 
 * body .background_img .container-all .right_info .swiper-container .sections_img {
@@ -360,6 +366,8 @@
   background-image: url("../img/綜合練習.png");
   background-position: center;
   background-size: cover;
+  -webkit-box-shadow: 0 0 5px black;
+          box-shadow: 0 0 5px black;
 }
 
 * body .background_img .container-all .right_info .swiper-container .mobirise_img {
@@ -368,6 +376,8 @@
   background-image: url("../img/Class-Mobirise.png");
   background-position: center;
   background-size: cover;
+  -webkit-box-shadow: 0 0 5px black;
+          box-shadow: 0 0 5px black;
 }
 
 * body .background_img .container-all .right_info .swiper-container .api_img {
@@ -376,6 +386,8 @@
   background-image: url("../img/jQuery AjexAPI串接.png");
   background-position: center;
   background-size: cover;
+  -webkit-box-shadow: 0 0 5px black;
+          box-shadow: 0 0 5px black;
 }
 
 * body .background_img .container-all .right_info .swiper-container .swiper-pagination {
