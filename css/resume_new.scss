@@ -5,7 +5,8 @@
   body {
     margin: 0 auto;
     padding: 0;
-
+    @media (max-width: 1140px) {
+    }
     .background_img {
       width: 100%;
       height: 100vh;
@@ -15,9 +16,14 @@
       background-position: center;
       background-size: cover;
       @media (max-width: 1140px) {
-        height: 3000px;
+        width: 100%;
+        height: 1700px;
+        background-image: none;
       }
-      .container {
+      @media (max-width: 540px) {
+        height: 1140px;
+      }
+      .container-all {
         width: 60vw;
         height: 80vh;
         margin: 0 auto;
@@ -32,12 +38,15 @@
         left: 20%;
         @media (max-width: 1140px) {
           width: 100%;
+          height: 100%;
           border-radius: 0px;
           box-shadow: none;
-          top: 0;
-          left: 0;
           justify-content: center;
           flex-direction: column;
+          top: 0;
+          left: 0;
+        }
+        @media (max-width: 540px) {
         }
         .left_info {
           width: 40%;
@@ -50,8 +59,12 @@
           clip-path: polygon(0 0, 100% 0, 90% 45%, 40% 90%, 0 73%);
           @media (max-width: 1140px) {
             width: 100%;
+            height: 50%;
             border-radius: 0;
             clip-path: polygon(0 0, 100% 0, 95% 70%, 40% 100%, 0 90%);
+          }
+          @media (max-width: 540px) {
+            clip-path: none;
           }
           .my_photo_line {
             width: 100%;
@@ -61,6 +74,11 @@
             @media (max-width: 1140px) {
               height: 100%;
               clip-path: polygon(30% 0, 100% 0, 100% 68%, 43% 80%, 20% 60%);
+            }
+            @media (max-width: 540px) {
+              height: 100%;
+              margin: 0 auto;
+              clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
             }
             .my_photo {
               width: 100%;
@@ -72,6 +90,11 @@
               @media (max-width: 1140px) {
                 background-position: center;
                 clip-path: polygon(36% 0, 100% 0, 100% 62%, 42% 75%, 23% 56%);
+              }
+              @media (max-width: 540px) {
+                clip-path: none;
+                width: 100%;
+                background-position: -80px 30px;
               }
             }
           }
@@ -87,6 +110,12 @@
               position: absolute;
               top: 30px;
             }
+            @media (max-width: 540px) {
+              font-size: 35px;
+              border: 1px solid white;
+              top: 50px;
+              right: 0px;
+            }
           }
           h3 {
             margin: 0 30px;
@@ -96,6 +125,11 @@
               position: absolute;
               top: 150px;
             }
+            @media (max-width: 540px) {
+              margin: 0 10px;
+              font-size: 25px;
+              right: 0;
+            }
           }
           h6 {
             margin: 0 35px;
@@ -104,6 +138,11 @@
             @media (max-width: 1140px) {
               position: absolute;
               top: 190px;
+            }
+            @media (max-width: 540px) {
+              margin: 0 10px;
+              font-size: 12px;
+              right: 0;
             }
           }
         }
@@ -116,7 +155,10 @@
           font-family: "Noto Sans TC", sans-serif;
           @media (max-width: 1140px) {
             width: 100%;
+            height: 50%;
             border-radius: 0;
+          }
+          @media (max-width: 540px) {
           }
           h3 {
             width: 70%;
@@ -133,6 +175,16 @@
             @media (max-width: 1140px) {
               height: 55px;
               font-size: 40px;
+            }
+            @media (max-width: 540px) {
+              height: 35px;
+              font-size: 25px;
+              background: linear-gradient(
+                135deg,
+                rgb(0, 146, 156) 20%,
+                rgba(141, 219, 117, 0.15) 60%,
+                rgba(0, 0, 0, 0) 100%
+              );
             }
           }
           .dropdown-divider {
@@ -151,6 +203,12 @@
               width: 90%;
               margin: 50px auto;
             }
+            @media (max-width: 540px) {
+              font-size: 18px;
+              line-height: 32px;
+              width: 100%;
+              margin: 15px auto;
+            }
           }
           .swiper-container {
             width: 100%;
@@ -158,6 +216,10 @@
             @media (max-width: 1140px) {
               height: 50%;
               margin-top: 50px;
+            }
+            @media (max-width: 540px) {
+              height: 50%;
+              margin-top: 15px;
             }
             .swiper-slide {
               // background: red;
@@ -214,12 +276,23 @@
               background-position: center;
               background-size: cover;
             }
-
+            .swiper-pagination {
+              display: none;
+              @media (max-width: 1140px) {
+                display: block;
+              }
+            }
             .swiper-button-next {
               top: 80%;
+              @media (max-width: 1140px) {
+                display: none;
+              }
             }
             .swiper-button-prev {
               top: 80%;
+              @media (max-width: 1140px) {
+                display: none;
+              }
             }
           }
           .copyright {
@@ -230,6 +303,14 @@
             @media (max-width: 1140px) {
               height: 50px;
               margin-top: 20px;
+            }
+            @media (max-width: 540px) {
+              width: 100%;
+              background-image: url("https://cdn.pixabay.com/photo/2020/02/02/23/50/nature-4814418_1280.jpg");
+              background-position: center;
+              background-size: cover;
+              padding: 0;
+              color: white;
             }
           }
         }
