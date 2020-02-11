@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evan Resume</title>
+    <title>on click</title>
     <!-- jquery ui -->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -35,58 +35,7 @@
             margin: 10px 0;
         }
 
-        .tabs {
-            width: 650px;
-            height: 300px;
-            background-color: rgb(221, 184, 184);
-
-        }
-
-        .tabs ul {
-            background-color: rgb(171, 192, 162);
-        }
-
-        .tabs ul li:nth-child(1) a {
-            background-color: rgb(201, 122, 109);
-        }
-
-        .tabs ul li:nth-child(2) a {
-            background-color: rgb(71, 255, 141);
-        }
-
-        #resume {
-            background-color: rgb(177, 76, 177);
-        }
-
-        .tab_a {
-            padding: 8px 20px;
-            margin-right: 5px;
-            border-radius: 10px 10px 0 0;
-            background-color: #666;
-            color: white;
-            cursor: pointer;
-        }
-
-        .tab_a.active {
-            background-color: white;
-            color: #666;
-        }
-
-        .tab_link {
-            opacity: 0;
-            pointer-events: none;
-            height: 0;
-            overflow: hidden;
-            background-color: white;
-            transition: 1s opacity;
-        }
-
-        .tab_link.active {
-            height: auto;
-            opacity: 1;
-            pointer-events: all;
-            padding: 20px;
-        }
+        
     </style>
     <script>
         // 按鈕訊息+改色
@@ -120,19 +69,7 @@
             $(document).tooltip();
         });
 
-        // Jquery UI提示tab
-        $(function () {
-            $(".tabs").tabs();
-        });
-
-        // 自設定的Tap
-        $('.tab_a').click(function () {
-            $('tab_a').removeClass('active');
-            $(this).addClass('active');
-            var index = $(".tab_a").index(this);
-            $(".tab_link").removeClass("active");
-            $(`.tab_link:nth-child(${index + 1})`).addClass("active");
-        });
+        
 
     </script>
 
@@ -175,40 +112,7 @@
         <input onclick="clean_text()" type="reset" value="清除">
     </form>
 
-    <!-- jquery ui tap -->
-    <h3>Jquery UI Tap</h3>
-    <div class="tabs">
-        <ul>
-            <li><a href="#resume">Resume</a></li>
-            <li><a href="#frontend">前端作品</a></li>
-            <li><a href="#backend">後端作品</a></li>
-        </ul>
-        <div id="resume">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque perferendis soluta,
-            molestiae dolores aliquam distinctio dolorem possimus vitae expedita nemo fuga minus modi praesentium labore
-            recusandae quasi? Qui, minus quae?</div>
-        <div id="frontend">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur dicta sed ex labore est
-            quisquam suscipit placeat aut temporibus beatae?</div>
-        <div id="backend">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, aliquid.</div>
-    </div>
-
-    <!-- 自設定的Tap -->
-    <h3>My JS Tap</h3>
-    <div class="tabs_A">
-        <div class="tab_a active">Resume</div>
-        <div class="tab_a">前端作品</div>
-        <div class="tab_a">後端作品</div>
-
-        <div class="tabs_link">
-            <div id="tab_link active">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque perferendis
-                soluta,
-                molestiae dolores aliquam distinctio dolorem possimus vitae expedita nemo fuga minus modi praesentium
-                labore
-                recusandae quasi? Qui, minus quae?</div>
-            <div id="tab_link">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur dicta sed ex labore est
-                quisquam suscipit placeat aut temporibus beatae?</div>
-            <div id="tab_link">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, aliquid.</div>
-        </div>
-    </div>
+    
 </body>
 
 </html>
