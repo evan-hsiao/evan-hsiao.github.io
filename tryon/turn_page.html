@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turn Page</title>
+
+    <style>
+        .page {
+            border: 1px solid white;
+            width: 600px;
+            height: 400px;
+            margin: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <img src="https://cdn.pixabay.com/photo/2020/02/05/14/42/beach-4821377_1280.jpg" alt="">
+        <!-- <img src="https://cdn.pixabay.com/photo/2014/08/15/11/29/sea-418742_1280.jpg" alt="">
+        <img src="https://cdn.pixabay.com/photo/2013/07/18/20/26/boat-164989_1280.jpg" alt="">
+        <img src="https://cdn.pixabay.com/photo/2015/03/16/10/59/sunset-675847_1280.jpg" alt=""> -->
+        <input type="button" value="next" onclick="changeImg">
+    </div>
+    <script>
+        var i = 1;
+        function changeImg() {
+            i++;
+            document.querySelector('img').src = "img/" + i % 3 + ".jpg";
+        }
+    </script>
+</body>
+
+</html>
