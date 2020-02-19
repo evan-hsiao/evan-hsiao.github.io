@@ -1,0 +1,86 @@
+@import "../css/_resume_tran.scss";
+:root {
+  --purple: #64585b;
+  --eag: #e8e4d2;
+  --dark: #e26961;
+}
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: "Righteous", cursive;
+  background-image: url("https://cdn.pixabay.com/photo/2020/02/14/04/20/old-city-4847469_1280.jpg");
+
+  .nav_title {
+    width: 50px;
+    height: 400px;
+    // background-color: blanchedalmond;
+    position: absolute;
+    right: 206px;
+    top: 30px;
+    box-shadow: 10px 0px 10px black;
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      li {
+        
+        .nav_link {
+          align-items: center;
+          
+          padding: 30px 0px 30px 15px;
+          writing-mode: vertical-lr;
+          text-decoration: none;
+          color: white;
+          a {
+          }
+        }
+        &:nth-child(1) {
+          background-color: var(--eag);
+        }
+        &:nth-child(2) {
+          background-color: var(--dark);
+        }
+        &:nth-child(3) {
+          background-color: var(--purple);
+        }
+      }
+    }
+  }
+  .text_bg {
+    margin: 30px auto;
+    display: block;
+    width: 1024px;
+    height: 600px;
+    background-color: var(--eag);
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 0 20px black;
+    .left_area {
+      width: 50%;
+      height: 100%;
+      background-color: var(--dark);
+    }
+    .right_area {
+      width: 50%;
+      height: 100%;
+      background-image: url("https://cdn.pixabay.com/photo/2020/02/13/21/21/lighthouse-4846854_1280.jpg");
+      background-position: center;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* 文字簍空設定 */
+      -webkit-background-clip: text;
+      color: transparent;
+      h1 {
+        font-size: 300px;
+        font-weight: 1;
+        -webkit-background-clip: text;
+        background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/tw-o.png"),
+          url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/tw5-o.png");
+        background-position: center;
+        background-size: cover;
+      }
+    }
+  }
+}
