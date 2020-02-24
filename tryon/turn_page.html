@@ -11,31 +11,53 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <style>
-
+        /* url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/tw-o.png"), */
     </style>
 </head>
 
 <body>
-    <div class="nav_title">
-        <ul>
-            <li><a href="#" onclick="" class="nav_link">Resume</a></li>
-            <li><a href="" onclick="change_bg()" class="nav_link">From-End</a></li>
-            <li><a href="" onclick="" class="nav_link">Back-End</a></li>
-        </ul>
-    </div>
-    <div class="text_bg">
+
+    <div class="container-all">
+        <div class="nav_title">
+            <ul>
+                <li><a href="#" class="nav_link">Resume</a></li>
+                <li><a href="#" class="nav_link">From-End</a></li>
+                <li><a href="#" class="nav_link">Back-End</a></li>
+            </ul>
+        </div>
         <div class="left_area"></div>
         <div class="right_area">
-            <h1>EH.</h1>
+            <h1 class="right_word">EH.</h1>
             <div class="inside_block"></div>
         </div>
     </div>
-</body>
-<script>
-    function change_bg() {
-        $(h1).style('background-position') =20px 30px;
-    }
 
-</script>
+    <script>
+
+        $(document).ready(function () {
+    
+
+            // $('li').click(function () {
+            //     console.log($(this).index());
+            // });
+
+
+
+            $('ul li a:lt(1)').click(function () {
+                $('.right_word').animate({
+                    backgroundPositionX: '60%', 
+                }, 1000);
+
+            });
+
+            // $('ul li a:lt(2)').click(function () {
+            //     $('.right_word').animate({
+            //         backgroundPositionX: '10%',
+            //     }, 1000);
+            // });
+            // return;
+        });
+    </script>
+</body>
 
 </html>
