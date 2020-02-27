@@ -25,7 +25,9 @@
                 <li><a href="#" class="nav_link">Back-End</a></li>
             </ul>
         </div>
-        <div class="left_area"></div>
+        <div class="left_area">
+
+        </div>
         <div class="right_area">
             <h1 class="right_word">EH.</h1>
             <div class="inside_block"></div>
@@ -35,27 +37,41 @@
     <script>
 
         $(document).ready(function () {
-    
+            // var bgpos = $('.right_word').css('background-position-x');
 
-            // $('li').click(function () {
-            //     console.log($(this).index());
-            // });
+            $('a').click(function () {
+                // 新式寫法(css也需增加.movie內容)
+                $('.right_word').toggleClass('movie');
+
+                // 就是寫法
+                // if (bgpos == '60%') {
+                //     $('.right_word').animate({
+                //         backgroundPositionX: '5%',
+
+                //     }, 1000);
+                //     bgpos = '5%';
+                // }
+
+                // else {
+                //     $('.right_word').animate({
+                //         backgroundPositionX: '60%',
+
+                //     }, 1000);
+                //     bgpos = '60%';
+                // }
+                // return
+            })
 
 
 
-            $('ul li a:lt(1)').click(function () {
-                $('.right_word').animate({
-                    backgroundPositionX: '60%', 
-                }, 1000);
 
-            });
-
-            // $('ul li a:lt(2)').click(function () {
+            // $('ul li a').click(function () {
             //     $('.right_word').animate({
-            //         backgroundPositionX: '10%',
+            //         backgroundPositionX: '30%',
             //     }, 1000);
+
             // });
-            // return;
+
         });
     </script>
 </body>

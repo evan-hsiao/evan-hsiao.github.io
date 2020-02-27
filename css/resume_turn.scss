@@ -4,6 +4,10 @@
   --eag: #e8e4d2;
   --dark: #e26961;
 }
+.movie{
+  background-position-x: 60%;
+}
+
 body {
   margin: 0;
   overflow: hidden;
@@ -24,13 +28,14 @@ body {
     box-shadow: 0 0 20px black;
 
     .left_area {
-      width: 47%;
+      width: 50%;
       height: 100%;
       background-color: var(--dark);
+    
     }
 
     .right_area {
-      width: 50%;
+      width: 45%;
       height: 100%;
       background-image: url("https://cdn.pixabay.com/photo/2020/02/13/21/21/lighthouse-4846854_1280.jpg");
       background-position: center;
@@ -53,11 +58,8 @@ body {
     }
 
     .nav_title {
-      width: 3%;
-      height: 400px;
-      // position: absolute;
-      // right: 206px;
-      // top: 30px;
+      width: 5%;
+      height: 380px;
       box-shadow: 10px 0px 10px black;
       ul {
         list-style-type: none;
