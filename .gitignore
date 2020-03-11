@@ -1,5 +1,8 @@
 node_modules
 package-lock.json
 
+/tryon
+/wireframe
+
 /css/*.scss
 /css/*.map
