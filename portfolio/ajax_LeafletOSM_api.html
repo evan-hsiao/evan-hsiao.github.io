@@ -5,15 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Leaflet + OpenStreetMap 地圖應用開發 -->
-    
-    <!-- 載入圖資套件 -->
-    <link rel="stylesheet" href="/css/leaflet.css">
-    <script src="/script/leaflet.js"></script>
 
-    <!-- 載入效能插件 -->
-    <link rel="stylesheet" href="/css/MarkerCluster.css">
-    <link rel="stylesheet" href="/css/MarkerCluster.Default.css">
-    <script src="/script/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
+
+
+
+
+
+    <link rel="stylesheet" href="https://unpkg.com/browse/leaflet.markercluster@1.4.1/dist/MarkerCluster.css">
+    <link rel="stylesheet" href="https://unpkg.com/browse/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css">
+    <script src="https://unpkg.com/browse/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
 
     <style>
         html,
@@ -30,7 +36,6 @@
             height: 100%;
         }
 
-        /* 以下是直接修改效能插件的css樣式 */
         .leaflet-popup-content h3 {
             text-align: center;
             color: red;
@@ -94,26 +99,26 @@
 </head>
 
 <body>
-  
+
     <div id="map"></div>
 
     <script>
-       
+
         var map = L.map("map", {
-          
+
             center: [24.2110393, 120.7048907],
-       
+
             zoom: 17
         });
 
-      
+
         L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-                       attribution:
+            attribution:
                 '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-           
+
         }).addTo(map);
 
-       
+
         var redIcon = new L.Icon({
             iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
             shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
@@ -131,41 +136,41 @@
             shadowSize: [35, 35]
         });
 
-        
+
         var markers = new L.markerClusterGroup().addTo(map);
 
-      
+
         var xApi = new XMLHttpRequest();
-       
+
         xApi.open("get", "https://raw.githubusercontent.com/kiang/pharmacies/master/json/points.json");
-      
+
         xApi.send();
-       
+
         xApi.onload = function () {
-         
+
             var markData = JSON.parse(xApi.responseText).features;
-           
+
             for (let i = 0; markData.length > i; i++) {
-               
+
                 var maskIcon;
                 if (markData[i].properties.mask_adult == 0) {
                     maskIcon = redIcon;
                 } else {
                     maskIcon = greenIcon;
                 }
-              
+
                 markers.addLayer(
                     L.marker(
-                      
+
                         [markData[i].geometry.coordinates[1], markData[i].geometry.coordinates[0]],
-                       
+
                         { icon: maskIcon }
                     ).bindPopup('<h3>' + markData[i].properties.name + '</h3>' + '<p>成人數量 :' + markData[i].properties.mask_adult + '</p>' + '<p>小孩數量 :' + markData[i].properties.mask_child + '</p>')
                 );
             }
             map.addLayer(markers);
         }
-       
+
     </script>
 </body>
 

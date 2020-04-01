@@ -7,8 +7,7 @@
     <title>Calculator計算機</title>
 
     <link rel="stylesheet" href="/css/calculator.css">
-    <!-- How To Make a Calculator Using Html CSS3 & Javascript -->
-    <!-- https://www.youtube.com/watch?v=BuZtAqk5LIY -->
+
 
 </head>
 
@@ -16,7 +15,6 @@
     <h1>表格式計算機</h1>
     <form class="calculator" name="calc">
         <input type="text" class="display" readonly="" name="txt">
-        <!-- 利用onclick 獲取 form 內的 txt 值 -->
         <span class="num clear" onclick="document.calc.txt.value =''">AC</span>
         <span class="num" onclick="document.calc.txt.value +='/'">/</span>
         <span class="num" onclick="document.calc.txt.value +='*'">*</span>
@@ -34,7 +32,6 @@
         <span class="num" onclick="document.calc.txt.value +='0'">0</span>
         <span class="num" onclick="document.calc.txt.value +='00'">00</span>
         <span class="num" onclick="document.calc.txt.value +='.'">.</span>
-        <!-- eval()函數為js.運算字串 -->
         <span class="num equal" onclick="document.calc.txt.value =eval(calc.txt.value)">=</span>
     </form>
 </body>
