@@ -1,0 +1,65 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif, "Poppins";
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #091921;
+}
+h1 {
+  color: white;
+  margin: 10px;
+}
+.calculator {
+  position: relative;
+  /* 格線編排顯示 */
+  display: grid;
+}
+/* 設定顯示螢幕 */
+.calculator .display {
+  /* 格線比例為每行為4列span寬 */
+  grid-column: span 4;
+  padding: 10px;
+  font-size: 18px;
+  height: 100px;
+  text-align: right;
+  border: none;
+  outline: none;
+}
+.calculator span {
+  display: grid;
+  width: 60px;
+  height: 60px;
+  color: white;
+  background: #0c2835;
+  /* place-items是align-items 與 justify-items 的縮寫 */
+  place-items: center;
+  border: 1px solid gray;
+}
+.calculator span:active {
+  background: #3bb7ff;
+  color: #111;
+}
+/* 清除 按鍵設定 */
+.calculator span.clear {
+  /* 格線比例為每行為2列span寬 */
+  grid-column: span 2;
+  width: 120px;
+  background: rgb(212, 97, 97);
+}
+/* 加法 按鍵設定 */
+.calculator span.plus {
+  /* 格線比例為每列為2行span寬 */
+  grid-row: span 2;
+  height: 120px;
+}
+/* 總計 按鍵設定 */
+.calculator span.equal {
+  background: rgb(99, 187, 91);
+}
