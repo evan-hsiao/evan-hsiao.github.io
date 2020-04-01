@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- fontawesome js -->
+    <!-- <script src="http://kit.fontawesome.com/a81368914c.js"></script> -->
+    
+    <script src="/script/all.js"></script>
+    <link rel="stylesheet" href="/css/all.css" />
+
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+
+    <!-- Login畫面 -->
+    <!-- https://www.youtube.com/watch?v=t-EMinSz_Tk -->
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins';
+        }
+
+        .wave {
+            height: 100%;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            padding: 0 2rem;
+            /* 將版面格線化 2列為1行 間格7rem */
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 7rem;
+        }
+
+        img {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .img img {
+            width: 500px;
+            position: absolute;
+            top: 200px;
+        }
+
+        .login-container {
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        form {
+            width: 360px;
+        }
+
+        .avatar {
+            width: 100px;
+        }
+
+        form h2 {
+            margin: 15px 0;
+            font-size: 2.9rem;
+            color: #333;
+            /* 全大寫字體 */
+            text-transform: uppercase;
+        }
+
+        .input {
+            width: 100%;
+            height: 100%;
+            font-size: 1.2rem;
+            color: #555;
+            background: none;
+            padding: 0.5rem 0.7rem;
+            border: none;
+            outline: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+        }
+
+        .input-div {
+            position: relative;
+            margin: 25px 0;
+            padding: 5px 0;
+            border-bottom: 2px solid #d9d9d9;
+            display: grid;
+            grid-template-columns: 7% 93%;
+        }
+
+        .input-div::after,
+        .input-div::before {
+            content: "";
+            width: 0;
+            height: 2px;
+            background-color: #38d39b;
+            position: absolute;
+            bottom: -2px;
+            transition: 0.3s;
+        }
+
+        .input-div::after {
+            right: 50%;
+        }
+
+        .input-div::before {
+            left: 50%;
+        }
+
+        .input-div.focus .i i {
+            color: #38d39b;
+        }
+
+        .input-div.focus div h5 {
+            top: -5px;
+            font-size: 15px;
+        }
+
+        .input-div.focus::before,
+        .input-div.focus::after {
+            width: 50%;
+        }
+
+        .input-div>div {
+            position: relative;
+            height: 45px;
+        }
+
+        .input-div>div h5 {
+            font-size: 18px;
+            color: #999;
+            /* display: none; */
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: .3s;
+        }
+
+        .input-div:nth-child(1) {
+            margin-top: 0;
+        }
+
+        .input-div:nth-child(2) {
+            margin-bottom: 4px;
+        }
+
+        .i {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .i i {
+            color: #d9d9d9;
+            transition: 0.3s;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            color: #999;
+            font-size: 0.9rem;
+            transition: .3s;
+        }
+
+        a:hover {
+            color: #38d39f;
+        }
+
+        .btn {
+            width: 100%;
+            height: 50px;
+            font-size: 1.2rem;
+            display: block;
+            cursor: pointer;
+            color: white;
+            border-radius: 25px;
+            margin: 1rem 0;
+            outline: none;
+            border: none;
+            text-transform: uppercase;
+            background-image: linear-gradient(to right, #2e886a, #3df5b8, #149761);
+            /* 對應hover顏色 */
+            background-size: 200%;
+            transition: .8s;
+        }
+
+        .btn:hover {
+            background-position: right;
+        }
+
+        @media (max-width:1050px) {
+            .container {
+                grid-gap: 5rem;
+            }
+        }
+
+        @media (max-width:1000px) {
+            form {
+                width: 290px;
+            }
+
+            form h2 {
+                font-size: 2.4rem;
+                margin: 8px 0;
+            }
+
+            .img img {
+                width: 400px;
+            }
+        }
+
+        @media screen and (max-width:900px) {
+            .img {
+                display: none;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .wave {
+                display: none;
+            }
+
+            .login-container {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <img src="/img/wav.svg" class="wave">
+    <div class="container">
+        <div class="img">
+            <img src="/img/undraw_organize_photos_d5nr.svg">
+        </div>
+        <div class="login-container">
+            <form action="index.html">
+                <!-- 個人照 -->
+                <img src="/img/undraw_male_avatar_323b.svg" class="avatar">
+                <h2>Welcome</h2>
+                <!-- 登入名稱 -->
+                <div class="input-div">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div>
+                        <h5>Username</h5>
+                        <input type="text" class="input">
+                    </div>
+                </div>
+                <!-- 登入密碼 -->
+                <div class="input-div">
+                    <div class="i">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div>
+                        <h5>Password</h5>
+                        <input type="password" class="input">
+                    </div>
+                </div>
+                <!-- 提示區塊 -->
+                <a href="#">Forgot Password?</a>
+                <input type="submit" class="btn" value="Login">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const inputs = document.querySelectorAll('.input');
+        function focusFunc() {
+            let parent = this.parentNode.parentNode;
+            parent.classList.add('fcous');
+        };
+        function blurFunc() {
+            let parent = this.parentNode.parentNode;
+            if (this.value == "") {
+                parent.classList.remove('fcous');
+            };
+        };
+        inputs.forEach(input => {
+            input.addEventListener('focus', focusFunc);
+            input.addEventListener('blur', blurFunc);
+        })
+    </script>
+</body>
+
+</html>
