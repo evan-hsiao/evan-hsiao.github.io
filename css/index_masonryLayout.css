@@ -106,8 +106,13 @@ body .container .box:nth-child(3) {
   background: none;
 }
 
+body .container .box:nth-child(4) .content {
+  height: 100%;
+  width: 100%;
+}
+
 body .container .box:nth-child(4) .content li {
-  font-weight: 300;
+  font-weight: 400;
   color: #fbff00;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -128,8 +133,10 @@ body .container .box:nth-child(4) .content li {
 }
 
 body .container .box:nth-child(4) .content li a {
+  font-size: 10px;
+  font-family: "Rock Salt", "Noto Sans TC";
   margin: 0;
-  color: black;
+  color: white;
 }
 
 body .container .box:nth-child(4) .content li a:hover {
