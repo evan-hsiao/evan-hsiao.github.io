@@ -4,84 +4,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to My Websit</title>
-    <link rel="stylesheet" href="/css/index_masonryLayout.css">
-    <script src="/script/myScript/index_masonryLayout.js"></script>
-
+    <title>Parallax Animation</title>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js'></script>
+    <link rel="stylesheet" href="/css/index_Parallax.css">
+    <link href="https://fonts.googleapis.com/css?family=Kreon|Noto+Serif+TC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
 </head>
 
 <body>
-    <div class="container">
-        <div class="box">
-            <div class="content">
-                <img src="/img/mont.png">
-                <h1>Welcome to My Websit</h1>
-                <h3>Email : yogohot@gmail.com</h3>
-                <p>Phone : 0937-197783</p>
+    <div class="wrapper">
+        <div class="nav">
+            <div class="logo">Evan Hsiao</div>
+            <div class="menu-links">
+                <ul>
+                    <li><a href="javascript:;">Home.</a></li>
+                    <li><a href="javascript:;">Wireframe作品集.</a></li>
+                    <li><a href="javascript:;">網頁作品集.</a></li>
+                    <li><a href="javascript:;">Contant.</a></li>
+                </ul>
             </div>
+            <!-- icon區 -->
+            <div class="search"><i class="fa fa-search"></i></div>
+            <div class="account">account</div>
+            <div class="cart"><i class="fa fa-shopping-cart"></i></div>
         </div>
-        <div class="box">
-            <a class="content" href="/index_resume.html">
-                <img src="/img/P_20200206_093700s1.jpg">
-                <p>Evan Hsiao</p>
-            </a>
-        </div>
-        <div class="box">
-            <div class="content">
-                <img src="">
-                <p>網頁就像一層層包覆的夾心餅乾，創造者需要每一層都設定出它的味道，不管是客人的需求，還是自己的堅持，總是要呈現出適當的產品，好讓客人品嘗味道。<br>
-                    我是 Evan
-                    Hsiao，過去10年的生產管理經驗，也陸續有著美術創作的機會，從生產管理到美術，像是一個規劃餅乾製造也學習成為一個製造的人，好呈現產品上架，或許火侯還沒到位，總希望能堅持努力下去。<br>
+        <!-- 文字區 -->
+        <div class="content">
+            <div class="tagline">this is my website</div>
+            <div class="pages"><span>10</span>/16</div>
+            <div class="title">welcome</div>
+            <div class="more"><a href="javascript:;">show all portflilor</a></div>
+            <div class="desc">
+                <p>我的 <span>觀點</span><br>什麼是網頁</p>
+                <p>網頁就像一層層包覆的夾心餅乾，創造者需要每一層都設定出它的味道，不管是客人的需求，還是自己的堅持，總是要呈現出適當的產品，好讓客人品嘗味道。
+                    我是 Evan Hsiao，過去10年的生產管理經驗，也陸續有著美術創作的機會，從生產管理到美術，像是一個規劃餅乾製造也學習成為一個製造的人，好呈現產品上架，或許火侯還沒到位，總希望能堅持努力下去。
                       期待未來能朝著創造者的路來邁進，把經驗相互運用，創造發展上的不同的火花。</p>
             </div>
         </div>
-        <div class="box">
-            <ul class="content">
-                <li>作品連結 :
-                    <a href="/portfolio/todoList_Jqusery.html">TodoList</a><br>
-                    <a href="/portfolio/ajax_LeafletOSM_api.html">口罩地圖</a><br>
-                    <a href="/portfolio/calculator.html">計算機</a><br>
-                    <a href="/portfolio/loginPage.html">Login頁面</a><br>
-                    <a href="/portfolio/turn_card.html">3D CSS翻頁效果</a><br>
+        <!-- 圖片區 -->
+        <div class="midPic">
+            <img src="/img/mont.png" alt="">
+        </div>
+        <div class="leaves">
+            <ul class="scene">
+                <li class="layer">
+                    <img src="/img/leaves-1279509_1920.png">
                 </li>
-
+                <li class="layer">
+                    <img src="/img/autumn-1008520_1920.png">
+                </li>
             </ul>
         </div>
-        <div class="box">
-            <div class="content">
-                <h3>Software : </h3>
-                <p>Adobe Photoshop / Adob Illustrator</p><br>
-                <h3>Tool : </h3>
-                <p>VScode / CSS / Javascript / JQuery</p><br>
-                <h3>Working on it : </h3>
-                <p>Node.js / Vue.js</p><br>
-                <h3>Testing : </h3>
-                <p>Arduino</p>
-            </div>
-        </div>
-        <div class="box">
-            <div class="content">
-                <p>Wireframe Design</p>
-                <div>
-                    <a href="https://www.cakeresume.com/s--vH-ePbnQ3WKuzIDocKc9qQ--/evan-hsiao">CakeResume &#9654;</a>
-                </div>
-            </div>
-        </div>
-        <div class="box">
-            <div class="content">
-                <div class="bible_list">
-
-                </div>
-                <p>Copyright &#169; by Evan-Hsiao
-                </p>
-            </div>
+        <!-- 左右兩側按鈕 -->
+        <div class="arrows">
+            <button class="prev"><i class="fa fa-chevron-left"></i></button>
+            <button class="next"><i class="fa fa-chevron-right"></i></button>
         </div>
     </div>
 
-
-    <script src="/script/jquery-3.4.1.min.js"></script>
     <script>
 
+        gsap.from(".logo", 1, {
+            opacity: 0,
+            x: -20,
+            ease: Expo.easeInOut
+        });
+        gsap.from(".menu-links ul li", 1, {
+            delay: 0.3,
+            opacity: 0,
+            x: -20,
+            ease: Expo.easeInOut
+        }, 0.08);
+        gsap.from(".search", 1, {
+            delay: 0.5,
+            opacity: 0,
+            x: -20,
+            ease: Expo.easeInOut
+        });
+        gsap.from(".account", 1, {
+            delay: 0.6,
+            opacity: 0,
+            x: -20,
+            ease: Expo.easeInOut
+        });
+        gsap.from(".cart", 1, {
+            delay: 0.7,
+            opacity: 0,
+            x: -20,
+            ease: Expo.easeInOut
+        });
+        gsap.from(".midPic", 1, {
+            delay: 2,
+            opacity: 0,
+            y: -800,
+            ease: Expo.easeInOut
+        });
+        gsap.from(".leaves .layer:nth-child(1)", 2, {
+            delay: 2,
+            opacity: 0,
+            y: -800,
+            ease: Expo.easeInOut
+        });
+        gsap.from(".leaves .layer:nth-child(2)", 2, {
+            delay: 2.1,
+            opacity: 0,
+            y: -800,
+            ease: Expo.easeInOut
+        });
+        gsap.from(".title", 1, {
+            delay: 1,
+            opacity: 0,
+            y: 20,
+            ease: Expo.easeInOut
+        });
+        gsap.from(".tagline , .pages ", 1, {
+            delay: 1.3,
+            opacity: 0,
+            y: 20,
+            ease: Expo.easeInOut
+        });
+        gsap.from(".more , .desc", 1, {
+            delay: 1.4,
+            opacity: 0,
+            y: 20,
+            ease: Expo.easeInOut
+        });
+        gsap.from(".arrows", 1, {
+            delay: 2,
+            opacity: 0,
+            ease: Expo.easeInOut
+        });
     </script>
 
 </body>
