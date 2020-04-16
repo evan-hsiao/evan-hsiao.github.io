@@ -143,6 +143,9 @@
 
 * body .wrapper .nav .icon .account {
   font-size: 15px;
+  cursor: pointer;
+  list-style: none;
+  text-decoration: none;
 }
 
 @media (max-width: 540px) {
@@ -258,6 +261,7 @@
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  cursor: pointer;
 }
 
 @media (max-width: 540px) {
@@ -270,7 +274,6 @@
   text-decoration: none;
   font-size: 20px;
   color: white;
-  cursor: pointer;
   background: black;
   padding: 10px 30px;
   border-radius: 10px;
@@ -290,7 +293,7 @@
   }
 }
 
-* body .wrapper .content .more a:hover {
+* body .wrapper .content .more a :hover {
   background: red;
 }
 
