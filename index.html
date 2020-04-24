@@ -100,11 +100,15 @@
             x: -20,
             ease: Expo.easeInOut
         });
-        gsap.from(".midPic", 1, {
+        gsap.fromTo(".midPic", 1, {
             delay: 2,
             opacity: 0,
             y: -800,
             ease: Expo.easeInOut
+        }, {
+            opacity: 1,
+            // x:800,
+            // duration: 1
         });
         gsap.from(".leaves .layer:nth-child(1)", 2, {
             delay: 2,

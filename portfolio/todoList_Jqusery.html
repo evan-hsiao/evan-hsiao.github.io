@@ -91,17 +91,11 @@
     <script>
 
         $('.txtb').keyup(function (x) {
-
             if (x.keyCode == 13 && $('.txtb').val() != "") {
-
                 var task = $('<div class="task"></div>').text($('.txtb').val());
-
                 var del = $('<i class="fal fa-trash-alt"></i>').click(function () {
-
                     var key_val = $(this).parent();
-
                     key_val.fadeOut(function () {
-
                         key_val.remove();
                     });
                 });
@@ -109,20 +103,14 @@
                 var check = $('<i class="fal fa-check"></i>').click(function () {
                     var key_val = $(this).parent();
                     key_val.fadeOut(function () {
-
                         $('.comp').append(key_val);
-
                         key_val.fadeIn();
                     });
-
                     $(this).remove();
                 });
 
                 task.append(del, check);
-
-
                 $('.notcomp').append(task);
-
                 $('.txtb').val('');
             }
         });
