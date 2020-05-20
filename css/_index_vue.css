@@ -1,0 +1,10 @@
+.logo {
+    font-family: "Architects Daughter", cursive;
+}
+section {
+    height: 100vh;
+}
+.title{
+    font-size: 100px;
+    color: teal;
+}
