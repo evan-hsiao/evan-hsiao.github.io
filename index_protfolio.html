@@ -6,65 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to my Websit</title>
 
-    <!-- bootstrap外掛 -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-        crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Rock+Salt&display=swap"
+        rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/fontawesome.js'></script>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css' />
+
     <link rel="stylesheet" href="/css/index_vue.css">
 </head>
 
 <body>
     <div id="container">
 
-        <nav class="navbar navbar-expand-lg bg-light">
-            <a href="#" class="navbar-brand logo">Evan Hsiao</a>
+        <nav class="navbar">
+            <div class="logo">Evan Hsiao</div>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <ul class="barList">
+                <li v-for="barlist in navBar">
+                    <i :class="barlist.icon"></i>
+                    <a :href="barlist.href" class="barItem"  @click="closeMenu"> {{barlist.name}} </a>
+                </li>
+            </ul>
 
-            <div class="navlist collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li v-for="navlist in navBar" class="nav-item">
-                        <a :href="navlist.href" class="nav-link"> {{navlist.name}} </a>
-                    </li>
-                </ul>
+            <div class="hanBar" @click="hanShowAct">
+                <span class="one" ></span>
+                <span class="two" ></span>
+                <span class="three"></span>
             </div>
-
         </nav>
 
         <section class="banner">
             <img :src="banImgSrc[index]">
-
             <a class="leftBtm btn" @click="prev" v-show="index!=0">Prev</a>
             <a class="rightBtm btn" @click="next" v-show="index<banImgSrc.length-1">Next</a>
 
             <div class="bannerInfo">
                 <h1>Welcome to</h1>
                 <h2>My Website</h2>
-                <h1>Evan Hisao</h1>
-                <a href="#" class="btn btn-success">About Me</a>
+                <a href="#aboutMe" class="aboutBtn">About Me</a>
             </div>
         </section>
 
         <section class="protfolio" id="protfolio">
-            <h2 class="title">Protfolio</h2>
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque officiis animi
-                        eligendi nisi, temporibus laboriosam adipisci sit sunt molestias iusto placeat maiores quas
-                        accusamus laudantium suscipit, odit repudiandae architecto aspernatur?</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+            <h2 class="title">Portfolio</h2>
+            <div class="card" style="width: 18rem" v-for="porFile in portfolioFile">
+                <img :src="porFile.src" class="cardImg" alt="...">
+                <div class="cardBody">
+                    <h5> {{porFile.cardTitle}} </h5>
+                    <p> {{porFile.cardText}} </p>
+                    <a :href="porFile.href" class="linkBtn">進入連結</a>
                 </div>
             </div>
-            
+
         </section>
 
         <section class="aboutMe" id="aboutMe">
@@ -81,11 +74,6 @@
 
     </footer>
 
-    <!-- bootstrap外掛 -->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js'></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/vue-router/3.1.3/vue-router.js'></script>
     <script src="/script/myScript/index_vue.js"></script>
