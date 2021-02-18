@@ -15,8 +15,10 @@
             <left_bar></left_bar>
             <transition mode="out-in">
                 <!-- <router-view></router-view>            -->
-            </transition>
-           
+            </transition>           
+        </div>
+        <div class="popInfo" v-if="isPop">
+            <button @click="isPop=!isPop">X</button>
         </div>
     </div>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.9/vue.js'

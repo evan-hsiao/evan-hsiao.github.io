@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+TC:wght@100&display=swap");
 *,
 html {
   margin: 0;
@@ -23,6 +24,12 @@ html body #evan {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background: url("/img/P_20200517_165717_vHDR_Auto_HP.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Nanum Gothic", sans-serif;
+  font-family: "Noto Sans TC", sans-serif;
 }
 
 * body #evan .container,
@@ -41,13 +48,100 @@ html body #evan .container .left_photo {
   width: 45%;
   height: 100%;
   overflow: hidden;
+  position: relative;
 }
 
 * body #evan .container .left_photo img,
 html body #evan .container .left_photo img {
   width: auto;
-  height: 80%;
+  height: 100%;
   -webkit-transform: translate(-150px, 0px);
           transform: translate(-150px, 0px);
+}
+
+* body #evan .container .left_photo .nav_tool,
+html body #evan .container .left_photo .nav_tool {
+  width: 60px;
+  height: 300px;
+  border-radius: 10px;
+  position: absolute;
+  top: 5%;
+  left: 85%;
+  background: #fff;
+  border: 1px solid gray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+* body #evan .container .left_photo .nav_tool a,
+html body #evan .container .left_photo .nav_tool a {
+  width: 100%;
+  height: calc(100% / 3);
+  cursor: pointer;
+  color: #000;
+  border: 1px solid gray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+* body #evan .container .left_photo .nav_tool a:hover,
+html body #evan .container .left_photo .nav_tool a:hover {
+  color: white;
+  background: gray;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+* body #evan .container .left_photo .nav_tool a.active,
+html body #evan .container .left_photo .nav_tool a.active {
+  color: white;
+  background: red;
+  border: none;
+}
+
+* body #evan .popInfo,
+html body #evan .popInfo {
+  width: 60%;
+  height: 90%;
+  background: rgba(255, 255, 255, 0.5);
+  position: fixed;
+}
+
+* body #evan .popInfo button,
+html body #evan .popInfo button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+* body #evan .popInfo button:hover,
+html body #evan .popInfo button:hover {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  color: white;
+  background: #000;
 }
 /*# sourceMappingURL=index_resume_1.css.map */

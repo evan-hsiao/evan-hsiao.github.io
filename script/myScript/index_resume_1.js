@@ -1,5 +1,5 @@
 const data = {
-
+    isPop: false
 
 }
 // var router = new VueRouter({
@@ -10,11 +10,17 @@ const data = {
 Vue.component("left_bar", {
     template: `<div class="left_photo">
         <img :src="myPhoto[startPhoto]" />
+        <div class="nav_tool">
+            <a @click="selectID(0)" :class="[selectShow==0?'active':'']">Home</a>
+            <a @click="selectID(1)" :class="[selectShow==1?'active':'']">2</a>
+            <a @click="selectID(2)" :class="[selectShow==2?'active':'']">3</a>
+        </div>
     </div>`,
     data() {
         return {
             startPhoto: 0,
-            myPhoto: []
+            myPhoto: [],
+            selectShow: "0"
         }
     },
     created() {
@@ -26,6 +32,12 @@ Vue.component("left_bar", {
             .catch(err => {
                 console.log(err);
             })
+    },
+    methods: {
+        selectID(i) {
+            console.log(i);
+            this.selectShow = i
+        }
     }
 })
 
