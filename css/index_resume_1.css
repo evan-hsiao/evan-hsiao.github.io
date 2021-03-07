@@ -24,28 +24,29 @@ html body #evan {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: url("/img/P_20200517_165717_vHDR_Auto_HP.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "Nanum Gothic", sans-serif;
   font-family: "Noto Sans TC", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 * body #evan .container,
 html body #evan .container {
-  width: 60%;
+  width: 80%;
   height: 90%;
-  background: #fff;
   border-radius: 10px;
-  -webkit-box-shadow: 0 0 10px black;
-          box-shadow: 0 0 10px black;
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 * body #evan .container .left_photo,
 html body #evan .container .left_photo {
-  width: 45%;
+  width: 35%;
   height: 100%;
   overflow: hidden;
   position: relative;
@@ -61,14 +62,15 @@ html body #evan .container .left_photo img {
 
 * body #evan .container .left_photo .nav_tool,
 html body #evan .container .left_photo .nav_tool {
-  width: 60px;
-  height: 300px;
-  border-radius: 10px;
+  width: 80px;
+  height: 400px;
   position: absolute;
-  top: 5%;
-  left: 85%;
+  top: 0%;
+  right: 0;
   background: #fff;
-  border: 1px solid gray;
+  border-radius: 10px 0 0 10px;
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -91,7 +93,8 @@ html body #evan .container .left_photo .nav_tool a {
   height: calc(100% / 3);
   cursor: pointer;
   color: #000;
-  border: 1px solid gray;
+  -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -101,6 +104,7 @@ html body #evan .container .left_photo .nav_tool a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-size: 0.8em;
 }
 
 * body #evan .container .left_photo .nav_tool a:hover,
@@ -116,6 +120,92 @@ html body #evan .container .left_photo .nav_tool a.active {
   color: white;
   background: red;
   border: none;
+}
+
+* body #evan .container .left_photo .icon_link,
+html body #evan .container .left_photo .icon_link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  bottom: 0px;
+  left: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  list-style: none;
+}
+
+* body #evan .container .left_photo .icon_link a,
+html body #evan .container .left_photo .icon_link a {
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+* body #evan .container .left_photo .icon_link a i,
+html body #evan .container .left_photo .icon_link a i {
+  color: #fff;
+  font-size: 30px;
+}
+
+* body #evan .container .left_photo .icon_link a p,
+html body #evan .container .left_photo .icon_link a p {
+  color: #fff;
+  margin-left: 5px;
+  display: none;
+}
+
+* body #evan .container .left_photo .icon_link a.active,
+html body #evan .container .left_photo .icon_link a.active {
+  width: 200px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+* body #evan .container .left_photo .icon_link a.active p,
+html body #evan .container .left_photo .icon_link a.active p {
+  display: block;
+}
+
+* body #evan .container .left_photo .icon_link a:hover,
+html body #evan .container .left_photo .icon_link a:hover {
+  width: 200px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+* body #evan .container .left_photo .icon_link a:hover p,
+html body #evan .container .left_photo .icon_link a:hover p {
+  display: block;
+}
+
+* body #evan .container .right_list,
+html body #evan .container .right_list {
+  width: 65%;
+  height: 100%;
+}
+
+* body #evan .container h1,
+html body #evan .container h1 {
+  font-size: 80px;
+  font-weight: 500;
+  color: #cc9933;
+  position: absolute;
+  top: 5%;
+  -webkit-transform: rotatez(-15deg);
+          transform: rotatez(-15deg);
+  z-index: -1;
+  font-family: "Kaushan Script", cursive;
 }
 
 * body #evan .popInfo,

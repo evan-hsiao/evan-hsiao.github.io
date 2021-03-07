@@ -7,30 +7,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evan Hsiao Website</title>
     <link rel="stylesheet" href="/css/index_resume_1.css">
+    <!-- font awesome -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.css'
+        integrity='sha512-9iWaz7iMchMkQOKA8K4Qpz6bpQRbhedFJB+MSdmJ5Nf4qIN1+5wOVnzg5BQs/mYH3sKtzY+DOgxiwMz8ZtMCsw=='
+        crossorigin='anonymous' />
+        <!-- google Kaushan Script英文草寫字體 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div id="evan">
+
         <div class="container">
             <left_bar></left_bar>
-            <transition mode="out-in">
-                <!-- <router-view></router-view>            -->
-            </transition>           
+            <right_bar></right_bar>
         </div>
         <div class="popInfo" v-if="isPop">
-            <button @click="isPop=!isPop">X</button>
+            <transition mode="out-in">
+                <router-view></router-view>
+            </transition>
+            <button @click="!isPop">X</button>
         </div>
     </div>
+
+    <!-- vue -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.9/vue.js'
         integrity='sha512-o9SZrtqlGkpa7EF+dDrNjEdRFFYhymlrBzDKpolHNolxsyx0IcXAbEm9i1e8QpoiMgEdKZVtY8XiK1t8i6jVDA=='
         crossorigin='anonymous'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.js'
-        integrity='sha512-otOZr2EcknK9a5aa3BbMR9XOjYKtxxscwyRHN6zmdXuRfJ5uApkHB7cz1laWk2g8RKLzV9qv/fl3RPwfCuoxHQ=='
+    <!-- vuex -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vuex/3.6.2/vuex.js'
+        integrity='sha512-i48GtNrU5tVNKFkvIT3nArzgcIYGLxb0t6Ok+yu6yybHksvifmC+mmT2c3II7PZgUsA5sFnxROrkeM5Yt46g3A=='
         crossorigin='anonymous'></script>
+    <!-- vue-router -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/vue-router/3.5.1/vue-router.js'
         integrity='sha512-mQKtM7fSv7pIQ6r4Jqe7c7K3QKEa1G+qNp0o9ohfGNeTT7pl85our+sPlSkzogl1oChZj75zhq9HGAj7Pf4Wjw=='
         crossorigin='anonymous'></script>
-    <script src="/script/myScript/index_resume_1.js"></script>
+    <!-- axios -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.js'
+        integrity='sha512-otOZr2EcknK9a5aa3BbMR9XOjYKtxxscwyRHN6zmdXuRfJ5uApkHB7cz1laWk2g8RKLzV9qv/fl3RPwfCuoxHQ=='
+        crossorigin='anonymous'></script>
+
+    <script src="/script/myScript/index_resume_1.js" type="module"></script>
+
 </body>
 
 </html>

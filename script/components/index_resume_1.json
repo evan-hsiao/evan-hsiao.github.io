@@ -2,17 +2,31 @@
     "introduced": "I am EvanHsiao from Taiwan Taichung,when i first touch coding at 3 years ago。I use Excel-VBA code,and buliding in my works",
     "contact_info": [
         {
-            "Phone": "0937197783",
-            "Email": "evan.hsiao1016@gmail.com",
-            "Github WebSite": "https://evan-hsiao.github.com"
+            "phone": "0937197783",
+            "email": "evan.hsiao1016@gmail.com",
+            "github": "https://evan-hsiao.github.io/",
+            "cakeresume": "https://www.cakeresume.com/s--vH-ePbnQ3WKuzIDocKc9qQ--/evan-hsiao"
+        }
+    ],
+    "Experience": [
+        {
+            "Company": "柏力電子有限公司",
+            "Title": "網頁設計師",
+            "Time": "2020/6~Now"
+        },
+        {
+            "Company": "SRAM愛爾蘭速聯股份有限公司(神岡廠)",
+            "Title": "生產部產線組長",
+            "Time": "2016/10~2019/9"
+        },
+        {
+            "Company": "Jabil Green綠點高薪股份有限公司(模具廠)",
+            "Title": "助理管理師",
+            "Time": "2013/5~2016/7"
         },
         {
             "School": "環球商專(二專部)",
             "Major": "商業文書"
-        },
-        {
-            "local Language": "Chinese",
-            "Second Language": "English"
         },
         {
             "Skill": "Adobe Photoshop",
@@ -26,18 +40,6 @@
             "License3": "中興大學大數據系統開發與全端Python資料探勘工程師養成班結業"
         }
     ],
-    "Experience": [
-        {
-            "Company": "SRAM愛爾蘭速聯股份有限公司(神岡廠)",
-            "Title": "生產部產線組長",
-            "Time": "2016/10~2019/9"
-        },
-        {
-            "Company": "Jabil Green綠點高薪股份有限公司(模具廠)",
-            "Title": "助理管理師",
-            "Time": "2013/5~2016/7"
-        }
-    ],
     "myPhoto": [
         "/img/P_20210216_095707.png",
         ""
@@ -46,10 +48,6 @@
         {
             "Photo": "/img/Harbor no.9.png",
             "Link": "https://evan-hsiao.github.io/no9_harbor"
-        },
-        {
-            "Photo": "/img/PortaPower - 柏力電子有限公司 - eBike系統套件供應商 - portapower.com.tw.png",
-            "Link": "https://www.portapower.com.tw"
         },
         {
             "Photo": "/img/eRider - ebike system solution - www.erider.com.png",
