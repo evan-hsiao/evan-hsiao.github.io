@@ -167,9 +167,9 @@ html body #evan .container .left_photo .icon_link a p {
 
 * body #evan .container .left_photo .icon_link a.active,
 html body #evan .container .left_photo .icon_link a.active {
-  width: 200px;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  width: 180px;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
 }
 
 * body #evan .container .left_photo .icon_link a.active p,
@@ -180,23 +180,19 @@ html body #evan .container .left_photo .icon_link a.active p {
 * body #evan .container .left_photo .icon_link a:hover,
 html body #evan .container .left_photo .icon_link a:hover {
   width: 200px;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 * body #evan .container .left_photo .icon_link a:hover p,
 html body #evan .container .left_photo .icon_link a:hover p {
   display: block;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
-* body #evan .container .right_list,
-html body #evan .container .right_list {
-  width: 65%;
-  height: 100%;
-}
-
-* body #evan .container h1,
-html body #evan .container h1 {
+* body #evan .container .left_photo h1,
+html body #evan .container .left_photo h1 {
   font-size: 80px;
   font-weight: 500;
   color: #cc9933;
@@ -206,6 +202,39 @@ html body #evan .container h1 {
           transform: rotatez(-15deg);
   z-index: -1;
   font-family: "Kaushan Script", cursive;
+}
+
+* body #evan .container .right_list,
+html body #evan .container .right_list {
+  width: 65%;
+  height: 100%;
+  background: red;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+* body #evan .container .right_list h1,
+html body #evan .container .right_list h1 {
+  color: white;
+}
+
+* body #evan .container .right_list .experience,
+html body #evan .container .right_list .experience {
+  text-align: center;
 }
 
 * body #evan .popInfo,
