@@ -1,3 +1,6 @@
+
+
+// const { mapState, mapActions } = 'vuex';
 export default {
     name: "rightArea",
     template: `<div class="right_list">
@@ -31,6 +34,11 @@ export default {
             resume: "",
             experience: []
         }
+    },
+    computed: {
+        // ...mapState({
+        //     a: state => state.selectList
+        // })
     },
     updated() {
         this.resumeTxt = this.$store.state.selectList
