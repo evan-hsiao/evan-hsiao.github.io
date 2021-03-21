@@ -208,7 +208,7 @@ html body #evan .container .left_photo h1 {
 html body #evan .container .right_list {
   width: 65%;
   height: 100%;
-  background: red;
+  background-color: red;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 10px 20px;
@@ -229,12 +229,32 @@ html body #evan .container .right_list {
 
 * body #evan .container .right_list h1,
 html body #evan .container .right_list h1 {
-  color: white;
+  color: #eee0e0;
 }
 
 * body #evan .container .right_list .experience,
 html body #evan .container .right_list .experience {
   text-align: center;
+}
+
+* body #evan .container .right_list .experience h3,
+html body #evan .container .right_list .experience h3 {
+  font-size: 1.5em;
+}
+
+* body #evan .container .right_list .experience h3 i,
+html body #evan .container .right_list .experience h3 i {
+  margin-right: 5px;
+}
+
+* body #evan .container .right_list .experience p,
+html body #evan .container .right_list .experience p {
+  font-size: 1.2em;
+}
+
+* body #evan .container .right_list .experience p i,
+html body #evan .container .right_list .experience p i {
+  margin-right: 5px;
 }
 
 * body #evan .popInfo,

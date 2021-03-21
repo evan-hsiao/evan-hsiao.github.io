@@ -33,7 +33,7 @@ new Vue({
     created() {
         axios.get('/script/components/index_resume_1.json')
             .then(arr => {
-                console.log(arr.data.myPhoto);
+                // console.log(arr.data.myPhoto);
             })
             .catch(err => {
                 console.log(err);

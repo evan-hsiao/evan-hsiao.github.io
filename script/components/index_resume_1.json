@@ -1,5 +1,5 @@
 {
-    "resume": "I am EvanHsiao from Taiwan Taichung,when i first touch coding at 3 years ago。\n I use Excel-VBA code,and buliding in my works",
+    "resume": "Hi!我是Evan \n 這頁面採用Vue.js建立，左側選單使用Vuex作為store連結內容，右側v-if切換顯示，然後使用v-for陣列內容",
     "contact_info": [
         {
             "phone": "0937197783",
@@ -23,21 +23,6 @@
             "Company": "Jabil Green綠點高薪股份有限公司(模具廠)",
             "Title": "助理管理師",
             "Time": "2013/5~2016/7"
-        },
-        {
-            "School": "環球商專(二專部)",
-            "Major": "商業文書"
-        },
-        {
-            "Skill": "Adobe Photoshop",
-            "Second Skill": "Adobe Illustrator",
-            "Third skill": "JavaScript ( Vue.js )"
-        },
-        {
-            "License": "電腦軟體應用丙級",
-            "License1": "電腦數值控制銑床乙級",
-            "License2": "Google Analytics基礎知識結業證書",
-            "License3": "中興大學大數據系統開發與全端Python資料探勘工程師養成班結業"
         }
     ],
     "myPhoto": [
@@ -62,5 +47,22 @@
         "/img/Text Transparent.png",
         "/img/10.png",
         "/img/charch-01.png"
+    ],
+    "Skills": [
+        {
+            "Skill": "Adobe Photoshop",
+            "Second Skill": "Adobe Illustrator",
+            "Third skill": "JavaScript ( Vue.js )"
+        },
+        {
+            "License": "電腦軟體應用丙級",
+            "License1": "電腦數值控制銑床乙級",
+            "License2": "Google Analytics基礎知識結業證書",
+            "License3": "中興大學大數據系統開發與全端Python資料探勘工程師養成班結業"
+        },
+        {
+            "School": "環球商專(二專部)",
+            "Major": "商業文書"
+        }
     ]
 }

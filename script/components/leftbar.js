@@ -3,10 +3,10 @@ export default {
     template: `<div class="left_photo">
     <img :src="myPhoto[startPhoto]" />
     <div class="nav_tool">
-            <a @click="selectID(0)" :class="[selectShow==0?'active':'']">Resume</a>
+            <a @click="selectID(0)" :class="[selectShow==0?'active':'']">Experience</a>
             <a @click="selectID(1)" :class="[selectShow==1?'active':'']">Portfolio</a>
             <a @click="selectID(2)" :class="[selectShow==2?'active':'']">Illustration</a>
-            <a @click="selectID(3)" :class="[selectShow==3?'active':'']">Offical</a>
+            <a @click="selectID(3)" :class="[selectShow==3?'active':'']">Summary</a>
             <a @click="selectID(4)" :class="[selectShow==4?'active':'']">Contact</a>
     </div>
     <div class="icon_link">
@@ -46,9 +46,9 @@ export default {
     },
     methods: {
         selectID(i) {
-            console.log(i);
+            // console.log(i);
             this.selectShow = i
-            // 送給vuex的changeList方法
+            // 送給vuex
             this.$store.commit('changeList', i)
         },
 
