@@ -35,7 +35,11 @@
             "Link": "https://evan-hsiao.github.io/no9_harbor"
         },
         {
-            "Photo": "/img/eRider - ebike system solution - www.erider.com.png",
+            "Photo": "/img/portapower.png",
+            "Link": "https://www.portapower.com.tw"
+        },
+        {
+            "Photo": "/img/eRider.png",
             "Link": "https://www.erider.com"
         }
     ],
@@ -43,10 +47,10 @@
         "/img/HungryHa_food.png",
         "/img/HungryHa_food2.png",
         "/img/in-scone.png",
-        "/img/Love web.png",
+        "/img/Love web.jpg",
         "/img/Text Transparent.png",
         "/img/10.png",
-        "/img/charch-01.png"
+        "/img/charch-01.jpg"
     ],
     "Skills": [
         {

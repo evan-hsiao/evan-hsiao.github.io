@@ -5,38 +5,42 @@ export default {
     name: "rightArea",
     template: `<div class="right_list">
     
-     <div v-if="this.$store.state.selectList==0">
-        <h1>工作經驗 Work Experience</h1>
-        <div class="experience" v-for="arr in experience">
+     <div class="experience" v-if="this.$store.state.selectList==0">
+        <h1>My Work Experience</h1>
+        <div  v-for="arr in experience">
             <h3><i class="fas fa-laptop-house"></i>{{arr.Company}}</h3>
             <p><i class="fas fa-user"></i>{{arr.Title}}</p>
             <p><i class="far fa-calendar-alt"></i>{{arr.Time}}</p>
         </div>
      </div>
-     <div v-if="this.$store.state.selectList==1">
-         <h1></h1>
-         <div class="myWorks" v-for="arr in myWorks">
-           <img :src="arr.Photo" />
+
+     <div class="myWorks" v-if="this.$store.state.selectList==1">
+         <h1>過去合作作品</h1>
+         <div  v-for="arr in myWorks">
+           <a :href="arr.Link">
+            <img :src="arr.Photo" />
+           </a>
          </div>
      </div>
-     <div v-if="this.$store.state.selectList==2">
-         <h1>我的作品</h1>
-         <div class="myillustration" v-for="arr in myillustration">
+
+     <div class="myillustration" v-if="this.$store.state.selectList==2">
+         <h1>設計作品</h1>
+         <div v-for="arr in myillustration">
            <img :src="arr" />
          </div>
      </div>
     
-     <div v-if="this.$store.state.selectList==3">
+     <div class="Summary" v-if="this.$store.state.selectList==3">
          <h1></h1>
-         <div class="Summary">
+         <div >
            <h1>網站概述</h1>
            <h2>{{resume}}</h2>
          </div>
      </div>
 
-     <div v-if="this.$store.state.selectList==4">
-     <h1>個人資料 Contact Information</h1>
-      <div class="contact_info" v-for="arr in contact_info">
+     <div class="contact_info" v-if="this.$store.state.selectList==4">
+     <h1>聯絡我吧 <br> Contact Information</h1>
+      <div  v-for="arr in contact_info">
         <p><i class="fas fa-phone-alt"></i>Phone : {{arr.phone}}</p>
         <p><i class="fas fa-envelope"></i> Email : {{arr.email}}</p>
         <p><i class="fab fa-github"></i> Github : {{arr.github}}</p>
@@ -76,16 +80,11 @@ export default {
     },
     updated() {
         this.resumeTxt = this.$store.state.selectList
-        var bg_color = document.querySelector('.right_list').style
-        if (this.resumeTxt == 1) {
-            // console.log(bg_color);
-            bg_color = "background-color:#494949"
-        } else if (this.resumeTxt == 2) {
-            console.log('i am 2');
-        } else if (this.resumeTxt == 3) {
-            console.log('i am 3');
-        } else if (this.resumeTxt == 4) {
-            console.log('i am 4');
+        var bg_color = document.querySelector('.right_list')
+        if (this.resumeTxt = 0 | 2) {
+            bg_color.style.background = "red"
+        } else if (this.resumeTxt = 1 | 3 | 5) {
+            bg_color.style.background = "#000"
         }
 
     },

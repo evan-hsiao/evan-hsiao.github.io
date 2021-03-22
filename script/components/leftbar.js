@@ -51,6 +51,5 @@ export default {
             // 送給vuex
             this.$store.commit('changeList', i)
         },
-
-    },
+    }
 }
