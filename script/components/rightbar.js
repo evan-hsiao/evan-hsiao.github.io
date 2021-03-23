@@ -17,25 +17,24 @@ export default {
      <div class="myWorks" v-if="this.$store.state.selectList==1">
          <h1>過去合作作品</h1>
          <div  v-for="arr in myWorks">
-           <a :href="arr.Link">
-            <img :src="arr.Photo" />
+            <p>{{arr.info}}</p>
+           <a :href="arr.Link" title="點我進入連結網站">
+            <img :src="arr.Photo[0]" />
            </a>
          </div>
      </div>
 
      <div class="myillustration" v-if="this.$store.state.selectList==2">
          <h1>設計作品</h1>
-         <div v-for="arr in myillustration">
-           <img :src="arr" />
+         <div v-for="(arr,index) in myillustration" @click="popShow(index)">
+           <p>{{arr.info}}</p>
+           <img :src="arr.Photo[0]" />
          </div>
      </div>
     
      <div class="Summary" v-if="this.$store.state.selectList==3">
-         <h1></h1>
-         <div >
-           <h1>網站概述</h1>
-           <h2>{{resume}}</h2>
-         </div>
+         <h1>網站概述</h1>
+         <h2>{{resume}}</h2>
      </div>
 
      <div class="contact_info" v-if="this.$store.state.selectList==4">
@@ -75,17 +74,24 @@ export default {
             myillustration: [],
         }
     },
+    methods: {
+        // 顯示彈跳視窗並傳送選取資料
+        popShow(i) {
+            console.log(i);
+            this.$store.commit('changePop', 1)
+        }
+    },
     computed: {
 
     },
     updated() {
         this.resumeTxt = this.$store.state.selectList
         var bg_color = document.querySelector('.right_list')
-        if (this.resumeTxt = 0 | 2) {
-            bg_color.style.background = "red"
-        } else if (this.resumeTxt = 1 | 3 | 5) {
-            bg_color.style.background = "#000"
-        }
+        // if (this.resumeTxt = 0) {
+        //     bg_color.style.background = "red"
+        // } else if (this.resumeTxt = 1) {
+        //     bg_color.style.background = "#000"
+        // }
 
     },
     watch: {

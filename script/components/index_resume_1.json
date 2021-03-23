@@ -31,26 +31,65 @@
     ],
     "myWorks": [
         {
-            "Photo": "/img/Harbor no.9.png",
-            "Link": "https://evan-hsiao.github.io/no9_harbor"
+            "Photo": [
+                "/img/Harbor no.9.png"
+            ],
+            "Link": "https://evan-hsiao.github.io/no9_harbor",
+            "info": "九號碼頭熱炒店專題網站製作"
         },
         {
-            "Photo": "/img/portapower.png",
-            "Link": "https://www.portapower.com.tw"
+            "Photo": [
+                "/img/portapower.png"
+            ],
+            "Link": "https://www.portapower.com.tw",
+            "info": "柏力電子台灣官方網站製作"
         },
         {
-            "Photo": "/img/eRider.png",
-            "Link": "https://www.erider.com"
+            "Photo": [
+                "/img/eRider.png"
+            ],
+            "Link": "https://www.erider.com",
+            "info": "eRider官方網站製作"
         }
     ],
     "myillustration": [
-        "/img/HungryHa_food.png",
-        "/img/HungryHa_food2.png",
-        "/img/in-scone.png",
-        "/img/Love web.jpg",
-        "/img/Text Transparent.png",
-        "/img/10.png",
-        "/img/charch-01.jpg"
+        {
+            "Photo": [
+                "/img/HungryHa_food.jpg",
+                "/img/HungryHa_food2.jpg"
+            ],
+            "info": "二哈小卷米粉網站設計"
+        },
+        {
+            "Photo": [
+                "/img/in-scone.png"
+            ],
+            "info": "司康網站設計"
+        },
+        {
+            "Photo": [
+                "/img/Love web.jpg"
+            ],
+            "info": "愛情網網站設計"
+        },
+        {
+            "Photo": [
+                "/img/Text Transparent.png"
+            ],
+            "info": "簍空遮罩Banner設計頁面"
+        },
+        {
+            "Photo": [
+                "/img/10.jpg"
+            ],
+            "info": "童趣圖像設計"
+        },
+        {
+            "Photo": [
+                "/img/charch-01.jpg"
+            ],
+            "info": "教堂建築網站設計"
+        }
     ],
     "Skills": [
         {

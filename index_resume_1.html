@@ -11,7 +11,7 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.css'
         integrity='sha512-9iWaz7iMchMkQOKA8K4Qpz6bpQRbhedFJB+MSdmJ5Nf4qIN1+5wOVnzg5BQs/mYH3sKtzY+DOgxiwMz8ZtMCsw=='
         crossorigin='anonymous' />
-        <!-- google Kaushan Script英文草寫字體 -->
+    <!-- google Kaushan Script英文草寫字體 -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
 </head>
@@ -23,11 +23,11 @@
             <left_bar></left_bar>
             <right_bar></right_bar>
         </div>
-        <div class="popInfo" v-if="isPop">
-            <transition mode="out-in">
+        <div class="popInfo" v-if="this.$store.state.isPop">
+            <!-- <transition mode="out-in"> -->
                 <router-view></router-view>
-            </transition>
-            <button @click="!isPop">X</button>
+            <!-- </transition> -->
+            
         </div>
     </div>
 

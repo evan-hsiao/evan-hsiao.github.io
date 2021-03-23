@@ -3,7 +3,7 @@ import left_bar from "../components/leftbar.js";
 import right_bar from "../components/rightbar.js";
 
 const data = {
-    isPop: false
+
 }
 var router = new VueRouter({
     routes: [
@@ -14,14 +14,26 @@ var router = new VueRouter({
 const store = new Vuex.Store({
     // 類似data
     state: {
+        // 選擇的清單
+        selectList: 0,
+        // 彈跳視窗顯示
+        isPop: 0,
         // 選擇的頁面
-        selectList: 0
+        selectInfo: 0
     },
     // 類似methods
     mutations: {
+        // 選擇的清單
         changeList(state, payload) {
-            // 對應頁面
             state.selectList = payload
+        },
+        // 彈跳視窗顯示
+        changePop(state, payload) {
+            state.isPop = payload
+        },
+        // 選擇的頁面
+        changeInf(sate, payload) {
+            state.selectInfo = payload
         }
     }
 })
