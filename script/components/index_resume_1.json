@@ -12,22 +12,24 @@
         {
             "Company": "柏力電子有限公司",
             "Title": "網頁設計師",
-            "Time": "2020/6~Now"
+            "Time": "2020/6~Now",
+            "info": ""
         },
         {
             "Company": "SRAM愛爾蘭速聯股份有限公司(神岡廠)",
             "Title": "生產部產線組長",
-            "Time": "2016/10~2019/9"
+            "Time": "2016/10~2019/9",
+            "info": ""
         },
         {
             "Company": "Jabil Green綠點高薪股份有限公司(模具廠)",
             "Title": "助理管理師",
-            "Time": "2013/5~2016/7"
+            "Time": "2013/5~2016/7",
+            "info": ""
         }
     ],
     "myPhoto": [
-        "/img/P_20210216_095707.png",
-        ""
+        "/img/P_20210216_095707.png"
     ],
     "myWorks": [
         {
@@ -35,21 +37,24 @@
                 "/img/Harbor no.9.png"
             ],
             "Link": "https://evan-hsiao.github.io/no9_harbor",
-            "info": "九號碼頭熱炒店專題網站製作"
+            "info": "九號碼頭熱炒店專題網站製作",
+            "moroInfo": "建立九號碼頭熱炒網站，"
         },
         {
             "Photo": [
                 "/img/portapower.png"
             ],
             "Link": "https://www.portapower.com.tw",
-            "info": "柏力電子台灣官方網站製作"
+            "info": "柏力電子台灣官方網站製作",
+            "moroInfo": "使用Vue.js建立"
         },
         {
             "Photo": [
                 "/img/eRider.png"
             ],
             "Link": "https://www.erider.com",
-            "info": "eRider官方網站製作"
+            "info": "eRider官方網站製作",
+            "moroInfo": ""
         }
     ],
     "myillustration": [
@@ -58,37 +63,43 @@
                 "/img/HungryHa_food.jpg",
                 "/img/HungryHa_food2.jpg"
             ],
-            "info": "二哈小卷米粉網站設計"
+            "info": "二哈小卷米粉網站設計",
+            "moroInfo": ""
         },
         {
             "Photo": [
                 "/img/in-scone.png"
             ],
-            "info": "司康網站設計"
+            "info": "司康網站設計",
+            "moroInfo": ""
         },
         {
             "Photo": [
                 "/img/Love web.jpg"
             ],
-            "info": "愛情網網站設計"
+            "info": "愛情網網站設計",
+            "moroInfo": ""
         },
         {
             "Photo": [
                 "/img/Text Transparent.png"
             ],
-            "info": "簍空遮罩Banner設計頁面"
+            "info": "簍空遮罩Banner設計頁面",
+            "moroInfo": ""
         },
         {
             "Photo": [
                 "/img/10.jpg"
             ],
-            "info": "童趣圖像設計"
+            "info": "童趣圖像設計",
+            "moroInfo": ""
         },
         {
             "Photo": [
                 "/img/charch-01.jpg"
             ],
-            "info": "教堂建築網站設計"
+            "info": "教堂建築網站設計",
+            "moroInfo": ""
         }
     ],
     "Skills": [
