@@ -19,7 +19,9 @@ const store = new Vuex.Store({
         // 彈跳視窗顯示
         isPop: 0,
         // 選擇的頁面
-        selectInfo: 0
+        selectInfo: '',
+        // 選擇頁面的index
+        selectIndex: 0
     },
     // 類似methods
     mutations: {
@@ -32,8 +34,12 @@ const store = new Vuex.Store({
             state.isPop = payload
         },
         // 選擇的頁面
-        changeInf(sate, payload) {
+        changeInfo(state, payload) {
             state.selectInfo = payload
+        },
+        // 選擇頁面的index
+        changeIndex(state, payload) {
+            state.selectIndex = payload
         }
     }
 })

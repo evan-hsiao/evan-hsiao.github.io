@@ -268,17 +268,41 @@ html body #evan .container .right_list .experience {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  cursor: default;
 }
 
 * body #evan .container .right_list .experience h1,
 html body #evan .container .right_list .experience h1 {
-  color: #fff;
-  text-align: center;
+  color: #000;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: start;
+  width: 50%;
+}
+
+* body #evan .container .right_list .experience div,
+html body #evan .container .right_list .experience div {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 5px;
 }
 
 * body #evan .container .right_list .experience div h3,
 html body #evan .container .right_list .experience div h3 {
-  font-size: 1.5em;
+  font-size: 1.2em;
+  text-align: start;
 }
 
 * body #evan .container .right_list .experience div h3 i,
@@ -289,6 +313,7 @@ html body #evan .container .right_list .experience div h3 i {
 * body #evan .container .right_list .experience div p,
 html body #evan .container .right_list .experience div p {
   font-size: 1.2em;
+  text-align: start;
 }
 
 * body #evan .container .right_list .experience div p i,
@@ -298,26 +323,25 @@ html body #evan .container .right_list .experience div p i {
 
 * body #evan .container .right_list .myWorks,
 html body #evan .container .right_list .myWorks {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  overflow-y: auto;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
 * body #evan .container .right_list .myWorks h1,
 html body #evan .container .right_list .myWorks h1 {
-  font-size: 1.5em;
+  font-size: 2em;
+  text-align: center;
+  width: 100%;
 }
 
 * body #evan .container .right_list .myWorks div,
 html body #evan .container .right_list .myWorks div {
-  width: calc(100% / 2.2);
-  cursor: pointer;
-  border: 1px solid black;
+  width: calc(100% / 2.5);
   margin: 5px;
   padding: 5px;
+  border: 1px solid black;
+  cursor: pointer;
 }
 
 * body #evan .container .right_list .myWorks div:hover,
@@ -330,37 +354,24 @@ html body #evan .container .right_list .myWorks div:hover {
 
 * body #evan .container .right_list .myWorks div:hover p,
 html body #evan .container .right_list .myWorks div:hover p {
-  color: white;
+  color: #fff;
 }
 
 * body #evan .container .right_list .myWorks div p,
 html body #evan .container .right_list .myWorks div p {
-  font-size: 1em;
   text-align: center;
+  font-size: 1em;
+  color: #000;
 }
 
-* body #evan .container .right_list .myWorks div a,
-html body #evan .container .right_list .myWorks div a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 5px;
-}
-
-* body #evan .container .right_list .myWorks div a img,
-html body #evan .container .right_list .myWorks div a img {
+* body #evan .container .right_list .myWorks div img,
+html body #evan .container .right_list .myWorks div img {
   width: 100%;
 }
 
 * body #evan .container .right_list .myillustration,
 html body #evan .container .right_list .myillustration {
-  overflow-y: scroll;
+  overflow-y: auto;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -388,7 +399,7 @@ html body #evan .container .right_list .myillustration div {
 * body #evan .container .right_list .myillustration div:hover,
 html body #evan .container .right_list .myillustration div:hover {
   border: none;
-  background: #000;
+  background: red;
   -webkit-transition: all 1s;
   transition: all 1s;
 }
@@ -418,6 +429,7 @@ html body #evan .container .right_list .Summary {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
+  cursor: default;
 }
 
 * body #evan .container .right_list .Summary h1,
@@ -428,44 +440,98 @@ html body #evan .container .right_list .Summary h1 {
 * body #evan .container .right_list .Summary h2,
 html body #evan .container .right_list .Summary h2 {
   font-size: 1.5em;
+  width: 80%;
 }
 
 * body #evan .container .right_list .contact_info,
 html body #evan .container .right_list .contact_info {
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: center;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 * body #evan .container .right_list .contact_info h1,
 html body #evan .container .right_list .contact_info h1 {
-  font-size: 2em;
+  font-size: 1.5em;
+  text-align: end;
+  width: calc(100% / 2);
+  padding-right: 10px;
+  color: #fff;
+  background: red;
+  cursor: default;
 }
 
-* body #evan .container .right_list .contact_info div p,
-html body #evan .container .right_list .contact_info div p {
-  font-size: 1.5em;
+* body #evan .container .right_list .contact_info div,
+html body #evan .container .right_list .contact_info div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: calc(100% / 2);
+  padding-left: 10px;
+}
+
+* body #evan .container .right_list .contact_info div a,
+html body #evan .container .right_list .contact_info div a {
   text-align: start;
+  margin: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+* body #evan .container .right_list .contact_info div a i,
+html body #evan .container .right_list .contact_info div a i {
+  font-size: 2em;
+  color: #000;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+* body #evan .container .right_list .contact_info div a i:hover,
+html body #evan .container .right_list .contact_info div a i:hover {
+  color: red;
 }
 
 * body #evan .popInfo,
 html body #evan .popInfo {
-  width: 75%;
-  height: 85%;
+  width: 80%;
+  height: 90%;
   background: #fff;
   position: fixed;
   -webkit-box-shadow: 0 0 20px black;
           box-shadow: 0 0 20px black;
   border-radius: 10px;
   padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 * body #evan .popInfo button,
 html body #evan .popInfo button {
   width: 30px;
   height: 30px;
+  padding: 5px;
   border-radius: 50%;
   border: none;
   position: absolute;
@@ -479,5 +545,72 @@ html body #evan .popInfo button:hover {
   transition: all 0.5s;
   color: white;
   background: #000;
+}
+
+* body #evan .popInfo .left_photo,
+html body #evan .popInfo .left_photo {
+  width: calc(100% / 2);
+  height: 100%;
+  position: relative;
+  overflow: auto;
+  padding: 10px;
+  background: #000;
+}
+
+* body #evan .popInfo .left_photo img,
+html body #evan .popInfo .left_photo img {
+  width: 100%;
+  height: 100%;
+}
+
+* body #evan .popInfo .left_photo a,
+html body #evan .popInfo .left_photo a {
+  width: 30px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.5);
+  color: #000;
+  position: absolute;
+  top: 200px;
+}
+
+* body #evan .popInfo .left_photo .btn_prev,
+html body #evan .popInfo .left_photo .btn_prev {
+  left: 30px;
+}
+
+* body #evan .popInfo .left_photo .btn_next,
+html body #evan .popInfo .left_photo .btn_next {
+  right: 30px;
+}
+
+* body #evan .popInfo .right_text,
+html body #evan .popInfo .right_text {
+  width: calc(100% / 2);
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+* body #evan .popInfo .right_text h1,
+html body #evan .popInfo .right_text h1 {
+  font-size: 1.5em;
+}
+
+* body #evan .popInfo .right_text p,
+html body #evan .popInfo .right_text p {
+  font-size: 1em;
 }
 /*# sourceMappingURL=index_resume_1.css.map */
