@@ -2,23 +2,24 @@ export default {
     name: "popInfo",
     template: `<div class="resume_pop">
         <div class="left_photo">
-            <img src="" />
+            <img :src="this.all_arr[this.$store.state.selectInfo][this.$store.state.selectIndex].Photo[selectPhoto]" />
             <a class="btn_prev" @click="trun(0)">P</a>
             <a class="btn_next" @click="trun(1)">N</a>
         </div>
         <div class="right_text">
             <h1>test</h1>
             <p>test</p>
-           <p> {{this.$store.state.selectInfo}} </p>  
-           <p> {{this.$store.state.selectIndex}} </p>   
+           <p> {{this.$store.state.selectInfo}} </p>                
             
         </div>
     <button class="isPop_btn" @click="clasePop(0)">X</button>
     </div>`,
     created() {
         axios.get('/script/components/index_resume_1.json').then(arr => {
-            console.log(arr.data);
+
             this.all_arr = arr.data
+
+            // console.log(this.all_arr[this.$store.state.selectInfo][this.$store.state.selectIndex]);
         }).catch(err => {
             console.log(err);
         })
@@ -29,6 +30,7 @@ export default {
     data() {
         return {
             all_arr: [],
+            selectPhoto: 0
         }
     },
     methods: {
@@ -37,7 +39,7 @@ export default {
         },
         trun(i) {
             if (i == 0) {
-                console.log('left');
+                this.selectPhoto
             } else {
                 console.log('right');
             }
@@ -47,9 +49,7 @@ export default {
         arr_filter() {
             var changeIndex = this.$store.state.changeIndex
             var changeInfo = this.$store.state.changeInfo
-            return this.all_arr.filter((i) => {
-                return i == this.$store.state.changeInfo
-            })
+            
         }
     },
     updated() {

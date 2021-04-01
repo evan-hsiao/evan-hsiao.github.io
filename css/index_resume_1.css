@@ -515,12 +515,6 @@ html body #evan .popInfo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -549,11 +543,8 @@ html body #evan .popInfo button:hover {
 
 * body #evan .popInfo .left_photo,
 html body #evan .popInfo .left_photo {
-  width: calc(100% / 2);
-  height: 100%;
   position: relative;
   overflow: auto;
-  padding: 10px;
   background: #000;
 }
 
@@ -587,8 +578,6 @@ html body #evan .popInfo .left_photo .btn_next {
 
 * body #evan .popInfo .right_text,
 html body #evan .popInfo .right_text {
-  width: calc(100% / 2);
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
