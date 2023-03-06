@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./app.2f931ac3.js";const l=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"frontend_develop/vitepress/team_page.md","lastUpdated":null}'),r={name:"frontend_develop/vitepress/team_page.md"};function o(s,n,p,_,c,d){return a(),t("div")}const m=e(r,[["render",o]]);export{l as __pageData,m as default};
